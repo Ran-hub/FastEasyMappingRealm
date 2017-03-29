@@ -9,8 +9,36 @@
 /* Begin PBXBuildFile section */
 		74EDE70E8C6987A643E0EAC4 /* libPods-FastEasyMappingRealm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F07485FFD141A5DBF8281FB4 /* libPods-FastEasyMappingRealm.a */; };
 		AD9400C81E8BE11A00558F37 /* FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9400BE1E8BE11A00558F37 /* FastEasyMappingRealm.framework */; };
-		AD9400CD1E8BE11A00558F37 /* FastEasyMappingRealmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400CC1E8BE11A00558F37 /* FastEasyMappingRealmTests.m */; };
 		AD9400CF1E8BE11A00558F37 /* FastEasyMappingRealm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400C11E8BE11A00558F37 /* FastEasyMappingRealm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD9400E51E8BE75000558F37 /* FEMRealmAssignmentPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400D91E8BE75000558F37 /* FEMRealmAssignmentPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD9400E61E8BE75000558F37 /* FEMRealmAssignmentPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400DA1E8BE75000558F37 /* FEMRealmAssignmentPolicy.m */; };
+		AD9400E71E8BE75000558F37 /* FEMAttribute+Realm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400DC1E8BE75000558F37 /* FEMAttribute+Realm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD9400E81E8BE75000558F37 /* FEMAttribute+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400DD1E8BE75000558F37 /* FEMAttribute+Realm.m */; };
+		AD9400E91E8BE75000558F37 /* FEMDeserializer+Realm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400DE1E8BE75000558F37 /* FEMDeserializer+Realm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD9400EA1E8BE75000558F37 /* FEMDeserializer+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400DF1E8BE75000558F37 /* FEMDeserializer+Realm.m */; };
+		AD9400EB1E8BE75000558F37 /* FEMObjectCache+Realm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400E01E8BE75000558F37 /* FEMObjectCache+Realm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD9400EC1E8BE75000558F37 /* FEMObjectCache+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400E11E8BE75000558F37 /* FEMObjectCache+Realm.m */; };
+		AD9400ED1E8BE75000558F37 /* FEMRealmStore.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400E31E8BE75000558F37 /* FEMRealmStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD9400EE1E8BE75000558F37 /* FEMRealmStore.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400E41E8BE75000558F37 /* FEMRealmStore.m */; };
+		AD94010A1E8BE7B100558F37 /* AssingmentPolicyToManyEmptyArray.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F01E8BE7B100558F37 /* AssingmentPolicyToManyEmptyArray.json */; };
+		AD94010B1E8BE7B100558F37 /* AssingmentPolicyToManyInit.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F11E8BE7B100558F37 /* AssingmentPolicyToManyInit.json */; };
+		AD94010C1E8BE7B100558F37 /* AssingmentPolicyToManyNull.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F21E8BE7B100558F37 /* AssingmentPolicyToManyNull.json */; };
+		AD94010D1E8BE7B100558F37 /* AssingmentPolicyToManyUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F31E8BE7B100558F37 /* AssingmentPolicyToManyUpdate.json */; };
+		AD94010E1E8BE7B100558F37 /* PrimaryKey.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F41E8BE7B100558F37 /* PrimaryKey.json */; };
+		AD94010F1E8BE7B100558F37 /* SupportedNullTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F51E8BE7B100558F37 /* SupportedNullTypes.json */; };
+		AD9401101E8BE7B100558F37 /* SupportedTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F61E8BE7B100558F37 /* SupportedTypes.json */; };
+		AD9401111E8BE7B100558F37 /* ToManyNullRelationship.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F71E8BE7B100558F37 /* ToManyNullRelationship.json */; };
+		AD9401121E8BE7B100558F37 /* ToManyRelationship.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F81E8BE7B100558F37 /* ToManyRelationship.json */; };
+		AD9401131E8BE7B100558F37 /* ToOneNullRelationship.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F91E8BE7B100558F37 /* ToOneNullRelationship.json */; };
+		AD9401141E8BE7B100558F37 /* ToOneRelationship.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400FA1E8BE7B100558F37 /* ToOneRelationship.json */; };
+		AD9401151E8BE7B100558F37 /* ChildRealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FD1E8BE7B100558F37 /* ChildRealmObject.m */; };
+		AD9401161E8BE7B100558F37 /* RealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FF1E8BE7B100558F37 /* RealmObject.m */; };
+		AD9401171E8BE7B100558F37 /* UniqueChildRealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401011E8BE7B100558F37 /* UniqueChildRealmObject.m */; };
+		AD9401181E8BE7B100558F37 /* UniqueRealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401031E8BE7B100558F37 /* UniqueRealmObject.m */; };
+		AD9401191E8BE7B100558F37 /* UniqueToManyChildRealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401051E8BE7B100558F37 /* UniqueToManyChildRealmObject.m */; };
+		AD94011A1E8BE7B100558F37 /* FEMAssignmentPolicySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401071E8BE7B100558F37 /* FEMAssignmentPolicySpec.m */; };
+		AD94011B1E8BE7B100558F37 /* FEMDeserializerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */; };
+		AD94011C1E8BE7B100558F37 /* FEMRealmStoreSpeс.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */; };
 		F6256E9C7723716166E525B3 /* libPods-FastEasyMappingRealmTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 086B3974B86A46B7251C6365 /* libPods-FastEasyMappingRealmTests.a */; };
 /* End PBXBuildFile section */
 
@@ -33,8 +61,41 @@
 		AD9400C11E8BE11A00558F37 /* FastEasyMappingRealm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastEasyMappingRealm.h; sourceTree = "<group>"; };
 		AD9400C21E8BE11A00558F37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD9400C71E8BE11A00558F37 /* FastEasyMappingRealmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastEasyMappingRealmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD9400CC1E8BE11A00558F37 /* FastEasyMappingRealmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastEasyMappingRealmTests.m; sourceTree = "<group>"; };
 		AD9400CE1E8BE11A00558F37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD9400D91E8BE75000558F37 /* FEMRealmAssignmentPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEMRealmAssignmentPolicy.h; sourceTree = "<group>"; };
+		AD9400DA1E8BE75000558F37 /* FEMRealmAssignmentPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMRealmAssignmentPolicy.m; sourceTree = "<group>"; };
+		AD9400DC1E8BE75000558F37 /* FEMAttribute+Realm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FEMAttribute+Realm.h"; sourceTree = "<group>"; };
+		AD9400DD1E8BE75000558F37 /* FEMAttribute+Realm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMAttribute+Realm.m"; sourceTree = "<group>"; };
+		AD9400DE1E8BE75000558F37 /* FEMDeserializer+Realm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FEMDeserializer+Realm.h"; sourceTree = "<group>"; };
+		AD9400DF1E8BE75000558F37 /* FEMDeserializer+Realm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMDeserializer+Realm.m"; sourceTree = "<group>"; };
+		AD9400E01E8BE75000558F37 /* FEMObjectCache+Realm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FEMObjectCache+Realm.h"; sourceTree = "<group>"; };
+		AD9400E11E8BE75000558F37 /* FEMObjectCache+Realm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMObjectCache+Realm.m"; sourceTree = "<group>"; };
+		AD9400E31E8BE75000558F37 /* FEMRealmStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEMRealmStore.h; sourceTree = "<group>"; };
+		AD9400E41E8BE75000558F37 /* FEMRealmStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMRealmStore.m; sourceTree = "<group>"; };
+		AD9400F01E8BE7B100558F37 /* AssingmentPolicyToManyEmptyArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssingmentPolicyToManyEmptyArray.json; sourceTree = "<group>"; };
+		AD9400F11E8BE7B100558F37 /* AssingmentPolicyToManyInit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssingmentPolicyToManyInit.json; sourceTree = "<group>"; };
+		AD9400F21E8BE7B100558F37 /* AssingmentPolicyToManyNull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssingmentPolicyToManyNull.json; sourceTree = "<group>"; };
+		AD9400F31E8BE7B100558F37 /* AssingmentPolicyToManyUpdate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssingmentPolicyToManyUpdate.json; sourceTree = "<group>"; };
+		AD9400F41E8BE7B100558F37 /* PrimaryKey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PrimaryKey.json; sourceTree = "<group>"; };
+		AD9400F51E8BE7B100558F37 /* SupportedNullTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SupportedNullTypes.json; sourceTree = "<group>"; };
+		AD9400F61E8BE7B100558F37 /* SupportedTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SupportedTypes.json; sourceTree = "<group>"; };
+		AD9400F71E8BE7B100558F37 /* ToManyNullRelationship.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ToManyNullRelationship.json; sourceTree = "<group>"; };
+		AD9400F81E8BE7B100558F37 /* ToManyRelationship.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ToManyRelationship.json; sourceTree = "<group>"; };
+		AD9400F91E8BE7B100558F37 /* ToOneNullRelationship.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ToOneNullRelationship.json; sourceTree = "<group>"; };
+		AD9400FA1E8BE7B100558F37 /* ToOneRelationship.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ToOneRelationship.json; sourceTree = "<group>"; };
+		AD9400FC1E8BE7B100558F37 /* ChildRealmObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildRealmObject.h; sourceTree = "<group>"; };
+		AD9400FD1E8BE7B100558F37 /* ChildRealmObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildRealmObject.m; sourceTree = "<group>"; };
+		AD9400FE1E8BE7B100558F37 /* RealmObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmObject.h; sourceTree = "<group>"; };
+		AD9400FF1E8BE7B100558F37 /* RealmObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmObject.m; sourceTree = "<group>"; };
+		AD9401001E8BE7B100558F37 /* UniqueChildRealmObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniqueChildRealmObject.h; sourceTree = "<group>"; };
+		AD9401011E8BE7B100558F37 /* UniqueChildRealmObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniqueChildRealmObject.m; sourceTree = "<group>"; };
+		AD9401021E8BE7B100558F37 /* UniqueRealmObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniqueRealmObject.h; sourceTree = "<group>"; };
+		AD9401031E8BE7B100558F37 /* UniqueRealmObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniqueRealmObject.m; sourceTree = "<group>"; };
+		AD9401041E8BE7B100558F37 /* UniqueToManyChildRealmObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniqueToManyChildRealmObject.h; sourceTree = "<group>"; };
+		AD9401051E8BE7B100558F37 /* UniqueToManyChildRealmObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniqueToManyChildRealmObject.m; sourceTree = "<group>"; };
+		AD9401071E8BE7B100558F37 /* FEMAssignmentPolicySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMAssignmentPolicySpec.m; sourceTree = "<group>"; };
+		AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMDeserializerSpec.m; sourceTree = "<group>"; };
+		AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMRealmStoreSpeс.m"; sourceTree = "<group>"; };
 		D978A7862BB67DEE571739FF /* Pods-FastEasyMappingRealmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealmTests/Pods-FastEasyMappingRealmTests.release.xcconfig"; sourceTree = "<group>"; };
 		F07485FFD141A5DBF8281FB4 /* libPods-FastEasyMappingRealm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastEasyMappingRealm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,6 +153,9 @@
 		AD9400C01E8BE11A00558F37 /* FastEasyMappingRealm */ = {
 			isa = PBXGroup;
 			children = (
+				AD9400D81E8BE75000558F37 /* Assignment Policy */,
+				AD9400DB1E8BE75000558F37 /* Extension */,
+				AD9400E21E8BE75000558F37 /* Store */,
 				AD9400C11E8BE11A00558F37 /* FastEasyMappingRealm.h */,
 				AD9400C21E8BE11A00558F37 /* Info.plist */,
 			);
@@ -101,10 +165,88 @@
 		AD9400CB1E8BE11A00558F37 /* FastEasyMappingRealmTests */ = {
 			isa = PBXGroup;
 			children = (
-				AD9400CC1E8BE11A00558F37 /* FastEasyMappingRealmTests.m */,
+				AD9400EF1E8BE7B100558F37 /* Fixture */,
+				AD9400FB1E8BE7B100558F37 /* Model */,
+				AD9401061E8BE7B100558F37 /* Specs */,
 				AD9400CE1E8BE11A00558F37 /* Info.plist */,
 			);
 			path = FastEasyMappingRealmTests;
+			sourceTree = "<group>";
+		};
+		AD9400D81E8BE75000558F37 /* Assignment Policy */ = {
+			isa = PBXGroup;
+			children = (
+				AD9400D91E8BE75000558F37 /* FEMRealmAssignmentPolicy.h */,
+				AD9400DA1E8BE75000558F37 /* FEMRealmAssignmentPolicy.m */,
+			);
+			path = "Assignment Policy";
+			sourceTree = "<group>";
+		};
+		AD9400DB1E8BE75000558F37 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AD9400DC1E8BE75000558F37 /* FEMAttribute+Realm.h */,
+				AD9400DD1E8BE75000558F37 /* FEMAttribute+Realm.m */,
+				AD9400DE1E8BE75000558F37 /* FEMDeserializer+Realm.h */,
+				AD9400DF1E8BE75000558F37 /* FEMDeserializer+Realm.m */,
+				AD9400E01E8BE75000558F37 /* FEMObjectCache+Realm.h */,
+				AD9400E11E8BE75000558F37 /* FEMObjectCache+Realm.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		AD9400E21E8BE75000558F37 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				AD9400E31E8BE75000558F37 /* FEMRealmStore.h */,
+				AD9400E41E8BE75000558F37 /* FEMRealmStore.m */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		AD9400EF1E8BE7B100558F37 /* Fixture */ = {
+			isa = PBXGroup;
+			children = (
+				AD9400F01E8BE7B100558F37 /* AssingmentPolicyToManyEmptyArray.json */,
+				AD9400F11E8BE7B100558F37 /* AssingmentPolicyToManyInit.json */,
+				AD9400F21E8BE7B100558F37 /* AssingmentPolicyToManyNull.json */,
+				AD9400F31E8BE7B100558F37 /* AssingmentPolicyToManyUpdate.json */,
+				AD9400F41E8BE7B100558F37 /* PrimaryKey.json */,
+				AD9400F51E8BE7B100558F37 /* SupportedNullTypes.json */,
+				AD9400F61E8BE7B100558F37 /* SupportedTypes.json */,
+				AD9400F71E8BE7B100558F37 /* ToManyNullRelationship.json */,
+				AD9400F81E8BE7B100558F37 /* ToManyRelationship.json */,
+				AD9400F91E8BE7B100558F37 /* ToOneNullRelationship.json */,
+				AD9400FA1E8BE7B100558F37 /* ToOneRelationship.json */,
+			);
+			path = Fixture;
+			sourceTree = "<group>";
+		};
+		AD9400FB1E8BE7B100558F37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD9400FC1E8BE7B100558F37 /* ChildRealmObject.h */,
+				AD9400FD1E8BE7B100558F37 /* ChildRealmObject.m */,
+				AD9400FE1E8BE7B100558F37 /* RealmObject.h */,
+				AD9400FF1E8BE7B100558F37 /* RealmObject.m */,
+				AD9401001E8BE7B100558F37 /* UniqueChildRealmObject.h */,
+				AD9401011E8BE7B100558F37 /* UniqueChildRealmObject.m */,
+				AD9401021E8BE7B100558F37 /* UniqueRealmObject.h */,
+				AD9401031E8BE7B100558F37 /* UniqueRealmObject.m */,
+				AD9401041E8BE7B100558F37 /* UniqueToManyChildRealmObject.h */,
+				AD9401051E8BE7B100558F37 /* UniqueToManyChildRealmObject.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AD9401061E8BE7B100558F37 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				AD9401071E8BE7B100558F37 /* FEMAssignmentPolicySpec.m */,
+				AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */,
+				AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */,
+			);
+			path = Specs;
 			sourceTree = "<group>";
 		};
 		EBFB27F318F780AA4D03D19D /* Pods */ = {
@@ -125,6 +267,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD9400ED1E8BE75000558F37 /* FEMRealmStore.h in Headers */,
+				AD9400E91E8BE75000558F37 /* FEMDeserializer+Realm.h in Headers */,
+				AD9400E51E8BE75000558F37 /* FEMRealmAssignmentPolicy.h in Headers */,
+				AD9400E71E8BE75000558F37 /* FEMAttribute+Realm.h in Headers */,
+				AD9400EB1E8BE75000558F37 /* FEMObjectCache+Realm.h in Headers */,
 				AD9400CF1E8BE11A00558F37 /* FastEasyMappingRealm.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +371,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD9401111E8BE7B100558F37 /* ToManyNullRelationship.json in Resources */,
+				AD94010E1E8BE7B100558F37 /* PrimaryKey.json in Resources */,
+				AD94010C1E8BE7B100558F37 /* AssingmentPolicyToManyNull.json in Resources */,
+				AD94010B1E8BE7B100558F37 /* AssingmentPolicyToManyInit.json in Resources */,
+				AD9401141E8BE7B100558F37 /* ToOneRelationship.json in Resources */,
+				AD9401121E8BE7B100558F37 /* ToManyRelationship.json in Resources */,
+				AD9401101E8BE7B100558F37 /* SupportedTypes.json in Resources */,
+				AD94010A1E8BE7B100558F37 /* AssingmentPolicyToManyEmptyArray.json in Resources */,
+				AD94010D1E8BE7B100558F37 /* AssingmentPolicyToManyUpdate.json in Resources */,
+				AD9401131E8BE7B100558F37 /* ToOneNullRelationship.json in Resources */,
+				AD94010F1E8BE7B100558F37 /* SupportedNullTypes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +470,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD9400EE1E8BE75000558F37 /* FEMRealmStore.m in Sources */,
+				AD9400EC1E8BE75000558F37 /* FEMObjectCache+Realm.m in Sources */,
+				AD9400E61E8BE75000558F37 /* FEMRealmAssignmentPolicy.m in Sources */,
+				AD9400E81E8BE75000558F37 /* FEMAttribute+Realm.m in Sources */,
+				AD9400EA1E8BE75000558F37 /* FEMDeserializer+Realm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +482,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD9400CD1E8BE11A00558F37 /* FastEasyMappingRealmTests.m in Sources */,
+				AD94011C1E8BE7B100558F37 /* FEMRealmStoreSpeс.m in Sources */,
+				AD9401181E8BE7B100558F37 /* UniqueRealmObject.m in Sources */,
+				AD94011A1E8BE7B100558F37 /* FEMAssignmentPolicySpec.m in Sources */,
+				AD9401191E8BE7B100558F37 /* UniqueToManyChildRealmObject.m in Sources */,
+				AD9401151E8BE7B100558F37 /* ChildRealmObject.m in Sources */,
+				AD9401171E8BE7B100558F37 /* UniqueChildRealmObject.m in Sources */,
+				AD94011B1E8BE7B100558F37 /* FEMDeserializerSpec.m in Sources */,
+				AD9401161E8BE7B100558F37 /* RealmObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
