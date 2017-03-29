@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74EDE70E8C6987A643E0EAC4 /* libPods-FastEasyMappingRealm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F07485FFD141A5DBF8281FB4 /* libPods-FastEasyMappingRealm.a */; };
+		18ACD514659D4C3C0278CC77 /* Pods_FastEasyMappingRealmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B8F163B5EE34CAB7F4D8C3 /* Pods_FastEasyMappingRealmTests.framework */; };
+		99BB42C3A092B0B3AD4F527F /* Pods_FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D246DBB4A81B748008746CD0 /* Pods_FastEasyMappingRealm.framework */; };
 		AD9400C81E8BE11A00558F37 /* FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9400BE1E8BE11A00558F37 /* FastEasyMappingRealm.framework */; };
 		AD9400CF1E8BE11A00558F37 /* FastEasyMappingRealm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400C11E8BE11A00558F37 /* FastEasyMappingRealm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD9400E51E8BE75000558F37 /* FEMRealmAssignmentPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400D91E8BE75000558F37 /* FEMRealmAssignmentPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -39,7 +40,6 @@
 		AD94011A1E8BE7B100558F37 /* FEMAssignmentPolicySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401071E8BE7B100558F37 /* FEMAssignmentPolicySpec.m */; };
 		AD94011B1E8BE7B100558F37 /* FEMDeserializerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */; };
 		AD94011C1E8BE7B100558F37 /* FEMRealmStoreSpeс.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */; };
-		F6256E9C7723716166E525B3 /* libPods-FastEasyMappingRealmTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 086B3974B86A46B7251C6365 /* libPods-FastEasyMappingRealmTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		086B3974B86A46B7251C6365 /* libPods-FastEasyMappingRealmTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastEasyMappingRealmTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		398AB909B1FC702CD2447C6C /* Pods-FastEasyMappingRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealm/Pods-FastEasyMappingRealm.debug.xcconfig"; sourceTree = "<group>"; };
 		5250A0E1DF487BEED66BFD8E /* Pods-FastEasyMappingRealm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealm.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealm/Pods-FastEasyMappingRealm.release.xcconfig"; sourceTree = "<group>"; };
 		9FDB92EC67A17C7D8DA643ED /* Pods-FastEasyMappingRealmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealmTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealmTests/Pods-FastEasyMappingRealmTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A5B8F163B5EE34CAB7F4D8C3 /* Pods_FastEasyMappingRealmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastEasyMappingRealmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9400BE1E8BE11A00558F37 /* FastEasyMappingRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FastEasyMappingRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9400C11E8BE11A00558F37 /* FastEasyMappingRealm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastEasyMappingRealm.h; sourceTree = "<group>"; };
 		AD9400C21E8BE11A00558F37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,8 +96,8 @@
 		AD9401071E8BE7B100558F37 /* FEMAssignmentPolicySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMAssignmentPolicySpec.m; sourceTree = "<group>"; };
 		AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMDeserializerSpec.m; sourceTree = "<group>"; };
 		AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMRealmStoreSpeс.m"; sourceTree = "<group>"; };
+		D246DBB4A81B748008746CD0 /* Pods_FastEasyMappingRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastEasyMappingRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D978A7862BB67DEE571739FF /* Pods-FastEasyMappingRealmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealmTests/Pods-FastEasyMappingRealmTests.release.xcconfig"; sourceTree = "<group>"; };
-		F07485FFD141A5DBF8281FB4 /* libPods-FastEasyMappingRealm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastEasyMappingRealm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74EDE70E8C6987A643E0EAC4 /* libPods-FastEasyMappingRealm.a in Frameworks */,
+				99BB42C3A092B0B3AD4F527F /* Pods_FastEasyMappingRealm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +114,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD9400C81E8BE11A00558F37 /* FastEasyMappingRealm.framework in Frameworks */,
-				F6256E9C7723716166E525B3 /* libPods-FastEasyMappingRealmTests.a in Frameworks */,
+				18ACD514659D4C3C0278CC77 /* Pods_FastEasyMappingRealmTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,8 +124,8 @@
 		615ABEBA17E7CBC8CB311A6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F07485FFD141A5DBF8281FB4 /* libPods-FastEasyMappingRealm.a */,
-				086B3974B86A46B7251C6365 /* libPods-FastEasyMappingRealmTests.a */,
+				D246DBB4A81B748008746CD0 /* Pods_FastEasyMappingRealm.framework */,
+				A5B8F163B5EE34CAB7F4D8C3 /* Pods_FastEasyMappingRealmTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

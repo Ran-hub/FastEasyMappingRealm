@@ -3,7 +3,7 @@
 #import "FEMDeserializer+Realm.h"
 #import "FEMRealmStore.h"
 
-#import <Realm/RLMRealm.h>
+@import Realm.RLMRealm;
 
 @implementation FEMDeserializer (Realm)
 

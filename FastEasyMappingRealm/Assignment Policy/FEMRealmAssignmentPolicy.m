@@ -2,9 +2,9 @@
 
 #import "FEMRealmAssignmentPolicy.h"
 
-#import <FastEasyMapping/FEMRelationshipAssignmentContext.h>
-#import <Realm/RLMObjectBase.h>
-#import <Realm/RLMArray.h>
+@import FastEasyMapping.FEMRelationshipAssignmentContext;
+@import Realm.RLMObjectBase;
+@import Realm.RLMArray;
 
 FEMAssignmentPolicy FEMRealmAssignmentPolicyCollectionMerge = ^id(FEMRelationshipAssignmentContext *context) {
     if (context.targetRelationshipValue == nil || [(NSArray *)context.targetRelationshipValue count] == 0) {

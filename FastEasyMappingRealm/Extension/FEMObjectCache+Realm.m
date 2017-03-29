@@ -1,11 +1,14 @@
 // For License please refer to LICENSE file in the root of FastEasyMappingRealm project
 
 #import "FEMObjectCache+Realm.h"
-#import <FastEasyMapping/FEMMapping.h>
 
-#import <Realm/RLMRealm.h>
+@import FastEasyMapping.FEMMapping;
+
+
+@import Realm.RLMRealm;
+@import Realm.RLMResults;
+
 #import <Realm/RLMRealm_Dynamic.h>
-#import <Realm/RLMResults.h>
 
 @implementation FEMObjectCache (Realm)
 

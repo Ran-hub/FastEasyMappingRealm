@@ -1,8 +1,7 @@
 // For License please refer to LICENSE file in the root of FastEasyMappingRealm project
 
 @import Foundation;
-
-#import <FastEasyMapping/FEMDeserializer.h>
+@import FastEasyMapping.FEMDeserializer;
 
 @class RLMRealm;
 

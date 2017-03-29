@@ -3,10 +3,8 @@
 #import "FEMRealmStore.h"
 #import "FEMObjectCache+Realm.h"
 
-#import <Realm/RLMRealm.h>
-#import <Realm/RLMRealm_Dynamic.h>
-#import <Realm/RLMObject.h>
-#import <FastEasyMapping/FastEasyMapping.h>
+@import FastEasyMapping;
+@import Realm;
 
 @implementation FEMRealmStore {
     FEMObjectCache *_cache;

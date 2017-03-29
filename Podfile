@@ -1,7 +1,8 @@
 platform :ios, '8.0'
 
 target 'FastEasyMappingRealm' do
-#   use_frameworks!
+  use_frameworks!
+   
   pod 'FastEasyMapping', :git => 'https://github.com/Yalantis/FastEasyMapping.git', :branch => 'feature/realm_ready'
   pod 'Realm', '~> 2.0'
 
