@@ -1,10 +1,3 @@
-//
-//  FastEasyMappingRealm.h
-//  FastEasyMappingRealm
-//
-//  Created by Dima on 3/29/17.
-//  Copyright © 2017 FastEasyMapping. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 

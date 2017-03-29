@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74EDE70E8C6987A643E0EAC4 /* libPods-FastEasyMappingRealm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F07485FFD141A5DBF8281FB4 /* libPods-FastEasyMappingRealm.a */; };
 		AD9400C81E8BE11A00558F37 /* FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9400BE1E8BE11A00558F37 /* FastEasyMappingRealm.framework */; };
 		AD9400CD1E8BE11A00558F37 /* FastEasyMappingRealmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400CC1E8BE11A00558F37 /* FastEasyMappingRealmTests.m */; };
 		AD9400CF1E8BE11A00558F37 /* FastEasyMappingRealm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400C11E8BE11A00558F37 /* FastEasyMappingRealm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F6256E9C7723716166E525B3 /* libPods-FastEasyMappingRealmTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 086B3974B86A46B7251C6365 /* libPods-FastEasyMappingRealmTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +25,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		086B3974B86A46B7251C6365 /* libPods-FastEasyMappingRealmTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastEasyMappingRealmTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		398AB909B1FC702CD2447C6C /* Pods-FastEasyMappingRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealm/Pods-FastEasyMappingRealm.debug.xcconfig"; sourceTree = "<group>"; };
+		5250A0E1DF487BEED66BFD8E /* Pods-FastEasyMappingRealm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealm.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealm/Pods-FastEasyMappingRealm.release.xcconfig"; sourceTree = "<group>"; };
+		9FDB92EC67A17C7D8DA643ED /* Pods-FastEasyMappingRealmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealmTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealmTests/Pods-FastEasyMappingRealmTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD9400BE1E8BE11A00558F37 /* FastEasyMappingRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FastEasyMappingRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9400C11E8BE11A00558F37 /* FastEasyMappingRealm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FastEasyMappingRealm.h; sourceTree = "<group>"; };
 		AD9400C21E8BE11A00558F37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD9400C71E8BE11A00558F37 /* FastEasyMappingRealmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastEasyMappingRealmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9400CC1E8BE11A00558F37 /* FastEasyMappingRealmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastEasyMappingRealmTests.m; sourceTree = "<group>"; };
 		AD9400CE1E8BE11A00558F37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D978A7862BB67DEE571739FF /* Pods-FastEasyMappingRealmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealmTests/Pods-FastEasyMappingRealmTests.release.xcconfig"; sourceTree = "<group>"; };
+		F07485FFD141A5DBF8281FB4 /* libPods-FastEasyMappingRealm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastEasyMappingRealm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74EDE70E8C6987A643E0EAC4 /* libPods-FastEasyMappingRealm.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +53,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD9400C81E8BE11A00558F37 /* FastEasyMappingRealm.framework in Frameworks */,
+				F6256E9C7723716166E525B3 /* libPods-FastEasyMappingRealmTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		615ABEBA17E7CBC8CB311A6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F07485FFD141A5DBF8281FB4 /* libPods-FastEasyMappingRealm.a */,
+				086B3974B86A46B7251C6365 /* libPods-FastEasyMappingRealmTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AD9400B41E8BE11A00558F37 = {
 			isa = PBXGroup;
 			children = (
 				AD9400C01E8BE11A00558F37 /* FastEasyMappingRealm */,
 				AD9400CB1E8BE11A00558F37 /* FastEasyMappingRealmTests */,
 				AD9400BF1E8BE11A00558F37 /* Products */,
+				EBFB27F318F780AA4D03D19D /* Pods */,
+				615ABEBA17E7CBC8CB311A6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +107,17 @@
 			path = FastEasyMappingRealmTests;
 			sourceTree = "<group>";
 		};
+		EBFB27F318F780AA4D03D19D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				398AB909B1FC702CD2447C6C /* Pods-FastEasyMappingRealm.debug.xcconfig */,
+				5250A0E1DF487BEED66BFD8E /* Pods-FastEasyMappingRealm.release.xcconfig */,
+				9FDB92EC67A17C7D8DA643ED /* Pods-FastEasyMappingRealmTests.debug.xcconfig */,
+				D978A7862BB67DEE571739FF /* Pods-FastEasyMappingRealmTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,10 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD9400D21E8BE11A00558F37 /* Build configuration list for PBXNativeTarget "FastEasyMappingRealm" */;
 			buildPhases = (
+				7531D36B99C24B613B8E3D0A /* [CP] Check Pods Manifest.lock */,
 				AD9400B91E8BE11A00558F37 /* Sources */,
 				AD9400BA1E8BE11A00558F37 /* Frameworks */,
 				AD9400BB1E8BE11A00558F37 /* Headers */,
 				AD9400BC1E8BE11A00558F37 /* Resources */,
+				6886A14EA41643FBD717CEB4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD9400D51E8BE11A00558F37 /* Build configuration list for PBXNativeTarget "FastEasyMappingRealmTests" */;
 			buildPhases = (
+				055059108475BD3ADA6D8572 /* [CP] Check Pods Manifest.lock */,
 				AD9400C31E8BE11A00558F37 /* Sources */,
 				AD9400C41E8BE11A00558F37 /* Frameworks */,
 				AD9400C51E8BE11A00558F37 /* Resources */,
+				C6458047EB662779B7C4FDFE /* [CP] Embed Pods Frameworks */,
+				B2E08821DEBFE3633F22C2B0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +228,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		055059108475BD3ADA6D8572 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6886A14EA41643FBD717CEB4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastEasyMappingRealm/Pods-FastEasyMappingRealm-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7531D36B99C24B613B8E3D0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B2E08821DEBFE3633F22C2B0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastEasyMappingRealmTests/Pods-FastEasyMappingRealmTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6458047EB662779B7C4FDFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastEasyMappingRealmTests/Pods-FastEasyMappingRealmTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AD9400B91E8BE11A00558F37 /* Sources */ = {
@@ -319,6 +434,7 @@
 		};
 		AD9400D31E8BE11A00558F37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 398AB909B1FC702CD2447C6C /* Pods-FastEasyMappingRealm.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -328,8 +444,9 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FastEasyMappingRealm/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.FastEasyMappingRealm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.Realm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -337,6 +454,7 @@
 		};
 		AD9400D41E8BE11A00558F37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5250A0E1DF487BEED66BFD8E /* Pods-FastEasyMappingRealm.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -346,8 +464,9 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = FastEasyMappingRealm/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.FastEasyMappingRealm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.Realm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -355,6 +474,7 @@
 		};
 		AD9400D61E8BE11A00558F37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FDB92EC67A17C7D8DA643ED /* Pods-FastEasyMappingRealmTests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = B22C3P93TG;
 				INFOPLIST_FILE = FastEasyMappingRealmTests/Info.plist;
@@ -366,6 +486,7 @@
 		};
 		AD9400D71E8BE11A00558F37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D978A7862BB67DEE571739FF /* Pods-FastEasyMappingRealmTests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = B22C3P93TG;
 				INFOPLIST_FILE = FastEasyMappingRealmTests/Info.plist;
@@ -394,6 +515,7 @@
 				AD9400D41E8BE11A00558F37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AD9400D51E8BE11A00558F37 /* Build configuration list for PBXNativeTarget "FastEasyMappingRealmTests" */ = {
 			isa = XCConfigurationList;
@@ -402,6 +524,7 @@
 				AD9400D71E8BE11A00558F37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
