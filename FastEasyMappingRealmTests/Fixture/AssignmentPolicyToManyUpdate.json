@@ -1,5 +1,5 @@
 {
-  "primaryKeyProperty": 5,
+  "primaryKey": 5,
   "toMany": [
     {
       "primaryKey": 11
