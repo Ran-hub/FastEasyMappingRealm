@@ -4,15 +4,6 @@
 #import "RealmObject.h"
 
 @implementation RealmObject
-
-//+ (NSDictionary *)defaultPropertyValues {
-//    return @{
-//        @"string": @"",
-//        @"date": [NSDate dateWithTimeIntervalSince1970:0.0],
-//        @"data": [NSData data]
-//    };
-//}
-
 @end
 
 @implementation RealmObject (Mapping)

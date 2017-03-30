@@ -1,5 +1,5 @@
 {
-  "integerProperty": 5,
+  "nsIntegerValue": 5,
   "toOneRelationship": {
   	"identifier": 10
   }

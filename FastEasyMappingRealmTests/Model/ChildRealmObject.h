@@ -1,11 +1,9 @@
-//
-// Created by zen on 09/09/15.
-// Copyright (c) 2015 Yalantis. All rights reserved.
-//
 
 @import Foundation;
 
 #import <Realm/RLMObject.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @class FEMMapping;
 
@@ -15,10 +13,13 @@
 
 @end
 
+RLM_ARRAY_TYPE(ChildRealmObject)
+
 @interface ChildRealmObject (Mapping)
 
 + (FEMMapping *)defaultMapping;
 
 @end
 
-RLM_ARRAY_TYPE(ChildRealmObject)
+
+NS_ASSUME_NONNULL_END

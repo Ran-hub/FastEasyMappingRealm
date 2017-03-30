@@ -305,84 +305,81 @@ describe(@"FEMDeserializer", ^{
         });
 
 
-//        context(@"to-one relationship", ^{
-//            context(@"nonnull value", ^{
-//                __block RealmObject *realmObject = nil;
-//                __block ChildRealmObject *childRealmObject = nil;
-//
-//                beforeEach(^{
-//                    FEMMapping *mapping = [RealmObject toOneRelationshipMapping];
-//                    NSDictionary *json = [Fixture buildUsingFixture:@"ToOneRelationship"];
-//                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
-//                    childRealmObject = realmObject.toOneRelationship;
-//                });
-//
-//                specify(^{
-//                    [[realmObject.toOneRelationship shouldNot] beNil];
-//                    [[@([realmObject.toOneRelationship isEqualToObject:childRealmObject]) should] beTrue];
-//                });
-//
-//                specify(^{
-//                    [[@(childRealmObject.identifier) should] equal:@(10)];
-//                });
-//            });
-//
-//            context(@"null value", ^{
-//                __block RealmObject *realmObject = nil;
-//                beforeEach(^{
-//                    FEMMapping *mapping = [RealmObject toOneRelationshipMapping];
-//                    NSDictionary *json = [Fixture buildUsingFixture:@"ToOneNullRelationship"];
-//                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
-//                });
-//
-//                specify(^{
-//                    [[realmObject.toOneRelationship should] beNil];
-//                });
-//            });
-//        });
-//
-//        context(@"to-many relationship", ^{
-//            context(@"nonnull value", ^{
-//                __block RealmObject *realmObject = nil;
-//                __block RLMArray<ChildRealmObject> *relationship = nil;
-//
-//                beforeEach(^{
-//                    FEMMapping *mapping = [RealmObject toManyRelationshipMapping];
-//                    NSDictionary *json = [Fixture buildUsingFixture:@"ToManyRelationship"];
-//                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
-//                    relationship = realmObject.toManyRelationship;
-//                });
-//
-//                specify(^{
-//                    [[relationship shouldNot] beNil];
-//                    [[@(relationship.count) should] equal:@(2)];
-//                });
-//
-//                specify(^{
-//                    ChildRealmObject *child0 = relationship[0];
-//                    [[@(child0.identifier) should] equal:@(20)];
-//
-//                    ChildRealmObject *child1 = relationship[1];
-//                    [[@(child1.identifier) should] equal:@(21)];
-//                });
-//            });
-//
-//            context(@"null value", ^{
-//                __block RealmObject *realmObject = nil;
-//                __block RLMArray<ChildRealmObject> *relationship = nil;
-//
-//                beforeEach(^{
-//                    FEMMapping *mapping = [RealmObject toManyRelationshipMapping];
-//                    NSDictionary *json = [Fixture buildUsingFixture:@"ToManyNullRelationship"];
-//                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
-//                    relationship = realmObject.toManyRelationship;
-//                });
-//
-//                specify(^{
-//                    [[@(relationship.count) should] equal:@(0)];
-//                });
-//            });
-//        });
+        context(@"to-one relationship", ^{
+            context(@"nonnull value", ^{
+                __block RealmObject *realmObject = nil;
+                __block ChildRealmObject *childRealmObject = nil;
+
+                beforeEach(^{
+                    FEMMapping *mapping = [RealmObject toOneRelationshipMapping];
+                    NSDictionary *json = [Fixture buildUsingFixture:@"ToOneRelationship"];
+                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
+                    childRealmObject = realmObject.toOneRelationship;
+                });
+
+                it(@"should map relationship", ^{
+                    [[realmObject.toOneRelationship shouldNot] beNil];
+                    [[@(childRealmObject.identifier) should] equal:@(10)];
+                });
+            });
+
+            context(@"null value", ^{
+                __block RealmObject *realmObject = nil;
+                beforeEach(^{
+                    FEMMapping *mapping = [RealmObject toOneRelationshipMapping];
+                    NSDictionary *json = [Fixture buildUsingFixture:@"ToOneNullRelationship"];
+                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
+                });
+
+                it(@"should nil relationship", ^{
+                    [[realmObject.toOneRelationship should] beNil];
+                });
+            });
+        });
+
+        context(@"to-many relationship", ^{
+            context(@"nonnull value", ^{
+                __block RealmObject *realmObject = nil;
+                __block RLMArray<ChildRealmObject *> *relationship = nil;
+
+                beforeEach(^{
+                    FEMMapping *mapping = [RealmObject toManyRelationshipMapping];
+                    NSDictionary *json = [Fixture buildUsingFixture:@"ToManyRelationship"];
+                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
+                    relationship = realmObject.toManyRelationship;
+                });
+
+                it(@"should map relationship values", ^{
+                    [[relationship shouldNot] beNil];
+                    [[@(relationship.count) should] equal:@(2)];
+                });
+
+                it(@"should set correct relationship attributes", ^{
+                    ChildRealmObject *child0 = relationship[0];
+                    [[@(child0.identifier) should] equal:@(20)];
+
+                    ChildRealmObject *child1 = relationship[1];
+                    [[@(child1.identifier) should] equal:@(21)];
+                });
+            });
+
+            context(@"null value", ^{
+                __block RealmObject *realmObject = nil;
+                __block RLMArray<ChildRealmObject *> *relationship = nil;
+
+                beforeEach(^{
+                    FEMMapping *mapping = [RealmObject toManyRelationshipMapping];
+                    NSDictionary *json = [Fixture buildUsingFixture:@"ToManyNullRelationship"];
+                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
+                    relationship = realmObject.toManyRelationship;
+                });
+
+                it(@"should set relationship to empty collection", ^{
+                    [[relationship shouldNot] beNil];
+                    [[@(relationship.count) should] equal:@(0)];
+                });
+            });
+        });
     });
 });
 

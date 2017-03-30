@@ -1,4 +1,4 @@
 {
-  "integerProperty": 5,
+  "nsIntegerValue": 5,
   "toManyRelationship": null
 }
