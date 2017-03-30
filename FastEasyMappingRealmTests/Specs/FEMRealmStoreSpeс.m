@@ -107,14 +107,14 @@ describe(@"FEMRealmStore", ^{
 
             it(@"should register object with PK", ^{
                 UniqueRealmObject *object = [store newObjectForMapping:mapping];
-                object.primaryKeyProperty = 5;
+                object.primaryKey = 5;
 
                 [store registerObject:object forMapping:mapping];
 
-                NSDictionary *json = @{@"primaryKeyProperty": @(5)};
+                NSDictionary *json = @{@"primaryKey": @(5)};
                 [[[store registeredObjectForRepresentation:json mapping:mapping] should] equal:object];
 
-                NSDictionary *invalidJSON = @{@"primaryKeyProperty": @(6)};
+                NSDictionary *invalidJSON = @{@"primaryKey": @(6)};
                 [[[store registeredObjectForRepresentation:invalidJSON mapping:mapping] should] beNil];
             });
 
@@ -128,11 +128,11 @@ describe(@"FEMRealmStore", ^{
             });
 
             it(@"should automatically register existing objects", ^{
-                NSDictionary *json = @{@"primaryKeyProperty": @(5)};
+                NSDictionary *json = @{@"primaryKey": @(5)};
                 __block UniqueRealmObject *object = nil;
                 [realm transactionWithBlock:^{
                     object = [[UniqueRealmObject alloc] init];
-                    object.primaryKeyProperty = 5;
+                    object.primaryKey = 5;
                     [realm addObject:object];
                 }];
 

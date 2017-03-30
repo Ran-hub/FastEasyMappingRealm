@@ -12,12 +12,8 @@
 
 @implementation UniqueRealmObject
 
-//+ (NSString *)primaryKey {
-//    return @"primaryKeyProperty";
-//}
-
-+ (NSDictionary *)defaultPropertyValues {
-    return @{@"string": @""};
++ (NSString *)primaryKey {
+    return @"primaryKey";
 }
 
 @end
@@ -27,7 +23,7 @@
 + (FEMMapping *)defaultMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:[self className]];
     mapping.primaryKey = [self primaryKey];
-    [mapping addAttributesFromArray:@[@"primaryKeyProperty"]];
+    [mapping addAttributesFromArray:@[@"primaryKey"]];
 
     return mapping;
 }

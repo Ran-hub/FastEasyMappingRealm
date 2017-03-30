@@ -11,9 +11,7 @@
 
 @interface UniqueRealmObject : RLMObject
 
-@property (nonatomic) int primaryKeyProperty;
-@property (nonatomic) long long longLongProperty;
-@property (nonatomic, copy) NSString *stringProperty;
+@property (nonatomic) int primaryKey;
 
 @property (nonatomic, strong) UniqueChildRealmObject *toOneRelationship;
 @property (nonatomic, strong) RLMArray<UniqueToManyChildRealmObject *><UniqueToManyChildRealmObject> *toManyRelationship;
