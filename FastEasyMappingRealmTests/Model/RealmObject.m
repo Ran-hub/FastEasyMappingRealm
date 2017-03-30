@@ -1,19 +1,15 @@
-//
-// Created by zen on 08/09/15.
-// Copyright (c) 2015 Yalantis. All rights reserved.
-//
 
 #import <Realm/Realm.h>
+#import <FastEasyMapping/FEMMapping.h>
 #import "RealmObject.h"
-#import "FEMMapping.h"
 
 @implementation RealmObject
 
 //+ (NSDictionary *)defaultPropertyValues {
 //    return @{
-//        @"stringProperty": @"",
-//        @"dateProperty": [NSDate dateWithTimeIntervalSince1970:0.0],
-//        @"dataProperty": [NSData data]
+//        @"string": @"",
+//        @"date": [NSDate dateWithTimeIntervalSince1970:0.0],
+//        @"data": [NSData data]
 //    };
 //}
 
@@ -21,24 +17,30 @@
 
 @implementation RealmObject (Mapping)
 
-+ (FEMMapping *)supportedTypesMapping {
++ (FEMMapping *)attributesMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:[self className]];
     [mapping addAttributesFromArray:@[
-        @"boolProperty",
-        @"booleanProperty",
-        @"intProperty",
-        @"integerProperty",
-        @"longProperty",
-        @"longLongProperty",
-        @"floatProperty",
-        @"doubleProperty",
-        @"cgFloatProperty",
-        @"stringProperty"
+        @"boolValue",
+        @"boolObject",
+        @"booleanValue",
+        @"intValue",
+        @"intObject",
+        @"nsIntegerValue",
+        @"nsIntegerObject",
+        @"longValue",
+        @"longObject",
+        @"longLongValue",
+        @"longLongObject",
+        @"floatValue",
+        @"floatObject",
+        @"doubleValue",
+        @"doubleObject",
+        @"string"
     ]];
 
-    [mapping addAttribute:[FEMAttribute mappingOfProperty:@"dateProperty" toKeyPath:@"dateProperty" dateFormat:@"YYYY-mm-dd'T'HH:mm:ssZZZZ"]];
+    [mapping addAttribute:[FEMAttribute mappingOfProperty:@"date" toKeyPath:@"date" dateFormat:@"YYYY-mm-dd'T'HH:mm:ssZZZZ"]];
 	
-	[mapping addAttribute:[FEMAttribute mappingOfProperty:@"dataProperty" toKeyPath:@"dataProperty" map:^id(id value) {
+	[mapping addAttribute:[FEMAttribute mappingOfProperty:@"data" toKeyPath:@"data" map:^id(id value) {
 		if ([value isKindOfClass:[NSString class]]) {
 			return [(NSString *)value dataUsingEncoding:NSUTF8StringEncoding];
 		}
@@ -56,22 +58,22 @@
 + (FEMMapping *)supportedNullableTypesMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:[self className]];
     [mapping addAttributesFromArray:@[
-        @"boolProperty",
-        @"booleanProperty",
-        @"intProperty",
+        @"boolValue",
+        @"booleanValue",
+        @"intValue",
         @"integerProperty",
         @"longProperty",
-        @"longLongProperty",
-        @"floatProperty",
-        @"doubleProperty",
+        @"longLongValue",
+        @"floatValue",
+        @"doubleValue",
         @"cgFloatProperty",
-				@"stringProperty",
-				@"dataProperty"
+				@"string",
+				@"data"
     ]];
 	
-	[mapping addAttribute:[FEMAttribute mappingOfProperty:@"dateProperty" toKeyPath:@"dateProperty" dateFormat:@"YYYY-mm-dd'T'HH:mm:ssZZZZ"]];
+	[mapping addAttribute:[FEMAttribute mappingOfProperty:@"date" toKeyPath:@"date" dateFormat:@"YYYY-mm-dd'T'HH:mm:ssZZZZ"]];
 
-	[mapping addAttribute:[FEMAttribute mappingOfProperty:@"dataProperty" toKeyPath:@"dataProperty" map:^id(id value) {
+	[mapping addAttribute:[FEMAttribute mappingOfProperty:@"data" toKeyPath:@"data" map:^id(id value) {
 		if ([value isKindOfClass:[NSString class]]) {
 			return [(NSString *)value dataUsingEncoding:NSUTF8StringEncoding];
 		}

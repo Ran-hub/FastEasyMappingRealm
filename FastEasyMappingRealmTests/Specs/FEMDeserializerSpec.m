@@ -1,15 +1,16 @@
 // For License please refer to LICENSE file in the root of FastEasyMapping project
 
 #import <Kiwi/Kiwi.h>
-#import <CMFactory/CMFixture.h>
 #import <FastEasyMapping/FastEasyMapping.h>
 #import <FastEasyMappingRealm/FastEasyMappingRealm.h>
 #import <Realm/Realm.h>
 #import "RealmObject.h"
 
+#import "Fixture.h"
+
 SPEC_BEGIN(FEMDeserializerSpec)
 describe(@"FEMDeserializer", ^{
-    context(@"deserialization", ^{
+    context(@"deserializing", ^{
         __block RLMRealm *realm = nil;
         __block FEMRealmStore *store = nil;
         __block FEMDeserializer *deserializer = nil;
@@ -42,29 +43,31 @@ describe(@"FEMDeserializer", ^{
             context(@"nonnull values", ^{
                 __block FEMMapping *mapping = nil;
 
-                beforeAll(^{
-                    mapping = [RealmObject supportedTypesMapping];
-                    NSDictionary *json = [CMFixture buildUsingFixture:@"SupportedTypes"];
+                beforeEach(^{
+                    mapping = [RealmObject attributesMapping];
+                    NSDictionary *json = [Fixture buildUsingFixture:@"SupportedTypes"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                 });
 
-                afterAll(^{
+                afterEach(^{
                     mapping = nil;
                 });
 
-                specify(^{
+                it(@"should map BOOL", ^{
                     BOOL expected = YES;
-                    [[@(realmObject.boolProperty) should] equal:@(expected)];
+                    [[@(realmObject.boolValue) should] equal:@(expected)];
                 });
 
-                specify(^{
+                it(@"should map boolean", ^{
                     bool expected = true;
-                    [[@(realmObject.booleanProperty) should] equal:@(expected)];
+                    [[@(realmObject.booleanValue) should] equal:@(expected)];
                 });
 
+            
+                
                 specify(^{
                     int expected = 3;
-                    [[@(realmObject.intProperty) should] equal:@(expected)];
+                    [[@(realmObject.intValue) should] equal:@(expected)];
                 });
 
                 specify(^{
@@ -79,17 +82,17 @@ describe(@"FEMDeserializer", ^{
 
                 specify(^{
                     long long expected = 9;
-                    [[@(realmObject.longLongProperty) should] equal:@(expected)];
+                    [[@(realmObject.longLongValue) should] equal:@(expected)];
                 });
 
                 specify(^{
                     float expected = 11.1f;
-                    [[@(realmObject.floatProperty) should] equal:expected withDelta:0.01f];
+                    [[@(realmObject.floatValue) should] equal:expected withDelta:0.01f];
                 });
 
                 specify(^{
                     double expected = 12.2;
-                    [[@(realmObject.doubleProperty) should] equal:expected withDelta:0.01f];
+                    [[@(realmObject.doubleValue) should] equal:expected withDelta:0.01f];
                 });
 
                 specify(^{
@@ -99,42 +102,42 @@ describe(@"FEMDeserializer", ^{
 
                 specify(^{
                     NSString *expected = @"string";
-                    [[realmObject.stringProperty should] equal:expected];
+                    [[realmObject.string should] equal:expected];
                 });
 
                 specify(^{
-                    FEMAttribute *attribute = [mapping attributeForProperty:@"dateProperty"];
+                    FEMAttribute *attribute = [mapping attributeForProperty:@"date"];
                     NSDate *expected = [attribute mapValue:@"2005-08-09T18:31:42+03"];
-                    [[realmObject.dateProperty should] equal:expected];
+                    [[realmObject.date should] equal:expected];
                 });
 
                 specify(^{
-                    FEMAttribute *attribute = [mapping attributeForProperty:@"dataProperty"];
+                    FEMAttribute *attribute = [mapping attributeForProperty:@"data"];
                     NSData *expected = [attribute mapValue:@"utf8"];
-                    [[realmObject.dataProperty should] equal:expected];
+                    [[realmObject.data should] equal:expected];
                 });
             });
 
             context(@"null values", ^{
                 beforeEach(^{
                     FEMMapping *mapping = [RealmObject supportedNullableTypesMapping];
-                    NSDictionary *json = [CMFixture buildUsingFixture:@"SupportedNullTypes"];
+                    NSDictionary *json = [Fixture buildUsingFixture:@"SupportedNullTypes"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                 });
 
                 specify(^{
                     BOOL expected = NO;
-                    [[@(realmObject.boolProperty) should] equal:@(expected)];
+                    [[@(realmObject.boolValue) should] equal:@(expected)];
                 });
 
                 specify(^{
                     bool expected = false;
-                    [[@(realmObject.booleanProperty) should] equal:@(expected)];
+                    [[@(realmObject.booleanValue) should] equal:@(expected)];
                 });
 
                 specify(^{
                     int expected = 0;
-                    [[@(realmObject.intProperty) should] equal:@(expected)];
+                    [[@(realmObject.intValue) should] equal:@(expected)];
                 });
 
                 specify(^{
@@ -149,17 +152,17 @@ describe(@"FEMDeserializer", ^{
 
                 specify(^{
                     long long expected = 0;
-                    [[@(realmObject.longLongProperty) should] equal:@(expected)];
+                    [[@(realmObject.longLongValue) should] equal:@(expected)];
                 });
 
                 specify(^{
                     float expected = 0.f;
-                    [[@(realmObject.floatProperty) should] equal:expected withDelta:0.01f];
+                    [[@(realmObject.floatValue) should] equal:expected withDelta:0.01f];
                 });
 
                 specify(^{
                     double expected = 0.0;
-                    [[@(realmObject.doubleProperty) should] equal:expected withDelta:0.01f];
+                    [[@(realmObject.doubleValue) should] equal:expected withDelta:0.01f];
                 });
 
                 specify(^{
@@ -170,28 +173,28 @@ describe(@"FEMDeserializer", ^{
 
             context(@"update by null values", ^{
                 beforeAll(^{
-                    FEMMapping *mapping = [RealmObject supportedTypesMapping];
-                    NSDictionary *json = [CMFixture buildUsingFixture:@"SupportedTypes"];
+                    FEMMapping *mapping = [RealmObject attributesMapping];
+                    NSDictionary *json = [Fixture buildUsingFixture:@"SupportedTypes"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
 
                     FEMMapping *nullMapping = [RealmObject supportedNullableTypesMapping];
-                    NSDictionary *nullJSON = [CMFixture buildUsingFixture:@"SupportedNullTypes"];
+                    NSDictionary *nullJSON = [Fixture buildUsingFixture:@"SupportedNullTypes"];
                     [deserializer fillObject:realmObject fromRepresentation:nullJSON mapping:nullMapping];
                 });
 
                 specify(^{
                     BOOL expected = YES;
-                    [[@(realmObject.boolProperty) should] equal:@(expected)];
+                    [[@(realmObject.boolValue) should] equal:@(expected)];
                 });
 
                 specify(^{
                     bool expected = true;
-                    [[@(realmObject.booleanProperty) should] equal:@(expected)];
+                    [[@(realmObject.booleanValue) should] equal:@(expected)];
                 });
 
                 specify(^{
                     int expected = 3;
-                    [[@(realmObject.intProperty) should] equal:@(expected)];
+                    [[@(realmObject.intValue) should] equal:@(expected)];
                 });
 
                 specify(^{
@@ -206,17 +209,17 @@ describe(@"FEMDeserializer", ^{
 
                 specify(^{
                     long long expected = 9;
-                    [[@(realmObject.longLongProperty) should] equal:@(expected)];
+                    [[@(realmObject.longLongValue) should] equal:@(expected)];
                 });
 
                 specify(^{
                     float expected = 11.1f;
-                    [[@(realmObject.floatProperty) should] equal:expected withDelta:0.01f];
+                    [[@(realmObject.floatValue) should] equal:expected withDelta:0.01f];
                 });
 
                 specify(^{
                     double expected = 12.2;
-                    [[@(realmObject.doubleProperty) should] equal:expected withDelta:0.01f];
+                    [[@(realmObject.doubleValue) should] equal:expected withDelta:0.01f];
                 });
 
                 specify(^{
@@ -226,15 +229,15 @@ describe(@"FEMDeserializer", ^{
 
                 // Not yet supported by Realm <= 0.95.0
                 specify(^{
-                    [[realmObject.stringProperty should] beNil];
+                    [[realmObject.string should] beNil];
                 });
 
                 specify(^{
-                    [[realmObject.dateProperty should] beNil];
+                    [[realmObject.date should] beNil];
                 });
 
                 specify(^{
-                    [[realmObject.dataProperty should] beNil];
+                    [[realmObject.data should] beNil];
                 });
             });
         });
@@ -247,7 +250,7 @@ describe(@"FEMDeserializer", ^{
 
                 beforeEach(^{
                     FEMMapping *mapping = [RealmObject toOneRelationshipMapping];
-                    NSDictionary *json = [CMFixture buildUsingFixture:@"ToOneRelationship"];
+                    NSDictionary *json = [Fixture buildUsingFixture:@"ToOneRelationship"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                     childRealmObject = realmObject.toOneRelationship;
                 });
@@ -266,7 +269,7 @@ describe(@"FEMDeserializer", ^{
                 __block RealmObject *realmObject = nil;
                 beforeEach(^{
                     FEMMapping *mapping = [RealmObject toOneRelationshipMapping];
-                    NSDictionary *json = [CMFixture buildUsingFixture:@"ToOneNullRelationship"];
+                    NSDictionary *json = [Fixture buildUsingFixture:@"ToOneNullRelationship"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                 });
 
@@ -283,7 +286,7 @@ describe(@"FEMDeserializer", ^{
 
                 beforeEach(^{
                     FEMMapping *mapping = [RealmObject toManyRelationshipMapping];
-                    NSDictionary *json = [CMFixture buildUsingFixture:@"ToManyRelationship"];
+                    NSDictionary *json = [Fixture buildUsingFixture:@"ToManyRelationship"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                     relationship = realmObject.toManyRelationship;
                 });
@@ -308,7 +311,7 @@ describe(@"FEMDeserializer", ^{
 
                 beforeEach(^{
                     FEMMapping *mapping = [RealmObject toManyRelationshipMapping];
-                    NSDictionary *json = [CMFixture buildUsingFixture:@"ToManyNullRelationship"];
+                    NSDictionary *json = [Fixture buildUsingFixture:@"ToManyNullRelationship"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                     relationship = realmObject.toManyRelationship;
                 });

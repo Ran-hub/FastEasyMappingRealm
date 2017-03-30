@@ -17,7 +17,7 @@
 //}
 
 + (NSDictionary *)defaultPropertyValues {
-    return @{@"stringProperty": @""};
+    return @{@"string": @""};
 }
 
 @end

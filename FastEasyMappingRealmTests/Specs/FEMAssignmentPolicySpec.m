@@ -1,14 +1,15 @@
 // For License please refer to LICENSE file in the root of FastEasyMapping project
 
 #import <Kiwi/Kiwi.h>
-#import <CMFactory/CMFixture.h>
 #import <FastEasyMapping/FastEasyMapping.h>
 #import <FastEasyMappingRealm/FastEasyMappingRealm.h>
 #import <Realm/Realm.h>
+
 #import "RealmObject.h"
 #import "UniqueRealmObject.h"
 #import "UniqueToManyChildRealmObject.h"
 #import "FEMRealmAssignmentPolicy.h"
+#import "Fixture.h"
 
 SPEC_BEGIN(FEMAssignmentPolicySpec)
 describe(@"FEMAssignmentPolicy", ^{
@@ -38,7 +39,7 @@ describe(@"FEMAssignmentPolicy", ^{
             __block UniqueRealmObject *object = nil;
             beforeEach(^{
                 mapping = [UniqueRealmObject toManyRelationshipMappingWithPolicy:FEMAssignmentPolicyAssign];
-                NSDictionary *fixture0 = [CMFixture buildUsingFixture:@"AssingmentPolicyToManyInit"];
+                NSDictionary *fixture0 = [Fixture buildUsingFixture:@"AssingmentPolicyToManyInit"];
                 object = [deserializer objectFromRepresentation:fixture0 mapping:mapping];
             });
 
@@ -64,7 +65,7 @@ describe(@"FEMAssignmentPolicy", ^{
             __block UniqueRealmObject *object = nil;
             beforeEach(^{
                 mapping = [UniqueRealmObject toManyRelationshipMappingWithPolicy:FEMAssignmentPolicyAssign];
-                NSDictionary *fixture0 = [CMFixture buildUsingFixture:@"AssingmentPolicyToManyInit"];
+                NSDictionary *fixture0 = [Fixture buildUsingFixture:@"AssingmentPolicyToManyInit"];
                 object = [deserializer objectFromRepresentation:fixture0 mapping:mapping];
             });
 
@@ -85,7 +86,7 @@ describe(@"FEMAssignmentPolicy", ^{
             });
 
             it(@"should re-assign value", ^{
-                NSDictionary *fixture1 = [CMFixture buildUsingFixture:@"AssingmentPolicyToManyUpdate"];
+                NSDictionary *fixture1 = [Fixture buildUsingFixture:@"AssingmentPolicyToManyUpdate"];
                 [deserializer fillObject:object fromRepresentation:fixture1 mapping:mapping];
 
                 [[@(object.primaryKeyProperty) should] equal:@5];
@@ -101,7 +102,7 @@ describe(@"FEMAssignmentPolicy", ^{
             });
 
             it(@"should assign null", ^{
-                NSDictionary *fixture2 = [CMFixture buildUsingFixture:@"AssingmentPolicyToManyNull"];
+                NSDictionary *fixture2 = [Fixture buildUsingFixture:@"AssingmentPolicyToManyNull"];
                 [deserializer fillObject:object fromRepresentation:fixture2 mapping:mapping];
 
                 [[@(object.primaryKeyProperty) should] equal:@5];
@@ -117,7 +118,7 @@ describe(@"FEMAssignmentPolicy", ^{
             __block UniqueRealmObject *object = nil;
             beforeEach(^{
                 mapping = [UniqueRealmObject toManyRelationshipMappingWithPolicy:FEMRealmAssignmentPolicyCollectionMerge];
-                NSDictionary *fixture0 = [CMFixture buildUsingFixture:@"AssingmentPolicyToManyInit"];
+                NSDictionary *fixture0 = [Fixture buildUsingFixture:@"AssingmentPolicyToManyInit"];
                 object = [deserializer objectFromRepresentation:fixture0 mapping:mapping];
             });
 
@@ -140,7 +141,7 @@ describe(@"FEMAssignmentPolicy", ^{
             });
 
             it(@"should merge values", ^{
-                NSDictionary *fixture1 = [CMFixture buildUsingFixture:@"AssingmentPolicyToManyUpdate"];
+                NSDictionary *fixture1 = [Fixture buildUsingFixture:@"AssingmentPolicyToManyUpdate"];
                 [deserializer fillObject:object fromRepresentation:fixture1 mapping:mapping];
 
                 [[@(object.primaryKeyProperty) should] equal:@5];
@@ -157,7 +158,7 @@ describe(@"FEMAssignmentPolicy", ^{
             });
 
             it(@"should ignore null value", ^{
-                NSDictionary *fixture2 = [CMFixture buildUsingFixture:@"AssingmentPolicyToManyNull"];
+                NSDictionary *fixture2 = [Fixture buildUsingFixture:@"AssingmentPolicyToManyNull"];
                 [deserializer fillObject:object fromRepresentation:fixture2 mapping:mapping];
 
                 [[@(object.primaryKeyProperty) should] equal:@5];
@@ -172,7 +173,7 @@ describe(@"FEMAssignmentPolicy", ^{
             });
 
             it(@"should ignore empty array", ^{
-                NSDictionary *fixture3 = [CMFixture buildUsingFixture:@"AssingmentPolicyToManyEmptyArray"];
+                NSDictionary *fixture3 = [Fixture buildUsingFixture:@"AssingmentPolicyToManyEmptyArray"];
                 [deserializer fillObject:object fromRepresentation:fixture3 mapping:mapping];
 
                 [[@(object.primaryKeyProperty) should] equal:@5];
@@ -191,7 +192,7 @@ describe(@"FEMAssignmentPolicy", ^{
             __block UniqueRealmObject *object = nil;
             beforeEach(^{
                 mapping = [UniqueRealmObject toManyRelationshipMappingWithPolicy:FEMRealmAssignmentPolicyCollectionReplace];
-                NSDictionary *fixture0 = [CMFixture buildUsingFixture:@"AssingmentPolicyToManyInit"];
+                NSDictionary *fixture0 = [Fixture buildUsingFixture:@"AssingmentPolicyToManyInit"];
                 object = [deserializer objectFromRepresentation:fixture0 mapping:mapping];
             });
 
@@ -214,7 +215,7 @@ describe(@"FEMAssignmentPolicy", ^{
             });
 
             it(@"should replace values", ^{
-                NSDictionary *fixture1 = [CMFixture buildUsingFixture:@"AssingmentPolicyToManyUpdate"];
+                NSDictionary *fixture1 = [Fixture buildUsingFixture:@"AssingmentPolicyToManyUpdate"];
                 [deserializer fillObject:object fromRepresentation:fixture1 mapping:mapping];
 
                 [[@(object.primaryKeyProperty) should] equal:@5];
@@ -230,7 +231,7 @@ describe(@"FEMAssignmentPolicy", ^{
             });
 
             it(@"should replace by null value", ^{
-                NSDictionary *fixture2 = [CMFixture buildUsingFixture:@"AssingmentPolicyToManyNull"];
+                NSDictionary *fixture2 = [Fixture buildUsingFixture:@"AssingmentPolicyToManyNull"];
                 [deserializer fillObject:object fromRepresentation:fixture2 mapping:mapping];
 
                 [[@(object.primaryKeyProperty) should] equal:@5];
@@ -240,7 +241,7 @@ describe(@"FEMAssignmentPolicy", ^{
             });
 
             it(@"should replace by empty array", ^{
-                NSDictionary *fixture3 = [CMFixture buildUsingFixture:@"AssingmentPolicyToManyEmptyArray"];
+                NSDictionary *fixture3 = [Fixture buildUsingFixture:@"AssingmentPolicyToManyEmptyArray"];
                 [deserializer fillObject:object fromRepresentation:fixture3 mapping:mapping];
 
                 [[@(object.primaryKeyProperty) should] equal:@5];
@@ -269,8 +270,8 @@ describe(@"FEMAssignmentPolicy", ^{
 //                __block FEMMapping *mapping = nil;
 //
 //                beforeAll(^{
-//                    mapping = [RealmObject supportedTypesMapping];
-//                    NSDictionary *json = [CMFixture buildUsingFixture:@"SupportedTypes"];
+//                    mapping = [RealmObject attributesMapping];
+//                    NSDictionary *json = [Fixture buildUsingFixture:@"SupportedTypes"];
 //                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
 //                });
 //
@@ -280,17 +281,17 @@ describe(@"FEMAssignmentPolicy", ^{
 //
 //                specify(^{
 //                    BOOL expected = YES;
-//                    [[@(realmObject.boolProperty) should] equal:@(expected)];
+//                    [[@(realmObject.boolValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{
 //                    bool expected = true;
-//                    [[@(realmObject.booleanProperty) should] equal:@(expected)];
+//                    [[@(realmObject.booleanValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{
 //                    int expected = 3;
-//                    [[@(realmObject.intProperty) should] equal:@(expected)];
+//                    [[@(realmObject.intValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{
@@ -305,17 +306,17 @@ describe(@"FEMAssignmentPolicy", ^{
 //
 //                specify(^{
 //                    long long expected = 9;
-//                    [[@(realmObject.longLongProperty) should] equal:@(expected)];
+//                    [[@(realmObject.longLongValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{
 //                    float expected = 11.1f;
-//                    [[@(realmObject.floatProperty) should] equal:expected withDelta:0.01f];
+//                    [[@(realmObject.floatValue) should] equal:expected withDelta:0.01f];
 //                });
 //
 //                specify(^{
 //                    double expected = 12.2;
-//                    [[@(realmObject.doubleProperty) should] equal:expected withDelta:0.01f];
+//                    [[@(realmObject.doubleValue) should] equal:expected withDelta:0.01f];
 //                });
 //
 //                specify(^{
@@ -325,42 +326,42 @@ describe(@"FEMAssignmentPolicy", ^{
 //
 //                specify(^{
 //                    NSString *expected = @"string";
-//                    [[realmObject.stringProperty should] equal:expected];
+//                    [[realmObject.string should] equal:expected];
 //                });
 //
 //                specify(^{
-//                    FEMAttribute *attribute = [mapping attributeForProperty:@"dateProperty"];
+//                    FEMAttribute *attribute = [mapping attributeForProperty:@"date"];
 //                    NSDate *expected = [attribute mapValue:@"2005-08-09T18:31:42+03"];
-//                    [[realmObject.dateProperty should] equal:expected];
+//                    [[realmObject.date should] equal:expected];
 //                });
 //
 //                specify(^{
-//                    FEMAttribute *attribute = [mapping attributeForProperty:@"dataProperty"];
+//                    FEMAttribute *attribute = [mapping attributeForProperty:@"data"];
 //                    NSData *expected = [attribute mapValue:@"utf8"];
-//                    [[realmObject.dataProperty should] equal:expected];
+//                    [[realmObject.data should] equal:expected];
 //                });
 //            });
 //
 //            context(@"null values", ^{
 //                beforeEach(^{
 //                    FEMMapping *mapping = [RealmObject supportedNullableTypesMapping];
-//                    NSDictionary *json = [CMFixture buildUsingFixture:@"SupportedNullTypes"];
+//                    NSDictionary *json = [Fixture buildUsingFixture:@"SupportedNullTypes"];
 //                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
 //                });
 //
 //                specify(^{
 //                    BOOL expected = NO;
-//                    [[@(realmObject.boolProperty) should] equal:@(expected)];
+//                    [[@(realmObject.boolValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{
 //                    bool expected = false;
-//                    [[@(realmObject.booleanProperty) should] equal:@(expected)];
+//                    [[@(realmObject.booleanValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{
 //                    int expected = 0;
-//                    [[@(realmObject.intProperty) should] equal:@(expected)];
+//                    [[@(realmObject.intValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{
@@ -375,17 +376,17 @@ describe(@"FEMAssignmentPolicy", ^{
 //
 //                specify(^{
 //                    long long expected = 0;
-//                    [[@(realmObject.longLongProperty) should] equal:@(expected)];
+//                    [[@(realmObject.longLongValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{
 //                    float expected = 0.f;
-//                    [[@(realmObject.floatProperty) should] equal:expected withDelta:0.01f];
+//                    [[@(realmObject.floatValue) should] equal:expected withDelta:0.01f];
 //                });
 //
 //                specify(^{
 //                    double expected = 0.0;
-//                    [[@(realmObject.doubleProperty) should] equal:expected withDelta:0.01f];
+//                    [[@(realmObject.doubleValue) should] equal:expected withDelta:0.01f];
 //                });
 //
 //                specify(^{
@@ -396,28 +397,28 @@ describe(@"FEMAssignmentPolicy", ^{
 //
 //            context(@"update by null values", ^{
 //                beforeAll(^{
-//                    FEMMapping *mapping = [RealmObject supportedTypesMapping];
-//                    NSDictionary *json = [CMFixture buildUsingFixture:@"SupportedTypes"];
+//                    FEMMapping *mapping = [RealmObject attributesMapping];
+//                    NSDictionary *json = [Fixture buildUsingFixture:@"SupportedTypes"];
 //                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
 //
 //                    FEMMapping *nullMapping = [RealmObject supportedNullableTypesMapping];
-//                    NSDictionary *nullJSON = [CMFixture buildUsingFixture:@"SupportedNullTypes"];
+//                    NSDictionary *nullJSON = [Fixture buildUsingFixture:@"SupportedNullTypes"];
 //                    [deserializer fillObject:realmObject fromRepresentation:nullJSON mapping:nullMapping];
 //                });
 //
 //                specify(^{
 //                    BOOL expected = YES;
-//                    [[@(realmObject.boolProperty) should] equal:@(expected)];
+//                    [[@(realmObject.boolValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{
 //                    bool expected = true;
-//                    [[@(realmObject.booleanProperty) should] equal:@(expected)];
+//                    [[@(realmObject.booleanValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{
 //                    int expected = 3;
-//                    [[@(realmObject.intProperty) should] equal:@(expected)];
+//                    [[@(realmObject.intValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{
@@ -432,17 +433,17 @@ describe(@"FEMAssignmentPolicy", ^{
 //
 //                specify(^{
 //                    long long expected = 9;
-//                    [[@(realmObject.longLongProperty) should] equal:@(expected)];
+//                    [[@(realmObject.longLongValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{
 //                    float expected = 11.1f;
-//                    [[@(realmObject.floatProperty) should] equal:expected withDelta:0.01f];
+//                    [[@(realmObject.floatValue) should] equal:expected withDelta:0.01f];
 //                });
 //
 //                specify(^{
 //                    double expected = 12.2;
-//                    [[@(realmObject.doubleProperty) should] equal:expected withDelta:0.01f];
+//                    [[@(realmObject.doubleValue) should] equal:expected withDelta:0.01f];
 //                });
 //
 //                specify(^{
@@ -473,7 +474,7 @@ describe(@"FEMAssignmentPolicy", ^{
 //
 //                beforeEach(^{
 //                    FEMMapping *mapping = [RealmObject toOneRelationshipMapping];
-//                    NSDictionary *json = [CMFixture buildUsingFixture:@"ToOneRelationship"];
+//                    NSDictionary *json = [Fixture buildUsingFixture:@"ToOneRelationship"];
 //                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
 //                    childRealmObject = realmObject.toOneRelationship;
 //                });
@@ -492,7 +493,7 @@ describe(@"FEMAssignmentPolicy", ^{
 //                __block RealmObject *realmObject = nil;
 //                beforeEach(^{
 //                    FEMMapping *mapping = [RealmObject toOneRelationshipMapping];
-//                    NSDictionary *json = [CMFixture buildUsingFixture:@"ToOneNullRelationship"];
+//                    NSDictionary *json = [Fixture buildUsingFixture:@"ToOneNullRelationship"];
 //                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
 //                });
 //
@@ -509,7 +510,7 @@ describe(@"FEMAssignmentPolicy", ^{
 //
 //                beforeEach(^{
 //                    FEMMapping *mapping = [RealmObject toManyRelationshipMapping];
-//                    NSDictionary *json = [CMFixture buildUsingFixture:@"ToManyRelationship"];
+//                    NSDictionary *json = [Fixture buildUsingFixture:@"ToManyRelationship"];
 //                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
 //                    relationship = realmObject.toManyRelationship;
 //                });
@@ -534,7 +535,7 @@ describe(@"FEMAssignmentPolicy", ^{
 //
 //                beforeEach(^{
 //                    FEMMapping *mapping = [RealmObject toManyRelationshipMapping];
-//                    NSDictionary *json = [CMFixture buildUsingFixture:@"ToManyNullRelationship"];
+//                    NSDictionary *json = [Fixture buildUsingFixture:@"ToManyNullRelationship"];
 //                    realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
 //                    relationship = realmObject.toManyRelationship;
 //                });
