@@ -45,7 +45,7 @@ LinkingObjects	@property (readonly) RLMLinkingObjects<Object *> *value; 2	n/a: m
 @property (nonatomic) NSInteger nsIntegerValue;
 @property (nonatomic, nullable) NSNumber<RLMInt> *nsIntegerObject;
 
-@property (nonatomic) long longProperty;
+@property (nonatomic) long longValue;
 @property (nonatomic, nullable) NSNumber<RLMInt> *longObject;
 
 @property (nonatomic) long long longLongValue;
@@ -71,8 +71,6 @@ LinkingObjects	@property (readonly) RLMLinkingObjects<Object *> *value; 2	n/a: m
 
 + (FEMMapping *)attributesMapping;
 
-
-+ (FEMMapping *)supportedNullableTypesMapping;
 + (FEMMapping *)toOneRelationshipMapping;
 + (FEMMapping *)toManyRelationshipMapping;
 

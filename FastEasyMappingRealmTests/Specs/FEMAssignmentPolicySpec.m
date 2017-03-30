@@ -301,7 +301,7 @@ describe(@"FEMAssignmentPolicy", ^{
 //
 //                specify(^{
 //                    long expected = 7;
-//                    [[@(realmObject.longProperty) should] equal:@(expected)];
+//                    [[@(realmObject.longValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{
@@ -371,7 +371,7 @@ describe(@"FEMAssignmentPolicy", ^{
 //
 //                specify(^{
 //                    long expected = 0;
-//                    [[@(realmObject.longProperty) should] equal:@(expected)];
+//                    [[@(realmObject.longValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{
@@ -428,7 +428,7 @@ describe(@"FEMAssignmentPolicy", ^{
 //
 //                specify(^{
 //                    long expected = 7;
-//                    [[@(realmObject.longProperty) should] equal:@(expected)];
+//                    [[@(realmObject.longValue) should] equal:@(expected)];
 //                });
 //
 //                specify(^{

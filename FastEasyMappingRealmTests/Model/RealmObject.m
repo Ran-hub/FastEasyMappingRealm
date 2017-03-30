@@ -55,39 +55,6 @@
     return mapping;
 }
 
-+ (FEMMapping *)supportedNullableTypesMapping {
-    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:[self className]];
-    [mapping addAttributesFromArray:@[
-        @"boolValue",
-        @"booleanValue",
-        @"intValue",
-        @"integerProperty",
-        @"longProperty",
-        @"longLongValue",
-        @"floatValue",
-        @"doubleValue",
-        @"cgFloatProperty",
-				@"string",
-				@"data"
-    ]];
-	
-	[mapping addAttribute:[FEMAttribute mappingOfProperty:@"date" toKeyPath:@"date" dateFormat:@"YYYY-mm-dd'T'HH:mm:ssZZZZ"]];
-
-	[mapping addAttribute:[FEMAttribute mappingOfProperty:@"data" toKeyPath:@"data" map:^id(id value) {
-		if ([value isKindOfClass:[NSString class]]) {
-			return [(NSString *)value dataUsingEncoding:NSUTF8StringEncoding];
-		}
-		return nil;
-	} reverseMap:^id(id value) {
-		if ([value isKindOfClass:[NSData class]]) {
-			return [[NSString alloc] initWithData:value encoding:NSUTF8StringEncoding];
-		}
-		return nil;
-	}]];
-
-    return mapping;
-}
-
 + (FEMMapping *)toOneRelationshipMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:[self className]];
     [mapping addAttributesFromArray:@[@"integerProperty"]];
