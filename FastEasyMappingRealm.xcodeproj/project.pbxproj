@@ -14,18 +14,16 @@
 		AD9400CF1E8BE11A00558F37 /* FastEasyMappingRealm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400C11E8BE11A00558F37 /* FastEasyMappingRealm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD9400E51E8BE75000558F37 /* FEMRealmAssignmentPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400D91E8BE75000558F37 /* FEMRealmAssignmentPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD9400E61E8BE75000558F37 /* FEMRealmAssignmentPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400DA1E8BE75000558F37 /* FEMRealmAssignmentPolicy.m */; };
-		AD9400E71E8BE75000558F37 /* FEMAttribute+Realm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400DC1E8BE75000558F37 /* FEMAttribute+Realm.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD9400E81E8BE75000558F37 /* FEMAttribute+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400DD1E8BE75000558F37 /* FEMAttribute+Realm.m */; };
 		AD9400E91E8BE75000558F37 /* FEMDeserializer+Realm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400DE1E8BE75000558F37 /* FEMDeserializer+Realm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD9400EA1E8BE75000558F37 /* FEMDeserializer+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400DF1E8BE75000558F37 /* FEMDeserializer+Realm.m */; };
 		AD9400EB1E8BE75000558F37 /* FEMObjectCache+Realm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400E01E8BE75000558F37 /* FEMObjectCache+Realm.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD9400EC1E8BE75000558F37 /* FEMObjectCache+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400E11E8BE75000558F37 /* FEMObjectCache+Realm.m */; };
 		AD9400ED1E8BE75000558F37 /* FEMRealmStore.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400E31E8BE75000558F37 /* FEMRealmStore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD9400EE1E8BE75000558F37 /* FEMRealmStore.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400E41E8BE75000558F37 /* FEMRealmStore.m */; };
-		AD94010A1E8BE7B100558F37 /* AssingmentPolicyToManyEmptyArray.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F01E8BE7B100558F37 /* AssingmentPolicyToManyEmptyArray.json */; };
-		AD94010B1E8BE7B100558F37 /* AssingmentPolicyToManyInit.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F11E8BE7B100558F37 /* AssingmentPolicyToManyInit.json */; };
-		AD94010C1E8BE7B100558F37 /* AssingmentPolicyToManyNull.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F21E8BE7B100558F37 /* AssingmentPolicyToManyNull.json */; };
-		AD94010D1E8BE7B100558F37 /* AssingmentPolicyToManyUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F31E8BE7B100558F37 /* AssingmentPolicyToManyUpdate.json */; };
+		AD94010A1E8BE7B100558F37 /* AssignmentPolicyToManyEmptyArray.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F01E8BE7B100558F37 /* AssignmentPolicyToManyEmptyArray.json */; };
+		AD94010B1E8BE7B100558F37 /* AssignmentPolicyToManyInit.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F11E8BE7B100558F37 /* AssignmentPolicyToManyInit.json */; };
+		AD94010C1E8BE7B100558F37 /* AssignmentPolicyToManyNull.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F21E8BE7B100558F37 /* AssignmentPolicyToManyNull.json */; };
+		AD94010D1E8BE7B100558F37 /* AssignmentPolicyToManyUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F31E8BE7B100558F37 /* AssignmentPolicyToManyUpdate.json */; };
 		AD94010E1E8BE7B100558F37 /* PrimaryKey.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F41E8BE7B100558F37 /* PrimaryKey.json */; };
 		AD94010F1E8BE7B100558F37 /* SupportedNullTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F51E8BE7B100558F37 /* SupportedNullTypes.json */; };
 		AD9401101E8BE7B100558F37 /* SupportedTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F61E8BE7B100558F37 /* SupportedTypes.json */; };
@@ -67,18 +65,16 @@
 		AD9400CE1E8BE11A00558F37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD9400D91E8BE75000558F37 /* FEMRealmAssignmentPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEMRealmAssignmentPolicy.h; sourceTree = "<group>"; };
 		AD9400DA1E8BE75000558F37 /* FEMRealmAssignmentPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMRealmAssignmentPolicy.m; sourceTree = "<group>"; };
-		AD9400DC1E8BE75000558F37 /* FEMAttribute+Realm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FEMAttribute+Realm.h"; sourceTree = "<group>"; };
-		AD9400DD1E8BE75000558F37 /* FEMAttribute+Realm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMAttribute+Realm.m"; sourceTree = "<group>"; };
 		AD9400DE1E8BE75000558F37 /* FEMDeserializer+Realm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FEMDeserializer+Realm.h"; sourceTree = "<group>"; };
 		AD9400DF1E8BE75000558F37 /* FEMDeserializer+Realm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMDeserializer+Realm.m"; sourceTree = "<group>"; };
 		AD9400E01E8BE75000558F37 /* FEMObjectCache+Realm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FEMObjectCache+Realm.h"; sourceTree = "<group>"; };
 		AD9400E11E8BE75000558F37 /* FEMObjectCache+Realm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMObjectCache+Realm.m"; sourceTree = "<group>"; };
 		AD9400E31E8BE75000558F37 /* FEMRealmStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FEMRealmStore.h; sourceTree = "<group>"; };
 		AD9400E41E8BE75000558F37 /* FEMRealmStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMRealmStore.m; sourceTree = "<group>"; };
-		AD9400F01E8BE7B100558F37 /* AssingmentPolicyToManyEmptyArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssingmentPolicyToManyEmptyArray.json; sourceTree = "<group>"; };
-		AD9400F11E8BE7B100558F37 /* AssingmentPolicyToManyInit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssingmentPolicyToManyInit.json; sourceTree = "<group>"; };
-		AD9400F21E8BE7B100558F37 /* AssingmentPolicyToManyNull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssingmentPolicyToManyNull.json; sourceTree = "<group>"; };
-		AD9400F31E8BE7B100558F37 /* AssingmentPolicyToManyUpdate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssingmentPolicyToManyUpdate.json; sourceTree = "<group>"; };
+		AD9400F01E8BE7B100558F37 /* AssignmentPolicyToManyEmptyArray.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToManyEmptyArray.json; sourceTree = "<group>"; };
+		AD9400F11E8BE7B100558F37 /* AssignmentPolicyToManyInit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToManyInit.json; sourceTree = "<group>"; };
+		AD9400F21E8BE7B100558F37 /* AssignmentPolicyToManyNull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToManyNull.json; sourceTree = "<group>"; };
+		AD9400F31E8BE7B100558F37 /* AssignmentPolicyToManyUpdate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToManyUpdate.json; sourceTree = "<group>"; };
 		AD9400F41E8BE7B100558F37 /* PrimaryKey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PrimaryKey.json; sourceTree = "<group>"; };
 		AD9400F51E8BE7B100558F37 /* SupportedNullTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SupportedNullTypes.json; sourceTree = "<group>"; };
 		AD9400F61E8BE7B100558F37 /* SupportedTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SupportedTypes.json; sourceTree = "<group>"; };
@@ -198,8 +194,6 @@
 		AD9400DB1E8BE75000558F37 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				AD9400DC1E8BE75000558F37 /* FEMAttribute+Realm.h */,
-				AD9400DD1E8BE75000558F37 /* FEMAttribute+Realm.m */,
 				AD9400DE1E8BE75000558F37 /* FEMDeserializer+Realm.h */,
 				AD9400DF1E8BE75000558F37 /* FEMDeserializer+Realm.m */,
 				AD9400E01E8BE75000558F37 /* FEMObjectCache+Realm.h */,
@@ -220,10 +214,10 @@
 		AD9400EF1E8BE7B100558F37 /* Fixture */ = {
 			isa = PBXGroup;
 			children = (
-				AD9400F01E8BE7B100558F37 /* AssingmentPolicyToManyEmptyArray.json */,
-				AD9400F11E8BE7B100558F37 /* AssingmentPolicyToManyInit.json */,
-				AD9400F21E8BE7B100558F37 /* AssingmentPolicyToManyNull.json */,
-				AD9400F31E8BE7B100558F37 /* AssingmentPolicyToManyUpdate.json */,
+				AD9400F01E8BE7B100558F37 /* AssignmentPolicyToManyEmptyArray.json */,
+				AD9400F11E8BE7B100558F37 /* AssignmentPolicyToManyInit.json */,
+				AD9400F21E8BE7B100558F37 /* AssignmentPolicyToManyNull.json */,
+				AD9400F31E8BE7B100558F37 /* AssignmentPolicyToManyUpdate.json */,
 				AD9400F41E8BE7B100558F37 /* PrimaryKey.json */,
 				AD9400F51E8BE7B100558F37 /* SupportedNullTypes.json */,
 				AD9400F61E8BE7B100558F37 /* SupportedTypes.json */,
@@ -283,7 +277,6 @@
 				AD9400ED1E8BE75000558F37 /* FEMRealmStore.h in Headers */,
 				AD9400E91E8BE75000558F37 /* FEMDeserializer+Realm.h in Headers */,
 				AD9400E51E8BE75000558F37 /* FEMRealmAssignmentPolicy.h in Headers */,
-				AD9400E71E8BE75000558F37 /* FEMAttribute+Realm.h in Headers */,
 				AD9400EB1E8BE75000558F37 /* FEMObjectCache+Realm.h in Headers */,
 				AD9400CF1E8BE11A00558F37 /* FastEasyMappingRealm.h in Headers */,
 			);
@@ -386,13 +379,13 @@
 			files = (
 				AD9401111E8BE7B100558F37 /* ToManyNullRelationship.json in Resources */,
 				AD94010E1E8BE7B100558F37 /* PrimaryKey.json in Resources */,
-				AD94010C1E8BE7B100558F37 /* AssingmentPolicyToManyNull.json in Resources */,
-				AD94010B1E8BE7B100558F37 /* AssingmentPolicyToManyInit.json in Resources */,
+				AD94010C1E8BE7B100558F37 /* AssignmentPolicyToManyNull.json in Resources */,
+				AD94010B1E8BE7B100558F37 /* AssignmentPolicyToManyInit.json in Resources */,
 				AD9401141E8BE7B100558F37 /* ToOneRelationship.json in Resources */,
 				AD9401121E8BE7B100558F37 /* ToManyRelationship.json in Resources */,
 				AD9401101E8BE7B100558F37 /* SupportedTypes.json in Resources */,
-				AD94010A1E8BE7B100558F37 /* AssingmentPolicyToManyEmptyArray.json in Resources */,
-				AD94010D1E8BE7B100558F37 /* AssingmentPolicyToManyUpdate.json in Resources */,
+				AD94010A1E8BE7B100558F37 /* AssignmentPolicyToManyEmptyArray.json in Resources */,
+				AD94010D1E8BE7B100558F37 /* AssignmentPolicyToManyUpdate.json in Resources */,
 				AD9401131E8BE7B100558F37 /* ToOneNullRelationship.json in Resources */,
 				AD94010F1E8BE7B100558F37 /* SupportedNullTypes.json in Resources */,
 			);
@@ -486,7 +479,6 @@
 				AD9400EE1E8BE75000558F37 /* FEMRealmStore.m in Sources */,
 				AD9400EC1E8BE75000558F37 /* FEMObjectCache+Realm.m in Sources */,
 				AD9400E61E8BE75000558F37 /* FEMRealmAssignmentPolicy.m in Sources */,
-				AD9400E81E8BE75000558F37 /* FEMAttribute+Realm.m in Sources */,
 				AD9400EA1E8BE75000558F37 /* FEMDeserializer+Realm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
