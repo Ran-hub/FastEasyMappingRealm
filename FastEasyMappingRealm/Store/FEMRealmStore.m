@@ -3,12 +3,12 @@
 #import "FEMRealmStore.h"
 #import "FEMObjectCache+Realm.h"
 
-@import FastEasyMapping;
+@import FastEasyMapping.FEMMapping;
 @import Realm;
 
 @implementation FEMRealmStore {
     FEMObjectCache *_cache;
-    NSHashTable<RLMObject *> *_newObjects;
+    NSHashTable<RLMObjectBase *> *_newObjects;
 }
 
 - (instancetype)initWithRealm:(RLMRealm *)realm {
@@ -48,9 +48,8 @@
 }
 
 - (id)newObjectForMapping:(FEMMapping *)mapping {
-    NSString *entityName = [mapping entityName];
-    Class realmObjectClass = NSClassFromString(entityName);
-    RLMObject *object = [(RLMObject *)[realmObjectClass alloc] init];
+    Class realmObjectClass = [mapping objectClass];
+    RLMObjectBase *object = [(RLMObjectBase *)[realmObjectClass alloc] init];
 
     [_newObjects addObject:object];
 
