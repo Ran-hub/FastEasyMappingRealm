@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		18ACD514659D4C3C0278CC77 /* Pods_FastEasyMappingRealmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B8F163B5EE34CAB7F4D8C3 /* Pods_FastEasyMappingRealmTests.framework */; };
+		1D6A304460D626A229EE33E1 /* AssignmentPolicyToOneInit.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3B226D8E5C958A3A810B /* AssignmentPolicyToOneInit.json */; };
+		1D6A30DC583D66E065BF1E19 /* AssignmentPolicyToOneNull.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3F3CBAED31FB56A1BACA /* AssignmentPolicyToOneNull.json */; };
+		1D6A312ABA1C5814235ADF91 /* AssignmentPolicyToOneUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3FBBE6A00A55297E22F9 /* AssignmentPolicyToOneUpdate.json */; };
 		1D6A3B21882F44C2845BBE57 /* Fixture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A31A1AF6EB00C258F7B81 /* Fixture.m */; };
 		99BB42C3A092B0B3AD4F527F /* Pods_FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D246DBB4A81B748008746CD0 /* Pods_FastEasyMappingRealm.framework */; };
 		AD9400C81E8BE11A00558F37 /* FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9400BE1E8BE11A00558F37 /* FastEasyMappingRealm.framework */; };
@@ -53,7 +56,10 @@
 
 /* Begin PBXFileReference section */
 		1D6A31A1AF6EB00C258F7B81 /* Fixture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fixture.m; sourceTree = "<group>"; };
+		1D6A3B226D8E5C958A3A810B /* AssignmentPolicyToOneInit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToOneInit.json; sourceTree = "<group>"; };
 		1D6A3D0333F968F2A500D33B /* Fixture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fixture.h; sourceTree = "<group>"; };
+		1D6A3F3CBAED31FB56A1BACA /* AssignmentPolicyToOneNull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToOneNull.json; sourceTree = "<group>"; };
+		1D6A3FBBE6A00A55297E22F9 /* AssignmentPolicyToOneUpdate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToOneUpdate.json; sourceTree = "<group>"; };
 		398AB909B1FC702CD2447C6C /* Pods-FastEasyMappingRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealm/Pods-FastEasyMappingRealm.debug.xcconfig"; sourceTree = "<group>"; };
 		5250A0E1DF487BEED66BFD8E /* Pods-FastEasyMappingRealm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealm.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealm/Pods-FastEasyMappingRealm.release.xcconfig"; sourceTree = "<group>"; };
 		9FDB92EC67A17C7D8DA643ED /* Pods-FastEasyMappingRealmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealmTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealmTests/Pods-FastEasyMappingRealmTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -225,6 +231,9 @@
 				AD9400F81E8BE7B100558F37 /* ToManyRelationship.json */,
 				AD9400F91E8BE7B100558F37 /* ToOneNullRelationship.json */,
 				AD9400FA1E8BE7B100558F37 /* ToOneRelationship.json */,
+				1D6A3F3CBAED31FB56A1BACA /* AssignmentPolicyToOneNull.json */,
+				1D6A3B226D8E5C958A3A810B /* AssignmentPolicyToOneInit.json */,
+				1D6A3FBBE6A00A55297E22F9 /* AssignmentPolicyToOneUpdate.json */,
 			);
 			path = Fixture;
 			sourceTree = "<group>";
@@ -388,6 +397,9 @@
 				AD94010D1E8BE7B100558F37 /* AssignmentPolicyToManyUpdate.json in Resources */,
 				AD9401131E8BE7B100558F37 /* ToOneNullRelationship.json in Resources */,
 				AD94010F1E8BE7B100558F37 /* SupportedNullTypes.json in Resources */,
+				1D6A30DC583D66E065BF1E19 /* AssignmentPolicyToOneNull.json in Resources */,
+				1D6A304460D626A229EE33E1 /* AssignmentPolicyToOneInit.json in Resources */,
+				1D6A312ABA1C5814235ADF91 /* AssignmentPolicyToOneUpdate.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

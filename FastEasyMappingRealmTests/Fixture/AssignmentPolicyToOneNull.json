@@ -1,0 +1,6 @@
+{
+  "primaryKey": 5,
+  "toOne": {
+    "primaryKey": 11
+  }
+}
