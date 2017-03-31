@@ -25,6 +25,9 @@ describe(@"FEMDeserializer", ^{
         });
 
         afterEach(^{
+            [realm transactionWithBlock:^{
+                [realm deleteAllObjects];
+            }];
             realm = nil;
             store = nil;
             deserializer = nil;

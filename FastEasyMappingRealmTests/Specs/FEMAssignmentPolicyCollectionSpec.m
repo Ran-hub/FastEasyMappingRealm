@@ -169,7 +169,6 @@ describe(@"FEMAssignmentPolicyCollection", ^{
 
         __block UniqueRealmObject *object = nil;
         beforeEach(^{
-            mapping = [UniqueRealmObject toManyRelationshipMappingWithPolicy:FEMRealmAssignmentPolicyCollectionReplace];
             NSDictionary *fixture0 = [Fixture buildUsingFixture:@"AssignmentPolicyToManyInit"];
             object = [deserializer objectFromRepresentation:fixture0 mapping:mapping];
         });

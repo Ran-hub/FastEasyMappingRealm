@@ -12,18 +12,18 @@
 FEMObjectCacheSource FEMRealmObjectCacheSource(RLMRealm *realm) {
     return ^id<NSFastEnumeration> (FEMMapping *mapping, NSSet *primaryKeys) {
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K IN %@", mapping.primaryKey, primaryKeys];
-        Class realmClass = mapping.objectClass;
+//        Class realmClass = mapping.objectClass;
 
-        NSCAssert(
-            [realmClass isKindOfClass:[RLMObjectBase class]],
-            @"Attempt to use FastEasyMapping configured for Realm with non-Realm mapping!\n"
-            "-[FEMMapping objectClass] expected to be kind of <%@>, but appears to be <%@>\n"
-            "You should not mix mappings for different types (NSObject, NSManagedObject, Realm, etc)",
-            NSStringFromClass([RLMObjectBase class]),
-            NSStringFromClass(mapping.objectClass)
-        );
+//        NSCAssert(
+//            [realmClass isKindOfClass:[RLMObjectBase class]],
+//            @"Attempt to use FastEasyMapping configured for Realm with non-Realm mapping!\n"
+//            "-[FEMMapping objectClass] expected to be kind of <%@>, but appears to be <%@>\n"
+//            "You should not mix mappings for different types (NSObject, NSManagedObject, Realm, etc)",
+//            NSStringFromClass([RLMObjectBase class]),
+//            NSStringFromClass(mapping.objectClass)
+//        );
 
-        RLMResults *results = [realm objects:[realmClass className] withPredicate:predicate];
+        RLMResults *results = [realm objects:mapping.entityName withPredicate:predicate];
         return results;
     };
 }

@@ -21,7 +21,7 @@
 @implementation UniqueRealmObject (Mapping)
 
 + (FEMMapping *)defaultMapping {
-    FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
+    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:[self className]];
     mapping.primaryKey = [self primaryKey];
     [mapping addAttributesFromArray:@[@"primaryKey"]];
 
@@ -31,7 +31,7 @@
 + (FEMMapping *)toOneRelationshipMappingWithPolicy:(FEMAssignmentPolicy)policy {
     FEMMapping *mapping = [self defaultMapping];
 
-    FEMMapping *relationshipMapping = [[FEMMapping alloc] initWithObjectClass:[UniqueChildRealmObject class]];
+    FEMMapping *relationshipMapping = [[FEMMapping alloc] initWithEntityName:[UniqueChildRealmObject className]];
     relationshipMapping.primaryKey = @"primaryKey";
     [relationshipMapping addAttributesFromArray:@[@"primaryKey"]];
 
@@ -45,7 +45,7 @@
 + (FEMMapping *)toManyRelationshipMappingWithPolicy:(FEMAssignmentPolicy)policy {
     FEMMapping *mapping = [self defaultMapping];
 
-    FEMMapping *relationshipMapping = [[FEMMapping alloc] initWithObjectClass:[UniqueChildRealmObject class]];
+    FEMMapping *relationshipMapping = [[FEMMapping alloc] initWithEntityName:[UniqueChildRealmObject className]];
     relationshipMapping.primaryKey = @"primaryKey";
     [relationshipMapping addAttributesFromArray:@[@"primaryKey"]];
 

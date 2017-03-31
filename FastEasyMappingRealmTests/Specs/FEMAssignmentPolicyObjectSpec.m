@@ -32,6 +32,10 @@ describe(@"FEMAssignmentPolicyObject", ^{
     });
 
     afterEach(^{
+        [realm transactionWithBlock:^{
+            [realm deleteAllObjects];
+        }];
+        
         realm = nil;
         store = nil;
         deserializer = nil;
@@ -42,7 +46,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
     // We re-test built-in policies to make sure that Realm works as expected
 
     context(@"assign", ^{
-        FEMMapping *mapping = [UniqueRealmObject toManyRelationshipMappingWithPolicy:FEMAssignmentPolicyAssign];
+        FEMMapping *mapping = [UniqueRealmObject toOneRelationshipMappingWithPolicy:FEMAssignmentPolicyAssign];
 
         context(@"when old value null", ^{
             beforeEach(^{
@@ -79,8 +83,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
 
                 it(@"should assign new value", ^{
                     [[object.toOneRelationship shouldNot] beNil];
-                    [[theValue(object.toOneRelationship.primaryKey) should] equal:theValue(10)];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
+                    [[theValue(object.toOneRelationship.primaryKey) should] equal:theValue(11)];
                 });
 
                 it(@"shouldn't remove old value", ^{
@@ -88,13 +91,13 @@ describe(@"FEMAssignmentPolicyObject", ^{
                     [[child.realm should] equal:realm];
 
                     [[[realm objectWithClassName:[UniqueChildRealmObject className] forPrimaryKey:@(10)] should] equal:child];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
+                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(2)];
                 });
             });
 
             context(@"new value null", ^{
                 beforeEach(^{
-                    NSDictionary *fixture = [Fixture buildUsingFixture:@"AssignmentPolicyToOneInit"];
+                    NSDictionary *fixture = [Fixture buildUsingFixture:@"AssignmentPolicyToOneNull"];
                     [deserializer fillObject:object fromRepresentation:fixture mapping:mapping];
                 });
 
@@ -114,7 +117,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
     });
 
     context(@"merge", ^{
-        FEMMapping *mapping = [UniqueRealmObject toManyRelationshipMappingWithPolicy:FEMAssignmentPolicyObjectMerge];
+        FEMMapping *mapping = [UniqueRealmObject toOneRelationshipMappingWithPolicy:FEMAssignmentPolicyObjectMerge];
 
         context(@"when old value null", ^{
             beforeEach(^{
@@ -151,8 +154,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
 
                 it(@"should assign new value", ^{
                     [[object.toOneRelationship shouldNot] beNil];
-                    [[theValue(object.toOneRelationship.primaryKey) should] equal:theValue(10)];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
+                    [[theValue(object.toOneRelationship.primaryKey) should] equal:theValue(11)];
                 });
 
                 it(@"shouldn't remove old value", ^{
@@ -160,7 +162,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
                     [[child.realm should] equal:realm];
 
                     [[[realm objectWithClassName:[UniqueChildRealmObject className] forPrimaryKey:@(10)] should] equal:child];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
+                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(2)];
                 });
             });
 
@@ -180,7 +182,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
     });
 
     context(@"replace", ^{
-        FEMMapping *mapping = [UniqueRealmObject toManyRelationshipMappingWithPolicy:FEMAssignmentPolicyObjectMerge];
+        FEMMapping *mapping = [UniqueRealmObject toOneRelationshipMappingWithPolicy:FEMAssignmentPolicyObjectReplace];
 
         context(@"when old value null", ^{
             beforeEach(^{
@@ -217,22 +219,20 @@ describe(@"FEMAssignmentPolicyObject", ^{
 
                 it(@"should assign new value", ^{
                     [[object.toOneRelationship shouldNot] beNil];
-                    [[theValue(object.toOneRelationship.primaryKey) should] equal:theValue(10)];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
+                    [[theValue(object.toOneRelationship.primaryKey) should] equal:theValue(11)];
                 });
 
                 it(@"should remove old value", ^{
                     [[theValue(child.invalidated) should] beTrue];
-                    [[child.realm should] beNil];
 
                     [[[realm objectWithClassName:[UniqueChildRealmObject className] forPrimaryKey:@(10)] should] beNil];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(0)];
+                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
                 });
             });
 
             context(@"new value null", ^{
                 beforeEach(^{
-                    NSDictionary *fixture = [Fixture buildUsingFixture:@"AssignmentPolicyToOneInit"];
+                    NSDictionary *fixture = [Fixture buildUsingFixture:@"AssignmentPolicyToOneNull"];
                     [deserializer fillObject:object fromRepresentation:fixture mapping:mapping];
                 });
 
@@ -242,7 +242,6 @@ describe(@"FEMAssignmentPolicyObject", ^{
 
                 it(@"shouldn't remove old value", ^{
                     [[theValue(child.invalidated) should] beTrue];
-                    [[child.realm should] beNil];
 
                     [[[realm objectWithClassName:[UniqueChildRealmObject className] forPrimaryKey:@(10)] should] beNil];
                     [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(0)];
