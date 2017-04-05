@@ -11,6 +11,8 @@
 		1D6A304460D626A229EE33E1 /* AssignmentPolicyToOneInit.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3B226D8E5C958A3A810B /* AssignmentPolicyToOneInit.json */; };
 		1D6A30DC583D66E065BF1E19 /* AssignmentPolicyToOneNull.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3F3CBAED31FB56A1BACA /* AssignmentPolicyToOneNull.json */; };
 		1D6A312ABA1C5814235ADF91 /* AssignmentPolicyToOneUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3FBBE6A00A55297E22F9 /* AssignmentPolicyToOneUpdate.json */; };
+		1D6A31E45949DD90F7A38C25 /* RealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A3625298F924561C7C15C /* RealmObject.m */; };
+		1D6A3343D847961BC4B5A6E0 /* FastEasyMappingRealmPerformanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A37A47F6ED514D6911A8C /* FastEasyMappingRealmPerformanceTests.m */; };
 		1D6A33A75AAF19C278C15784 /* FEMAssignmentPolicyCollectionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A3FD9EC906F05ADB303A7 /* FEMAssignmentPolicyCollectionSpec.m */; };
 		1D6A3B21882F44C2845BBE57 /* Fixture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A31A1AF6EB00C258F7B81 /* Fixture.m */; };
 		99BB42C3A092B0B3AD4F527F /* Pods_FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D246DBB4A81B748008746CD0 /* Pods_FastEasyMappingRealm.framework */; };
@@ -43,6 +45,7 @@
 		AD94011A1E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401071E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m */; };
 		AD94011B1E8BE7B100558F37 /* FEMDeserializerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */; };
 		AD94011C1E8BE7B100558F37 /* FEMRealmStoreSpeс.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */; };
+		ADCD41C21E953D7D006C8106 /* FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9400BE1E8BE11A00558F37 /* FastEasyMappingRealm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,11 +56,21 @@
 			remoteGlobalIDString = AD9400BD1E8BE11A00558F37;
 			remoteInfo = FastEasyMappingRealm;
 		};
+		ADCD41C31E953D7D006C8106 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD9400B51E8BE11A00558F37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD9400BD1E8BE11A00558F37;
+			remoteInfo = FastEasyMappingRealm;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D6A31A1AF6EB00C258F7B81 /* Fixture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fixture.m; sourceTree = "<group>"; };
+		1D6A3625298F924561C7C15C /* RealmObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmObject.m; sourceTree = "<group>"; };
+		1D6A37A47F6ED514D6911A8C /* FastEasyMappingRealmPerformanceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastEasyMappingRealmPerformanceTests.m; sourceTree = "<group>"; };
 		1D6A3B226D8E5C958A3A810B /* AssignmentPolicyToOneInit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToOneInit.json; sourceTree = "<group>"; };
+		1D6A3BA49FC9BCB4CEB49EC9 /* RealmObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmObject.h; sourceTree = "<group>"; };
 		1D6A3D0333F968F2A500D33B /* Fixture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fixture.h; sourceTree = "<group>"; };
 		1D6A3F3CBAED31FB56A1BACA /* AssignmentPolicyToOneNull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToOneNull.json; sourceTree = "<group>"; };
 		1D6A3FBBE6A00A55297E22F9 /* AssignmentPolicyToOneUpdate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToOneUpdate.json; sourceTree = "<group>"; };
@@ -103,6 +116,8 @@
 		AD9401071E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMAssignmentPolicyObjectSpec.m; sourceTree = "<group>"; };
 		AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMDeserializerSpec.m; sourceTree = "<group>"; };
 		AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMRealmStoreSpeс.m"; sourceTree = "<group>"; };
+		ADCD41BD1E953D7D006C8106 /* FastEasyMappingRealmPerformanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastEasyMappingRealmPerformanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADCD41C11E953D7D006C8106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D246DBB4A81B748008746CD0 /* Pods_FastEasyMappingRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastEasyMappingRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D978A7862BB67DEE571739FF /* Pods-FastEasyMappingRealmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealmTests/Pods-FastEasyMappingRealmTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,9 +140,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADCD41BA1E953D7D006C8106 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADCD41C21E953D7D006C8106 /* FastEasyMappingRealm.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D6A310EE7B840EAA04FD338 /* Spec */ = {
+			isa = PBXGroup;
+			children = (
+				1D6A37A47F6ED514D6911A8C /* FastEasyMappingRealmPerformanceTests.m */,
+			);
+			path = Spec;
+			sourceTree = "<group>";
+		};
 		1D6A3A00133EFE1EAF658E05 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +166,15 @@
 				1D6A3D0333F968F2A500D33B /* Fixture.h */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		1D6A3F81A6E3AA21E3D8AAE6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D6A3625298F924561C7C15C /* RealmObject.m */,
+				1D6A3BA49FC9BCB4CEB49EC9 /* RealmObject.h */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		615ABEBA17E7CBC8CB311A6E /* Frameworks */ = {
@@ -151,6 +191,7 @@
 			children = (
 				AD9400C01E8BE11A00558F37 /* FastEasyMappingRealm */,
 				AD9400CB1E8BE11A00558F37 /* FastEasyMappingRealmTests */,
+				ADCD41BE1E953D7D006C8106 /* FastEasyMappingRealmPerformanceTests */,
 				AD9400BF1E8BE11A00558F37 /* Products */,
 				EBFB27F318F780AA4D03D19D /* Pods */,
 				615ABEBA17E7CBC8CB311A6E /* Frameworks */,
@@ -162,6 +203,7 @@
 			children = (
 				AD9400BE1E8BE11A00558F37 /* FastEasyMappingRealm.framework */,
 				AD9400C71E8BE11A00558F37 /* FastEasyMappingRealmTests.xctest */,
+				ADCD41BD1E953D7D006C8106 /* FastEasyMappingRealmPerformanceTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -268,6 +310,16 @@
 			path = Specs;
 			sourceTree = "<group>";
 		};
+		ADCD41BE1E953D7D006C8106 /* FastEasyMappingRealmPerformanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				ADCD41C11E953D7D006C8106 /* Info.plist */,
+				1D6A310EE7B840EAA04FD338 /* Spec */,
+				1D6A3F81A6E3AA21E3D8AAE6 /* Model */,
+			);
+			path = FastEasyMappingRealmPerformanceTests;
+			sourceTree = "<group>";
+		};
 		EBFB27F318F780AA4D03D19D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +390,24 @@
 			productReference = AD9400C71E8BE11A00558F37 /* FastEasyMappingRealmTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		ADCD41BC1E953D7D006C8106 /* FastEasyMappingRealmPerformanceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADCD41C71E953D7D006C8106 /* Build configuration list for PBXNativeTarget "FastEasyMappingRealmPerformanceTests" */;
+			buildPhases = (
+				ADCD41B91E953D7D006C8106 /* Sources */,
+				ADCD41BA1E953D7D006C8106 /* Frameworks */,
+				ADCD41BB1E953D7D006C8106 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADCD41C41E953D7D006C8106 /* PBXTargetDependency */,
+			);
+			name = FastEasyMappingRealmPerformanceTests;
+			productName = FastEasyMappingRealmPerformanceTests;
+			productReference = ADCD41BD1E953D7D006C8106 /* FastEasyMappingRealmPerformanceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -353,6 +423,11 @@
 						ProvisioningStyle = Automatic;
 					};
 					AD9400C61E8BE11A00558F37 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = B22C3P93TG;
+						ProvisioningStyle = Automatic;
+					};
+					ADCD41BC1E953D7D006C8106 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = B22C3P93TG;
 						ProvisioningStyle = Automatic;
@@ -373,6 +448,7 @@
 			targets = (
 				AD9400BD1E8BE11A00558F37 /* FastEasyMappingRealm */,
 				AD9400C61E8BE11A00558F37 /* FastEasyMappingRealmTests */,
+				ADCD41BC1E953D7D006C8106 /* FastEasyMappingRealmPerformanceTests */,
 			);
 		};
 /* End PBXProject section */
@@ -403,6 +479,13 @@
 				1D6A30DC583D66E065BF1E19 /* AssignmentPolicyToOneNull.json in Resources */,
 				1D6A304460D626A229EE33E1 /* AssignmentPolicyToOneInit.json in Resources */,
 				1D6A312ABA1C5814235ADF91 /* AssignmentPolicyToOneUpdate.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADCD41BB1E953D7D006C8106 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,6 +598,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ADCD41B91E953D7D006C8106 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D6A3343D847961BC4B5A6E0 /* FastEasyMappingRealmPerformanceTests.m in Sources */,
+				1D6A31E45949DD90F7A38C25 /* RealmObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -522,6 +614,11 @@
 			isa = PBXTargetDependency;
 			target = AD9400BD1E8BE11A00558F37 /* FastEasyMappingRealm */;
 			targetProxy = AD9400C91E8BE11A00558F37 /* PBXContainerItemProxy */;
+		};
+		ADCD41C41E953D7D006C8106 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD9400BD1E8BE11A00558F37 /* FastEasyMappingRealm */;
+			targetProxy = ADCD41C31E953D7D006C8106 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -688,6 +785,28 @@
 			};
 			name = Release;
 		};
+		ADCD41C51E953D7D006C8106 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = B22C3P93TG;
+				INFOPLIST_FILE = FastEasyMappingRealmPerformanceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.FastEasyMappingRealmPerformanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ADCD41C61E953D7D006C8106 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = B22C3P93TG;
+				INFOPLIST_FILE = FastEasyMappingRealmPerformanceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.FastEasyMappingRealmPerformanceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -717,6 +836,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		ADCD41C71E953D7D006C8106 /* Build configuration list for PBXNativeTarget "FastEasyMappingRealmPerformanceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADCD41C51E953D7D006C8106 /* Debug */,
+				ADCD41C61E953D7D006C8106 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
