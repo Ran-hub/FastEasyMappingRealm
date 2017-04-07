@@ -11,7 +11,7 @@
 		1D6A304460D626A229EE33E1 /* AssignmentPolicyToOneInit.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3B226D8E5C958A3A810B /* AssignmentPolicyToOneInit.json */; };
 		1D6A30DC583D66E065BF1E19 /* AssignmentPolicyToOneNull.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3F3CBAED31FB56A1BACA /* AssignmentPolicyToOneNull.json */; };
 		1D6A312ABA1C5814235ADF91 /* AssignmentPolicyToOneUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3FBBE6A00A55297E22F9 /* AssignmentPolicyToOneUpdate.json */; };
-		1D6A31E45949DD90F7A38C25 /* RealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A3625298F924561C7C15C /* RealmObject.m */; };
+		1D6A31E45949DD90F7A38C25 /* PerformanceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A3625298F924561C7C15C /* PerformanceObject.m */; };
 		1D6A3343D847961BC4B5A6E0 /* FastEasyMappingRealmPerformanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A37A47F6ED514D6911A8C /* FastEasyMappingRealmPerformanceTests.m */; };
 		1D6A33A75AAF19C278C15784 /* FEMAssignmentPolicyCollectionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A3FD9EC906F05ADB303A7 /* FEMAssignmentPolicyCollectionSpec.m */; };
 		1D6A3B21882F44C2845BBE57 /* Fixture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A31A1AF6EB00C258F7B81 /* Fixture.m */; };
@@ -46,6 +46,7 @@
 		AD94011B1E8BE7B100558F37 /* FEMDeserializerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */; };
 		AD94011C1E8BE7B100558F37 /* FEMRealmStoreSpeс.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */; };
 		ADCD41C21E953D7D006C8106 /* FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9400BE1E8BE11A00558F37 /* FastEasyMappingRealm.framework */; };
+		FAB7C94B80635577E2D1E89A /* Pods_FastEasyMappingRealmPerformanceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22088D00ADA8D17BEFE7FD0C /* Pods_FastEasyMappingRealmPerformanceTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,17 +67,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0531E68A73302AF2978D6BF1 /* Pods_FFFFFFF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FFFFFFF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D6A31A1AF6EB00C258F7B81 /* Fixture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fixture.m; sourceTree = "<group>"; };
-		1D6A3625298F924561C7C15C /* RealmObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmObject.m; sourceTree = "<group>"; };
+		1D6A3625298F924561C7C15C /* PerformanceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformanceObject.m; sourceTree = "<group>"; };
 		1D6A37A47F6ED514D6911A8C /* FastEasyMappingRealmPerformanceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastEasyMappingRealmPerformanceTests.m; sourceTree = "<group>"; };
 		1D6A3B226D8E5C958A3A810B /* AssignmentPolicyToOneInit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToOneInit.json; sourceTree = "<group>"; };
-		1D6A3BA49FC9BCB4CEB49EC9 /* RealmObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmObject.h; sourceTree = "<group>"; };
+		1D6A3BA49FC9BCB4CEB49EC9 /* PerformanceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceObject.h; sourceTree = "<group>"; };
 		1D6A3D0333F968F2A500D33B /* Fixture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fixture.h; sourceTree = "<group>"; };
 		1D6A3F3CBAED31FB56A1BACA /* AssignmentPolicyToOneNull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToOneNull.json; sourceTree = "<group>"; };
 		1D6A3FBBE6A00A55297E22F9 /* AssignmentPolicyToOneUpdate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToOneUpdate.json; sourceTree = "<group>"; };
 		1D6A3FD9EC906F05ADB303A7 /* FEMAssignmentPolicyCollectionSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMAssignmentPolicyCollectionSpec.m; sourceTree = "<group>"; };
+		22088D00ADA8D17BEFE7FD0C /* Pods_FastEasyMappingRealmPerformanceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastEasyMappingRealmPerformanceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		398AB909B1FC702CD2447C6C /* Pods-FastEasyMappingRealm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealm/Pods-FastEasyMappingRealm.debug.xcconfig"; sourceTree = "<group>"; };
+		4A3AFF9EA70B9B7A2902397D /* Pods-FFFFFFF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFFFFFF.release.xcconfig"; path = "Pods/Target Support Files/Pods-FFFFFFF/Pods-FFFFFFF.release.xcconfig"; sourceTree = "<group>"; };
+		51F21807C1EC09241323D092 /* Pods-FFFFFFF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FFFFFFF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FFFFFFF/Pods-FFFFFFF.debug.xcconfig"; sourceTree = "<group>"; };
 		5250A0E1DF487BEED66BFD8E /* Pods-FastEasyMappingRealm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealm.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealm/Pods-FastEasyMappingRealm.release.xcconfig"; sourceTree = "<group>"; };
+		58C8CA878B0E2D9FD8CBBEF5 /* Pods-FastEasyMappingRealmPerformanceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealmPerformanceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealmPerformanceTests/Pods-FastEasyMappingRealmPerformanceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9FDB92EC67A17C7D8DA643ED /* Pods-FastEasyMappingRealmTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealmTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealmTests/Pods-FastEasyMappingRealmTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5B8F163B5EE34CAB7F4D8C3 /* Pods_FastEasyMappingRealmTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastEasyMappingRealmTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9400BE1E8BE11A00558F37 /* FastEasyMappingRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FastEasyMappingRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +126,7 @@
 		ADCD41C11E953D7D006C8106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D246DBB4A81B748008746CD0 /* Pods_FastEasyMappingRealm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FastEasyMappingRealm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D978A7862BB67DEE571739FF /* Pods-FastEasyMappingRealmTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealmTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealmTests/Pods-FastEasyMappingRealmTests.release.xcconfig"; sourceTree = "<group>"; };
+		E830C5A8B98657898040E116 /* Pods-FastEasyMappingRealmPerformanceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEasyMappingRealmPerformanceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FastEasyMappingRealmPerformanceTests/Pods-FastEasyMappingRealmPerformanceTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADCD41C21E953D7D006C8106 /* FastEasyMappingRealm.framework in Frameworks */,
+				FAB7C94B80635577E2D1E89A /* Pods_FastEasyMappingRealmPerformanceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,8 +179,8 @@
 		1D6A3F81A6E3AA21E3D8AAE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1D6A3625298F924561C7C15C /* RealmObject.m */,
-				1D6A3BA49FC9BCB4CEB49EC9 /* RealmObject.h */,
+				1D6A3625298F924561C7C15C /* PerformanceObject.m */,
+				1D6A3BA49FC9BCB4CEB49EC9 /* PerformanceObject.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -182,6 +190,8 @@
 			children = (
 				D246DBB4A81B748008746CD0 /* Pods_FastEasyMappingRealm.framework */,
 				A5B8F163B5EE34CAB7F4D8C3 /* Pods_FastEasyMappingRealmTests.framework */,
+				22088D00ADA8D17BEFE7FD0C /* Pods_FastEasyMappingRealmPerformanceTests.framework */,
+				0531E68A73302AF2978D6BF1 /* Pods_FFFFFFF.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -327,6 +337,10 @@
 				5250A0E1DF487BEED66BFD8E /* Pods-FastEasyMappingRealm.release.xcconfig */,
 				9FDB92EC67A17C7D8DA643ED /* Pods-FastEasyMappingRealmTests.debug.xcconfig */,
 				D978A7862BB67DEE571739FF /* Pods-FastEasyMappingRealmTests.release.xcconfig */,
+				58C8CA878B0E2D9FD8CBBEF5 /* Pods-FastEasyMappingRealmPerformanceTests.debug.xcconfig */,
+				E830C5A8B98657898040E116 /* Pods-FastEasyMappingRealmPerformanceTests.release.xcconfig */,
+				51F21807C1EC09241323D092 /* Pods-FFFFFFF.debug.xcconfig */,
+				4A3AFF9EA70B9B7A2902397D /* Pods-FFFFFFF.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -394,9 +408,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADCD41C71E953D7D006C8106 /* Build configuration list for PBXNativeTarget "FastEasyMappingRealmPerformanceTests" */;
 			buildPhases = (
+				61C5FF8E85FC98B7FF5813D3 /* [CP] Check Pods Manifest.lock */,
 				ADCD41B91E953D7D006C8106 /* Sources */,
 				ADCD41BA1E953D7D006C8106 /* Frameworks */,
 				ADCD41BB1E953D7D006C8106 /* Resources */,
+				EC08C10465C1329B9199BFC8 /* [CP] Embed Pods Frameworks */,
+				328A3EB517A3DC1BE233362A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -440,6 +457,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = AD9400B41E8BE11A00558F37;
 			productRefGroup = AD9400BF1E8BE11A00558F37 /* Products */;
@@ -493,6 +511,36 @@
 
 /* Begin PBXShellScriptBuildPhase section */
 		055059108475BD3ADA6D8572 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		328A3EB517A3DC1BE233362A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastEasyMappingRealmPerformanceTests/Pods-FastEasyMappingRealmPerformanceTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61C5FF8E85FC98B7FF5813D3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -567,6 +615,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastEasyMappingRealmTests/Pods-FastEasyMappingRealmTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		EC08C10465C1329B9199BFC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FastEasyMappingRealmPerformanceTests/Pods-FastEasyMappingRealmPerformanceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -603,7 +666,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D6A3343D847961BC4B5A6E0 /* FastEasyMappingRealmPerformanceTests.m in Sources */,
-				1D6A31E45949DD90F7A38C25 /* RealmObject.m in Sources */,
+				1D6A31E45949DD90F7A38C25 /* PerformanceObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,7 +788,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 398AB909B1FC702CD2447C6C /* Pods-FastEasyMappingRealm.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -745,7 +809,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5250A0E1DF487BEED66BFD8E /* Pods-FastEasyMappingRealm.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -787,6 +852,7 @@
 		};
 		ADCD41C51E953D7D006C8106 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58C8CA878B0E2D9FD8CBBEF5 /* Pods-FastEasyMappingRealmPerformanceTests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = B22C3P93TG;
 				INFOPLIST_FILE = FastEasyMappingRealmPerformanceTests/Info.plist;
@@ -798,6 +864,7 @@
 		};
 		ADCD41C61E953D7D006C8106 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E830C5A8B98657898040E116 /* Pods-FastEasyMappingRealmPerformanceTests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = B22C3P93TG;
 				INFOPLIST_FILE = FastEasyMappingRealmPerformanceTests/Info.plist;
@@ -844,6 +911,7 @@
 				ADCD41C61E953D7D006C8106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
