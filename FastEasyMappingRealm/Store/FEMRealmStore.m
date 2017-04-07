@@ -41,7 +41,8 @@
 }
 
 - (NSError *)commitTransaction {
-    [_realm addObjects:_newObjects];
+    [_realm addOrUpdateObjectsFromArray:_newObjects];
+//    [_realm addObjects:_newObjects];
     _newObjects = nil;
 
     [_realm commitWriteTransaction];
