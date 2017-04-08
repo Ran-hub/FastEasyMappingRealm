@@ -45,7 +45,7 @@
 + (FEMMapping *)toManyRelationshipMappingWithPolicy:(FEMAssignmentPolicy)policy {
     FEMMapping *mapping = [self defaultMapping];
 
-    FEMMapping *relationshipMapping = [[FEMMapping alloc] initWithEntityName:[UniqueChildRealmObject className]];
+    FEMMapping *relationshipMapping = [[FEMMapping alloc] initWithEntityName:[UniqueToManyChildRealmObject className]];
     relationshipMapping.primaryKey = @"primaryKey";
     [relationshipMapping addAttributesFromArray:@[@"primaryKey"]];
 

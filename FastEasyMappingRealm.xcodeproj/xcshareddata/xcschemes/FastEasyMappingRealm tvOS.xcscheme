@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AD7DF8311E981501006888E1"
-               BuildableName = "FastEasyMappingRealm tvOS.framework"
+               BuildableName = "FastEasyMappingRealm.framework"
                BlueprintName = "FastEasyMappingRealm tvOS"
                ReferencedContainer = "container:FastEasyMappingRealm.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AD7DF8311E981501006888E1"
-            BuildableName = "FastEasyMappingRealm tvOS.framework"
+            BuildableName = "FastEasyMappingRealm.framework"
             BlueprintName = "FastEasyMappingRealm tvOS"
             ReferencedContainer = "container:FastEasyMappingRealm.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AD7DF8311E981501006888E1"
-            BuildableName = "FastEasyMappingRealm tvOS.framework"
+            BuildableName = "FastEasyMappingRealm.framework"
             BlueprintName = "FastEasyMappingRealm tvOS"
             ReferencedContainer = "container:FastEasyMappingRealm.xcodeproj">
          </BuildableReference>

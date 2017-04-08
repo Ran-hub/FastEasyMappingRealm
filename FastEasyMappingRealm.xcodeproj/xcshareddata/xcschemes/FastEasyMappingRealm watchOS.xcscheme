@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AD7DF83E1E981510006888E1"
-               BuildableName = "FastEasyMappingRealm watchOS.framework"
+               BuildableName = "FastEasyMappingRealm.framework"
                BlueprintName = "FastEasyMappingRealm watchOS"
                ReferencedContainer = "container:FastEasyMappingRealm.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AD7DF83E1E981510006888E1"
-            BuildableName = "FastEasyMappingRealm watchOS.framework"
+            BuildableName = "FastEasyMappingRealm.framework"
             BlueprintName = "FastEasyMappingRealm watchOS"
             ReferencedContainer = "container:FastEasyMappingRealm.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AD7DF83E1E981510006888E1"
-            BuildableName = "FastEasyMappingRealm watchOS.framework"
+            BuildableName = "FastEasyMappingRealm.framework"
             BlueprintName = "FastEasyMappingRealm watchOS"
             ReferencedContainer = "container:FastEasyMappingRealm.xcodeproj">
          </BuildableReference>

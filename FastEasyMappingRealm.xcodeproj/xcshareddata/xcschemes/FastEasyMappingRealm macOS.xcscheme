@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AD7DF8151E9814EB006888E1"
-               BuildableName = "FastEasyMappingRealm macOS.framework"
+               BuildableName = "FastEasyMappingRealm.framework"
                BlueprintName = "FastEasyMappingRealm macOS"
                ReferencedContainer = "container:FastEasyMappingRealm.xcodeproj">
             </BuildableReference>
@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "AD7DF81D1E9814EB006888E1"
-               BuildableName = "FastEasyMappingRealm macOSTests.xctest"
-               BlueprintName = "FastEasyMappingRealm macOSTests"
+               BuildableName = "FastEasyMappingRealm macOS Tests.xctest"
+               BlueprintName = "FastEasyMappingRealm macOS Tests"
                ReferencedContainer = "container:FastEasyMappingRealm.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AD7DF8151E9814EB006888E1"
-            BuildableName = "FastEasyMappingRealm macOS.framework"
+            BuildableName = "FastEasyMappingRealm.framework"
             BlueprintName = "FastEasyMappingRealm macOS"
             ReferencedContainer = "container:FastEasyMappingRealm.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AD7DF8151E9814EB006888E1"
-            BuildableName = "FastEasyMappingRealm macOS.framework"
+            BuildableName = "FastEasyMappingRealm.framework"
             BlueprintName = "FastEasyMappingRealm macOS"
             ReferencedContainer = "container:FastEasyMappingRealm.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "AD7DF8151E9814EB006888E1"
-            BuildableName = "FastEasyMappingRealm macOS.framework"
+            BuildableName = "FastEasyMappingRealm.framework"
             BlueprintName = "FastEasyMappingRealm macOS"
             ReferencedContainer = "container:FastEasyMappingRealm.xcodeproj">
          </BuildableReference>

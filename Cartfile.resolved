@@ -1,0 +1,4 @@
+github "Yalantis/FastEasyMapping" "73f274f86ffee8f06eeaa21f40bf25ce157575c4"
+github "kiwi-bdd/Kiwi" "v2.4.0"
+github "magicalpanda/MagicalRecord" "v2.3.3"
+github "realm/realm-cocoa" "v2.5.1"
