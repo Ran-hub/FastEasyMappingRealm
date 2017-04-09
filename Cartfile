@@ -1,0 +1,2 @@
+github "Yalantis/FastEasyMapping" "master"
+github "realm/realm-cocoa" ~> 2.0
