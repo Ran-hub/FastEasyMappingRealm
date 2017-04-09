@@ -10,8 +10,6 @@
 		1D6A304460D626A229EE33E1 /* AssignmentPolicyToOneInit.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3B226D8E5C958A3A810B /* AssignmentPolicyToOneInit.json */; };
 		1D6A30DC583D66E065BF1E19 /* AssignmentPolicyToOneNull.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3F3CBAED31FB56A1BACA /* AssignmentPolicyToOneNull.json */; };
 		1D6A312ABA1C5814235ADF91 /* AssignmentPolicyToOneUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3FBBE6A00A55297E22F9 /* AssignmentPolicyToOneUpdate.json */; };
-		1D6A31E45949DD90F7A38C25 /* PerformanceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A3625298F924561C7C15C /* PerformanceObject.m */; };
-		1D6A3343D847961BC4B5A6E0 /* FastEasyMappingRealmPerformanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A37A47F6ED514D6911A8C /* FastEasyMappingRealmPerformanceTests.m */; };
 		1D6A33A75AAF19C278C15784 /* FEMAssignmentPolicyCollectionSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A3FD9EC906F05ADB303A7 /* FEMAssignmentPolicyCollectionSpec.m */; };
 		1D6A3B21882F44C2845BBE57 /* Fixture.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6A31A1AF6EB00C258F7B81 /* Fixture.m */; };
 		AD361BD41E9909B2009024D2 /* FastEasyMapping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8951E982312006888E1 /* FastEasyMapping.framework */; };
@@ -111,7 +109,11 @@
 		AD94011A1E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401071E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m */; };
 		AD94011B1E8BE7B100558F37 /* FEMDeserializerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */; };
 		AD94011C1E8BE7B100558F37 /* FEMRealmStoreSpeс.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */; };
-		ADCD41C21E953D7D006C8106 /* FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9400BE1E8BE11A00558F37 /* FastEasyMappingRealm.framework */; };
+		ADE1F35C1E9A702D00F457E9 /* FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8161E9814EB006888E1 /* FastEasyMappingRealm.framework */; };
+		ADE1F3671E9A70A100F457E9 /* PerformanceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3641E9A70A100F457E9 /* PerformanceObject.m */; };
+		ADE1F3681E9A70A100F457E9 /* FastEasyMappingRealmPerformanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3661E9A70A100F457E9 /* FastEasyMappingRealmPerformanceTests.m */; };
+		ADE1F3691E9A715B00F457E9 /* FastEasyMapping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8951E982312006888E1 /* FastEasyMapping.framework */; };
+		ADE1F36A1E9A715B00F457E9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8961E982312006888E1 /* Realm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,21 +131,18 @@
 			remoteGlobalIDString = AD9400BD1E8BE11A00558F37;
 			remoteInfo = FastEasyMappingRealm;
 		};
-		ADCD41C31E953D7D006C8106 /* PBXContainerItemProxy */ = {
+		ADE1F35D1E9A702D00F457E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AD9400B51E8BE11A00558F37 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AD9400BD1E8BE11A00558F37;
-			remoteInfo = FastEasyMappingRealm;
+			remoteGlobalIDString = AD7DF8151E9814EB006888E1;
+			remoteInfo = "FastEasyMappingRealm macOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D6A31A1AF6EB00C258F7B81 /* Fixture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fixture.m; sourceTree = "<group>"; };
-		1D6A3625298F924561C7C15C /* PerformanceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformanceObject.m; sourceTree = "<group>"; };
-		1D6A37A47F6ED514D6911A8C /* FastEasyMappingRealmPerformanceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastEasyMappingRealmPerformanceTests.m; sourceTree = "<group>"; };
 		1D6A3B226D8E5C958A3A810B /* AssignmentPolicyToOneInit.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToOneInit.json; sourceTree = "<group>"; };
-		1D6A3BA49FC9BCB4CEB49EC9 /* PerformanceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceObject.h; sourceTree = "<group>"; };
 		1D6A3D0333F968F2A500D33B /* Fixture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fixture.h; sourceTree = "<group>"; };
 		1D6A3F3CBAED31FB56A1BACA /* AssignmentPolicyToOneNull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToOneNull.json; sourceTree = "<group>"; };
 		1D6A3FBBE6A00A55297E22F9 /* AssignmentPolicyToOneUpdate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToOneUpdate.json; sourceTree = "<group>"; };
@@ -201,8 +200,11 @@
 		AD9401071E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMAssignmentPolicyObjectSpec.m; sourceTree = "<group>"; };
 		AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMDeserializerSpec.m; sourceTree = "<group>"; };
 		AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMRealmStoreSpeс.m"; sourceTree = "<group>"; };
-		ADCD41BD1E953D7D006C8106 /* FastEasyMappingRealm iOS PerformanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "FastEasyMappingRealm iOS PerformanceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		ADCD41C11E953D7D006C8106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADE1F3571E9A702D00F457E9 /* Benchmark.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Benchmark.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADE1F35B1E9A702D00F457E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADE1F3631E9A70A100F457E9 /* PerformanceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceObject.h; sourceTree = "<group>"; };
+		ADE1F3641E9A70A100F457E9 /* PerformanceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformanceObject.m; sourceTree = "<group>"; };
+		ADE1F3661E9A70A100F457E9 /* FastEasyMappingRealmPerformanceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastEasyMappingRealmPerformanceTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,25 +268,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADCD41BA1E953D7D006C8106 /* Frameworks */ = {
+		ADE1F3541E9A702D00F457E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADCD41C21E953D7D006C8106 /* FastEasyMappingRealm.framework in Frameworks */,
+				ADE1F3691E9A715B00F457E9 /* FastEasyMapping.framework in Frameworks */,
+				ADE1F36A1E9A715B00F457E9 /* Realm.framework in Frameworks */,
+				ADE1F35C1E9A702D00F457E9 /* FastEasyMappingRealm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1D6A310EE7B840EAA04FD338 /* Spec */ = {
-			isa = PBXGroup;
-			children = (
-				1D6A37A47F6ED514D6911A8C /* FastEasyMappingRealmPerformanceTests.m */,
-			);
-			path = Spec;
-			sourceTree = "<group>";
-		};
 		1D6A3A00133EFE1EAF658E05 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,15 +288,6 @@
 				1D6A3D0333F968F2A500D33B /* Fixture.h */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		1D6A3F81A6E3AA21E3D8AAE6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1D6A3625298F924561C7C15C /* PerformanceObject.m */,
-				1D6A3BA49FC9BCB4CEB49EC9 /* PerformanceObject.h */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		AD7DF87A1E981ABA006888E1 /* Frameworks */ = {
@@ -327,7 +314,7 @@
 			children = (
 				AD9400C01E8BE11A00558F37 /* FastEasyMappingRealm */,
 				AD9400CB1E8BE11A00558F37 /* FastEasyMappingRealmTests */,
-				ADCD41BE1E953D7D006C8106 /* FastEasyMappingRealmPerformanceTests */,
+				ADE1F3581E9A702D00F457E9 /* Benchmark */,
 				AD9400BF1E8BE11A00558F37 /* Products */,
 				AD7DF87A1E981ABA006888E1 /* Frameworks */,
 			);
@@ -338,11 +325,11 @@
 			children = (
 				AD9400BE1E8BE11A00558F37 /* FastEasyMappingRealm.framework */,
 				AD9400C71E8BE11A00558F37 /* FastEasyMappingRealm iOS Tests.xctest */,
-				ADCD41BD1E953D7D006C8106 /* FastEasyMappingRealm iOS PerformanceTests.xctest */,
 				AD7DF8161E9814EB006888E1 /* FastEasyMappingRealm.framework */,
 				AD7DF81E1E9814EB006888E1 /* FastEasyMappingRealm macOS Tests.xctest */,
 				AD7DF8321E981501006888E1 /* FastEasyMappingRealm.framework */,
 				AD7DF83F1E981510006888E1 /* FastEasyMappingRealm.framework */,
+				ADE1F3571E9A702D00F457E9 /* Benchmark.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -449,14 +436,31 @@
 			path = Specs;
 			sourceTree = "<group>";
 		};
-		ADCD41BE1E953D7D006C8106 /* FastEasyMappingRealmPerformanceTests */ = {
+		ADE1F3581E9A702D00F457E9 /* Benchmark */ = {
 			isa = PBXGroup;
 			children = (
-				ADCD41C11E953D7D006C8106 /* Info.plist */,
-				1D6A310EE7B840EAA04FD338 /* Spec */,
-				1D6A3F81A6E3AA21E3D8AAE6 /* Model */,
+				ADE1F3621E9A70A100F457E9 /* Model */,
+				ADE1F3651E9A70A100F457E9 /* Spec */,
+				ADE1F35B1E9A702D00F457E9 /* Info.plist */,
 			);
-			path = FastEasyMappingRealmPerformanceTests;
+			path = Benchmark;
+			sourceTree = "<group>";
+		};
+		ADE1F3621E9A70A100F457E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ADE1F3631E9A70A100F457E9 /* PerformanceObject.h */,
+				ADE1F3641E9A70A100F457E9 /* PerformanceObject.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADE1F3651E9A70A100F457E9 /* Spec */ = {
+			isa = PBXGroup;
+			children = (
+				ADE1F3661E9A70A100F457E9 /* FastEasyMappingRealmPerformanceTests.m */,
+			);
+			path = Spec;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -623,22 +627,23 @@
 			productReference = AD9400C71E8BE11A00558F37 /* FastEasyMappingRealm iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		ADCD41BC1E953D7D006C8106 /* FastEasyMappingRealm iOS PerformanceTests */ = {
+		ADE1F3561E9A702D00F457E9 /* Benchmark */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADCD41C71E953D7D006C8106 /* Build configuration list for PBXNativeTarget "FastEasyMappingRealm iOS PerformanceTests" */;
+			buildConfigurationList = ADE1F35F1E9A702D00F457E9 /* Build configuration list for PBXNativeTarget "Benchmark" */;
 			buildPhases = (
-				ADCD41B91E953D7D006C8106 /* Sources */,
-				ADCD41BA1E953D7D006C8106 /* Frameworks */,
-				ADCD41BB1E953D7D006C8106 /* Resources */,
+				ADE1F3531E9A702D00F457E9 /* Sources */,
+				ADE1F3541E9A702D00F457E9 /* Frameworks */,
+				ADE1F3551E9A702D00F457E9 /* Resources */,
+				ADE1F36B1E9A716100F457E9 /* Carthage */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				ADCD41C41E953D7D006C8106 /* PBXTargetDependency */,
+				ADE1F35E1E9A702D00F457E9 /* PBXTargetDependency */,
 			);
-			name = "FastEasyMappingRealm iOS PerformanceTests";
-			productName = FastEasyMappingRealmPerformanceTests;
-			productReference = ADCD41BD1E953D7D006C8106 /* FastEasyMappingRealm iOS PerformanceTests.xctest */;
+			name = Benchmark;
+			productName = Benchmark;
+			productReference = ADE1F3571E9A702D00F457E9 /* Benchmark.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -680,8 +685,8 @@
 						DevelopmentTeam = B22C3P93TG;
 						ProvisioningStyle = Automatic;
 					};
-					ADCD41BC1E953D7D006C8106 = {
-						CreatedOnToolsVersion = 8.3;
+					ADE1F3561E9A702D00F457E9 = {
+						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = B22C3P93TG;
 						ProvisioningStyle = Automatic;
 					};
@@ -702,11 +707,11 @@
 			targets = (
 				AD9400BD1E8BE11A00558F37 /* FastEasyMappingRealm iOS */,
 				AD9400C61E8BE11A00558F37 /* FastEasyMappingRealm iOS Tests */,
-				ADCD41BC1E953D7D006C8106 /* FastEasyMappingRealm iOS PerformanceTests */,
 				AD7DF8151E9814EB006888E1 /* FastEasyMappingRealm macOS */,
 				AD7DF81D1E9814EB006888E1 /* FastEasyMappingRealm macOS Tests */,
 				AD7DF8311E981501006888E1 /* FastEasyMappingRealm tvOS */,
 				AD7DF83E1E981510006888E1 /* FastEasyMappingRealm watchOS */,
+				ADE1F3561E9A702D00F457E9 /* Benchmark */,
 			);
 		};
 /* End PBXProject section */
@@ -782,7 +787,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADCD41BB1E953D7D006C8106 /* Resources */ = {
+		ADE1F3551E9A702D00F457E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -798,10 +803,10 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Kiwi.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/MagicalRecord.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/FastEasyMapping.framework",
+				"$(CARTHAGE_BUILD)/Kiwi.framework",
+				"$(CARTHAGE_BUILD)/MagicalRecord.framework",
+				"$(CARTHAGE_BUILD)/Realm.framework",
+				"$(CARTHAGE_BUILD)/FastEasyMapping.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -816,10 +821,26 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Kiwi.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/MagicalRecord.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/Realm.framework",
-				"$(SRCROOT)/Carthage/Build/Mac/FastEasyMapping.framework",
+				"$(CARTHAGE_BUILD)/Kiwi.framework",
+				"$(CARTHAGE_BUILD)/MagicalRecord.framework",
+				"$(CARTHAGE_BUILD)/Realm.framework",
+				"$(CARTHAGE_BUILD)/FastEasyMapping.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		ADE1F36B1E9A716100F457E9 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(CARTHAGE_BUILD)/Realm.framework",
+				"$(CARTHAGE_BUILD)/FastEasyMapping.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -909,12 +930,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ADCD41B91E953D7D006C8106 /* Sources */ = {
+		ADE1F3531E9A702D00F457E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D6A3343D847961BC4B5A6E0 /* FastEasyMappingRealmPerformanceTests.m in Sources */,
-				1D6A31E45949DD90F7A38C25 /* PerformanceObject.m in Sources */,
+				ADE1F3681E9A70A100F457E9 /* FastEasyMappingRealmPerformanceTests.m in Sources */,
+				ADE1F3671E9A70A100F457E9 /* PerformanceObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -931,10 +952,10 @@
 			target = AD9400BD1E8BE11A00558F37 /* FastEasyMappingRealm iOS */;
 			targetProxy = AD9400C91E8BE11A00558F37 /* PBXContainerItemProxy */;
 		};
-		ADCD41C41E953D7D006C8106 /* PBXTargetDependency */ = {
+		ADE1F35E1E9A702D00F457E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AD9400BD1E8BE11A00558F37 /* FastEasyMappingRealm iOS */;
-			targetProxy = ADCD41C31E953D7D006C8106 /* PBXContainerItemProxy */;
+			target = AD7DF8151E9814EB006888E1 /* FastEasyMappingRealm macOS */;
+			targetProxy = ADE1F35D1E9A702D00F457E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -988,6 +1009,7 @@
 		AD7DF82B1E9814EB006888E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/Mac";
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
@@ -1006,6 +1028,7 @@
 		AD7DF82C1E9814EB006888E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/Mac";
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
@@ -1115,6 +1138,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CARTHAGE_BUILD = "$(SRCROOT)/Carthage/Build/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1172,6 +1196,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CARTHAGE_BUILD = "$(SRCROOT)/Carthage/Build/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1222,6 +1247,7 @@
 		AD9400D31E8BE11A00558F37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/iOS/";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
@@ -1242,6 +1268,7 @@
 		AD9400D41E8BE11A00558F37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/iOS/";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
@@ -1262,6 +1289,7 @@
 		AD9400D61E8BE11A00558F37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/iOS";
 				DEVELOPMENT_TEAM = B22C3P93TG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1277,6 +1305,7 @@
 		AD9400D71E8BE11A00558F37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/iOS";
 				DEVELOPMENT_TEAM = B22C3P93TG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1289,25 +1318,43 @@
 			};
 			name = Release;
 		};
-		ADCD41C51E953D7D006C8106 /* Debug */ = {
+		ADE1F3601E9A702D00F457E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/Mac";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
-				INFOPLIST_FILE = FastEasyMappingRealmPerformanceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.FastEasyMappingRealmPerformanceTests;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = Benchmark/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.Benchmark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
-		ADCD41C61E953D7D006C8106 /* Release */ = {
+		ADE1F3611E9A702D00F457E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/Mac";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
-				INFOPLIST_FILE = FastEasyMappingRealmPerformanceTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.FastEasyMappingRealmPerformanceTests;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = Benchmark/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.Benchmark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -1377,14 +1424,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADCD41C71E953D7D006C8106 /* Build configuration list for PBXNativeTarget "FastEasyMappingRealm iOS PerformanceTests" */ = {
+		ADE1F35F1E9A702D00F457E9 /* Build configuration list for PBXNativeTarget "Benchmark" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ADCD41C51E953D7D006C8106 /* Debug */,
-				ADCD41C61E953D7D006C8106 /* Release */,
+				ADE1F3601E9A702D00F457E9 /* Debug */,
+				ADE1F3611E9A702D00F457E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
