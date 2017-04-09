@@ -11,8 +11,8 @@
 
 FEMObjectCacheSource FEMRealmObjectCacheSource(RLMRealm *realm) {
     return ^id<NSFastEnumeration> (FEMMapping *mapping, NSSet *primaryKeys) {
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K IN %@", mapping.primaryKey, primaryKeys];
-        Class realmClass = mapping.objectClass;
+//        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K IN %@", mapping.primaryKey, primaryKeys];
+//        Class realmClass = mapping.objectClass;
 
 //        NSCAssert(
 //            [realmClass isKindOfClass:[RLMObjectBase class]],
@@ -23,9 +23,9 @@ FEMObjectCacheSource FEMRealmObjectCacheSource(RLMRealm *realm) {
 //            NSStringFromClass(mapping.objectClass)
 //        );
 
-//        return @[];
-        RLMResults *results = [realm objects:mapping.entityName withPredicate:predicate];
-        return results;
+        return @[];
+//        RLMResults *results = [realm objects:mapping.entityName withPredicate:predicate];
+//        return results;
     };
 }
 
