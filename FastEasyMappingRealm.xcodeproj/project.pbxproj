@@ -111,7 +111,7 @@
 		AD94011C1E8BE7B100558F37 /* FEMRealmStoreSpeс.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */; };
 		ADE1F35C1E9A702D00F457E9 /* FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8161E9814EB006888E1 /* FastEasyMappingRealm.framework */; };
 		ADE1F3671E9A70A100F457E9 /* PerformanceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3641E9A70A100F457E9 /* PerformanceObject.m */; };
-		ADE1F3681E9A70A100F457E9 /* FastEasyMappingRealmPerformanceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3661E9A70A100F457E9 /* FastEasyMappingRealmPerformanceTests.m */; };
+		ADE1F3681E9A70A100F457E9 /* Benchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3661E9A70A100F457E9 /* Benchmark.m */; };
 		ADE1F3691E9A715B00F457E9 /* FastEasyMapping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8951E982312006888E1 /* FastEasyMapping.framework */; };
 		ADE1F36A1E9A715B00F457E9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8961E982312006888E1 /* Realm.framework */; };
 /* End PBXBuildFile section */
@@ -204,7 +204,7 @@
 		ADE1F35B1E9A702D00F457E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE1F3631E9A70A100F457E9 /* PerformanceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceObject.h; sourceTree = "<group>"; };
 		ADE1F3641E9A70A100F457E9 /* PerformanceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerformanceObject.m; sourceTree = "<group>"; };
-		ADE1F3661E9A70A100F457E9 /* FastEasyMappingRealmPerformanceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FastEasyMappingRealmPerformanceTests.m; sourceTree = "<group>"; };
+		ADE1F3661E9A70A100F457E9 /* Benchmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Benchmark.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,7 +458,7 @@
 		ADE1F3651E9A70A100F457E9 /* Spec */ = {
 			isa = PBXGroup;
 			children = (
-				ADE1F3661E9A70A100F457E9 /* FastEasyMappingRealmPerformanceTests.m */,
+				ADE1F3661E9A70A100F457E9 /* Benchmark.m */,
 			);
 			path = Spec;
 			sourceTree = "<group>";
@@ -934,7 +934,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADE1F3681E9A70A100F457E9 /* FastEasyMappingRealmPerformanceTests.m in Sources */,
+				ADE1F3681E9A70A100F457E9 /* Benchmark.m in Sources */,
 				ADE1F3671E9A70A100F457E9 /* PerformanceObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1431,6 +1431,7 @@
 				ADE1F3611E9A702D00F457E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

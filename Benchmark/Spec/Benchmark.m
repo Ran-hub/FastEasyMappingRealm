@@ -6,10 +6,10 @@
 
 #import "PerformanceObject.h"
 
-@interface FastEasyMappingRealmPerformanceTests : XCTestCase
+@interface Benchmark : XCTestCase
 @end
 
-@implementation FastEasyMappingRealmPerformanceTests
+@implementation Benchmark
 
 - (void)setUp {
     [super setUp];
