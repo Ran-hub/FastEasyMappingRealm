@@ -23,8 +23,9 @@ const NSInteger ObjectsAmount = 50000;
     
     self.representation = [self generateTestData:ObjectsAmount];
     
-    RLMRealmConfiguration *config = [RLMRealmConfiguration new];
-    config.inMemoryIdentifier = @"performance_tests";
+    RLMRealmConfiguration *config = [RLMRealmConfiguration defaultConfiguration];
+//    config.inMemoryIdentifier = @"performance_tests";
+    
     self.realm = [RLMRealm realmWithConfiguration:config error:nil];
 }
 

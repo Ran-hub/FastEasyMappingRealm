@@ -16,6 +16,9 @@
 		AD361BD51E9909B2009024D2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8961E982312006888E1 /* Realm.framework */; };
 		AD361BD81E9909B2009024D2 /* Kiwi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD361BD61E9909B2009024D2 /* Kiwi.framework */; };
 		AD361BD91E9909B2009024D2 /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD361BD71E9909B2009024D2 /* MagicalRecord.framework */; };
+		AD7A96D11E9CFF3A00A75C10 /* FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9400BE1E8BE11A00558F37 /* FastEasyMappingRealm.framework */; };
+		AD7A96D61E9D042800A75C10 /* FastEasyMapping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8951E982312006888E1 /* FastEasyMapping.framework */; };
+		AD7A96D71E9D042800A75C10 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8961E982312006888E1 /* Realm.framework */; };
 		AD7DF81F1E9814EB006888E1 /* FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8161E9814EB006888E1 /* FastEasyMappingRealm.framework */; };
 		AD7DF8471E98152F006888E1 /* FEMRealmAssignmentPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400D91E8BE75000558F37 /* FEMRealmAssignmentPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD7DF8481E98152F006888E1 /* FEMDeserializer+Realm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9400DE1E8BE75000558F37 /* FEMDeserializer+Realm.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -109,14 +112,18 @@
 		AD94011A1E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401071E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m */; };
 		AD94011B1E8BE7B100558F37 /* FEMDeserializerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */; };
 		AD94011C1E8BE7B100558F37 /* FEMRealmStoreSpeс.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */; };
-		ADE1F35C1E9A702D00F457E9 /* FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8161E9814EB006888E1 /* FastEasyMappingRealm.framework */; };
 		ADE1F3671E9A70A100F457E9 /* PerformanceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3641E9A70A100F457E9 /* PerformanceObject.m */; };
 		ADE1F3681E9A70A100F457E9 /* Benchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3661E9A70A100F457E9 /* Benchmark.m */; };
-		ADE1F3691E9A715B00F457E9 /* FastEasyMapping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8951E982312006888E1 /* FastEasyMapping.framework */; };
-		ADE1F36A1E9A715B00F457E9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8961E982312006888E1 /* Realm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AD7A96D41E9D041700A75C10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AD9400B51E8BE11A00558F37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD7DF8151E9814EB006888E1;
+			remoteInfo = "FastEasyMappingRealm macOS";
+		};
 		AD7DF8201E9814EB006888E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AD9400B51E8BE11A00558F37 /* Project object */;
@@ -130,13 +137,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = AD9400BD1E8BE11A00558F37;
 			remoteInfo = FastEasyMappingRealm;
-		};
-		ADE1F35D1E9A702D00F457E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AD9400B51E8BE11A00558F37 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AD7DF8151E9814EB006888E1;
-			remoteInfo = "FastEasyMappingRealm macOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -272,9 +272,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADE1F3691E9A715B00F457E9 /* FastEasyMapping.framework in Frameworks */,
-				ADE1F36A1E9A715B00F457E9 /* Realm.framework in Frameworks */,
-				ADE1F35C1E9A702D00F457E9 /* FastEasyMappingRealm.framework in Frameworks */,
+				AD7A96D61E9D042800A75C10 /* FastEasyMapping.framework in Frameworks */,
+				AD7A96D71E9D042800A75C10 /* Realm.framework in Frameworks */,
+				AD7A96D11E9CFF3A00A75C10 /* FastEasyMappingRealm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,7 +639,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				ADE1F35E1E9A702D00F457E9 /* PBXTargetDependency */,
+				AD7A96D51E9D041700A75C10 /* PBXTargetDependency */,
 			);
 			name = Benchmark;
 			productName = Benchmark;
@@ -942,6 +942,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AD7A96D51E9D041700A75C10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD7DF8151E9814EB006888E1 /* FastEasyMappingRealm macOS */;
+			targetProxy = AD7A96D41E9D041700A75C10 /* PBXContainerItemProxy */;
+		};
 		AD7DF8211E9814EB006888E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AD7DF8151E9814EB006888E1 /* FastEasyMappingRealm macOS */;
@@ -951,11 +956,6 @@
 			isa = PBXTargetDependency;
 			target = AD9400BD1E8BE11A00558F37 /* FastEasyMappingRealm iOS */;
 			targetProxy = AD9400C91E8BE11A00558F37 /* PBXContainerItemProxy */;
-		};
-		ADE1F35E1E9A702D00F457E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AD7DF8151E9814EB006888E1 /* FastEasyMappingRealm macOS */;
-			targetProxy = ADE1F35D1E9A702D00F457E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1138,7 +1138,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CARTHAGE_BUILD = "$(SRCROOT)/Carthage/Build/";
+				CARTHAGE_BUILD = "$(SRCROOT)/Carthage/Build";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1196,7 +1196,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CARTHAGE_BUILD = "$(SRCROOT)/Carthage/Build/";
+				CARTHAGE_BUILD = "$(SRCROOT)/Carthage/Build";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1321,12 +1321,13 @@
 		ADE1F3601E9A702D00F457E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/iOS";
+				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/Mac";
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(CARTHAGE_BUILD)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = Benchmark/Info.plist;
@@ -1334,19 +1335,20 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.Benchmark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos10.3;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		ADE1F3611E9A702D00F457E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/iOS";
+				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/Mac";
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(CARTHAGE_BUILD)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				INFOPLIST_FILE = Benchmark/Info.plist;
@@ -1354,7 +1356,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.Benchmark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos10.3;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
