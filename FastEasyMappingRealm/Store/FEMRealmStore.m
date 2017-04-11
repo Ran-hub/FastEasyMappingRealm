@@ -10,7 +10,9 @@
 
 @implementation FEMRealmStore {
     FEMObjectCache *_cache;
-    NSHashTable<RLMObject *> *_newObjects;
+    NSHashTable<RLMObject *> *_allNewObjects;
+    NSHashTable<RLMObject *> *_rootObjects;
+    FEMMapping *_rootMapping;
 }
 
 - (instancetype)initWithRealm:(RLMRealm *)realm {
@@ -28,6 +30,7 @@
 
 - (void)prepareTransactionForMapping:(nonnull FEMMapping *)mapping ofRepresentation:(nonnull NSArray *)representation {
     _cache = [[FEMObjectCache alloc] initWithMapping:mapping representation:representation realm:_realm];
+    _rootMapping = mapping;
 }
 
 - (void)beginTransaction {
@@ -36,17 +39,26 @@
         _cache = [[FEMObjectCache alloc] initWithRealm:_realm];
     }
 
-    _newObjects = [NSHashTable hashTableWithOptions:NSHashTableObjectPointerPersonality];
+    _allNewObjects = [NSHashTable hashTableWithOptions:NSHashTableObjectPointerPersonality];
+    _rootObjects = [NSHashTable hashTableWithOptions:NSHashTableObjectPointerPersonality];
+    
     [_realm beginWriteTransaction];
 }
 
 - (NSError *)commitTransaction {
-    [_realm addOrUpdateObjectsFromArray:_newObjects];
-//    [_realm addObjects:_newObjects];
-    _newObjects = nil;
+    Class realmClass = NSClassFromString(_rootMapping.entityName);
+    if ([realmClass primaryKey] != nil) {
+        [_realm addOrUpdateObjectsFromArray:_rootObjects];
+    } else {
+        [_realm addObjects:_rootObjects];
+    }
+    
+    _allNewObjects = nil;
+    _rootObjects = nil;
 
     [_realm commitWriteTransaction];
-
+    _rootMapping = nil;
+    
     return nil;
 }
 
@@ -54,12 +66,7 @@
     Class realmObjectClass = NSClassFromString(mapping.entityName);
     RLMObject *object = [(RLMObject *)[realmObjectClass alloc] init];
 
-//    [self.realm.configuration objectClasses]
-
-//    [_newObjects addObject:object];
-
-    
-    [_newObjects addObject:object];
+    [_allNewObjects addObject:object];
 
     return object;
 }
@@ -74,9 +81,9 @@
     [_cache addExistingObject:object mapping:mapping];
 }
 
-- (NSDictionary *)registeredObjectsForMapping:(FEMMapping *)mapping {
-    return [_cache existingObjectsForMapping:mapping];
-}
+//- (NSDictionary *)registeredObjectsForMapping:(FEMMapping *)mapping {
+//    return [_cache existingObjectsForMapping:mapping];
+//}
 
 - (BOOL)canRegisterObject:(id)object forMapping:(FEMMapping *)mapping {
     return mapping.primaryKey != nil && [(RLMObject *)object realm] == nil;
@@ -89,7 +96,7 @@
     if (rlmObject.realm == _realm) {
         [_realm deleteObject:rlmObject];
     } else {
-        [_newObjects removeObject:rlmObject];
+//        [_newObjects removeObject:rlmObject];
     }
 }
 

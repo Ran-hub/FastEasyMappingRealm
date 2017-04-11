@@ -1,12 +1,19 @@
 
 @import XCTest;
 
+@import FastEasyMapping;
 @import FastEasyMappingRealm;
 @import Realm;
 
 #import "PerformanceObject.h"
 
+const NSInteger ObjectsAmount = 50000;
+
 @interface Benchmark : XCTestCase
+
+@property (nonatomic, strong) RLMRealm *realm;
+@property (nonatomic, strong) NSArray *representation;
+
 @end
 
 @implementation Benchmark
@@ -14,17 +21,21 @@
 - (void)setUp {
     [super setUp];
     
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.representation = [self generateTestData:ObjectsAmount];
+    
+    RLMRealmConfiguration *config = [RLMRealmConfiguration new];
+    config.inMemoryIdentifier = @"performance_tests";
+    self.realm = [RLMRealm realmWithConfiguration:config error:nil];
 }
 
 - (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    self.representation = nil;
+    
+    [self.realm transactionWithBlock:^{
+        [self.realm deleteAllObjects];
+    }];
+    
     [super tearDown];
-}
-
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
 - (NSArray<NSDictionary<NSString *, id> *> *)generateTestData:(NSInteger)count {
@@ -58,60 +69,82 @@
     return representation;
 }
 
-- (void)testFastEasyMapping {
-    NSArray *representation = [self generateTestData:50000];
-
-    RLMRealmConfiguration *config = [RLMRealmConfiguration new];
-    config.inMemoryIdentifier = @"performance_tests";
-    RLMRealm *realm = [RLMRealm realmWithConfiguration:config error:nil];
-    
-    FEMRealmStore *store = [[FEMRealmStore alloc] initWithRealm:realm];
+- (void)testFastEasyMappingInsert {
+    FEMRealmStore *store = [[FEMRealmStore alloc] initWithRealm:self.realm];
     FEMDeserializer *deserializer = [[FEMDeserializer alloc] initWithStore:store];
-    [deserializer collectionFromRepresentation:representation mapping:[PerformanceObject defaultMapping]];
-    
+    FEMMapping *mapping = [PerformanceObject defaultMapping];
+
     [self measureMetrics:[self.class defaultPerformanceMetrics] automaticallyStartMeasuring:NO forBlock:^{
-        
         [self startMeasuring];
         
-        [deserializer collectionFromRepresentation:representation mapping:[PerformanceObject defaultMapping]];
+        [deserializer collectionFromRepresentation:self.representation mapping:mapping];
         
-        [self stopMeasuring];
+        [self stopMeasuring];        
         
-//        [realm transactionWithBlock:^{
-//            [realm deleteAllObjects];
-//        }];
+        [self.realm transactionWithBlock:^{
+            [self.realm deleteAllObjects];
+        }];
     }];
 }
 
-- (void)testRealmPerformance {
-    NSArray *representation = [self generateTestData:50000];
-    
-    RLMRealmConfiguration *config = [RLMRealmConfiguration new];
-    config.inMemoryIdentifier = @"performance_tests";
-    RLMRealm *realm = [RLMRealm realmWithConfiguration:config error:nil];
-    
-    FEMRealmStore *store = [[FEMRealmStore alloc] initWithRealm:realm];
+- (void)testFastEasyMappingUpdate {
+    FEMRealmStore *store = [[FEMRealmStore alloc] initWithRealm:self.realm];
     FEMDeserializer *deserializer = [[FEMDeserializer alloc] initWithStore:store];
-    [deserializer collectionFromRepresentation:representation mapping:[PerformanceObject defaultMapping]];
-    
+    FEMMapping *mapping = [PerformanceObject defaultMapping];
+    [deserializer collectionFromRepresentation:self.representation mapping:mapping];
     
     [self measureMetrics:[self.class defaultPerformanceMetrics] automaticallyStartMeasuring:NO forBlock:^{
         [self startMeasuring];
         
-        NSMutableArray *objects = [[NSMutableArray alloc] initWithCapacity:representation.count];
-        for (NSInteger i = 0; i < representation.count; i++) {
-            [objects addObject:[[PerformanceObject alloc] initWithValue:representation[i]]];
+        [deserializer collectionFromRepresentation:self.representation mapping:mapping];
+        
+        [self stopMeasuring];
+    }];
+}
+
+- (void)testRealmPerformanceInsert {
+    [self measureMetrics:[self.class defaultPerformanceMetrics] automaticallyStartMeasuring:NO forBlock:^{
+        [self startMeasuring];
+        
+        NSMutableArray *objects = [[NSMutableArray alloc] initWithCapacity:self.representation.count];
+        for (NSInteger i = 0; i < self.representation.count; i++) {
+            [objects addObject:[[PerformanceObject alloc] initWithValue:self.representation[i]]];
         }
         
-        [realm beginWriteTransaction];
-        [realm addOrUpdateObjectsFromArray:objects];
-        [realm commitWriteTransaction];
+        [self.realm beginWriteTransaction];
+        [self.realm addOrUpdateObjectsFromArray:objects];
+        [self.realm commitWriteTransaction];
         
         [self stopMeasuring];
         
-//        [realm transactionWithBlock:^{
-//            [realm deleteAllObjects];
-//        }];
+        [self.realm transactionWithBlock:^{
+            [self.realm deleteAllObjects];
+        }];
+    }];
+}
+
+- (void)testRealmPerformanceUpdate {
+    NSMutableArray *objects = [[NSMutableArray alloc] initWithCapacity:self.representation.count];
+    for (NSInteger i = 0; i < self.representation.count; i++) {
+        [objects addObject:[[PerformanceObject alloc] initWithValue:self.representation[i]]];
+    }
+    [self.realm beginWriteTransaction];
+    [self.realm addOrUpdateObjectsFromArray:objects];
+    [self.realm commitWriteTransaction];
+    
+    [self measureMetrics:[self.class defaultPerformanceMetrics] automaticallyStartMeasuring:NO forBlock:^{
+        [self startMeasuring];
+        
+        NSMutableArray *objects = [[NSMutableArray alloc] initWithCapacity:self.representation.count];
+        for (NSInteger i = 0; i < self.representation.count; i++) {
+            [objects addObject:[[PerformanceObject alloc] initWithValue:self.representation[i]]];
+        }
+        
+        [self.realm beginWriteTransaction];
+        [self.realm addOrUpdateObjectsFromArray:objects];
+        [self.realm commitWriteTransaction];
+        
+        [self stopMeasuring];
     }];
 }
 

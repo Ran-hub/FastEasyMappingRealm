@@ -1321,7 +1321,7 @@
 		ADE1F3601E9A702D00F457E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/Mac";
+				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/iOS";
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
@@ -1334,14 +1334,14 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.Benchmark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = iphoneos10.3;
 			};
 			name = Debug;
 		};
 		ADE1F3611E9A702D00F457E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/Mac";
+				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/iOS";
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
@@ -1354,7 +1354,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.Benchmark;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = iphoneos10.3;
 			};
 			name = Release;
 		};

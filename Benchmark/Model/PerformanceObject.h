@@ -4,6 +4,8 @@
 
 @class FEMMapping;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface PerformanceObject : RLMObject
 
 @property (nonatomic) BOOL boolValue;
@@ -38,3 +40,5 @@
 + (FEMMapping *)defaultMapping;
 
 @end
+
+NS_ASSUME_NONNULL_END
