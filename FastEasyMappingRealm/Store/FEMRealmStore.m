@@ -1,19 +1,13 @@
 // For License please refer to LICENSE file in the root of FastEasyMappingRealm project
 
 #import "FEMRealmStore.h"
-#import "FEMObjectCache+Realm.h"
 
 @import FastEasyMapping.FEMMapping;
 @import Realm.RLMRealm;
 @import Realm.RLMObject;
 @import Realm.Dynamic;
 
-@implementation FEMRealmStore {
-    FEMObjectCache *_cache;
-    NSHashTable<RLMObject *> *_allNewObjects;
-    NSHashTable<RLMObject *> *_rootObjects;
-    FEMMapping *_rootMapping;
-}
+@implementation FEMRealmStore
 
 - (instancetype)initWithRealm:(RLMRealm *)realm {
     NSParameterAssert(realm != nil);
@@ -44,8 +38,6 @@
 - (id)newObjectForMapping:(FEMMapping *)mapping {
     Class realmObjectClass = NSClassFromString(mapping.entityName);
     RLMObject *object = [(RLMObject *)[realmObjectClass alloc] init];
-
-    [_allNewObjects addObject:object];
 
     return object;
 }

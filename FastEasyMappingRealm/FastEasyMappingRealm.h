@@ -9,6 +9,4 @@ FOUNDATION_EXPORT const unsigned char FastEasyMappingRealmVersionString[];
 
 #import <FastEasyMappingRealm/FEMRealmStore.h>
 #import <FastEasyMappingRealm/FEMRealmAssignmentPolicy.h>
-
 #import <FastEasyMappingRealm/FEMDeserializer+Realm.h>
-#import <FastEasyMappingRealm/FEMObjectCache+Realm.h>
