@@ -168,7 +168,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
 
             context(@"new value null", ^{
                 beforeEach(^{
-                    NSDictionary *fixture = [Fixture buildUsingFixture:@"AssignmentPolicyToOneInit"];
+                    NSDictionary *fixture = [Fixture buildUsingFixture:@"AssignmentPolicyToOneNull"];
                     [deserializer fillObject:object fromRepresentation:fixture mapping:mapping];
                 });
 

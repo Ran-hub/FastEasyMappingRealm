@@ -59,6 +59,7 @@ describe(@"FEMRealmStore", ^{
             it(@"should save new object after commit", ^{
                 [store beginTransaction];
                 UniqueRealmObject *object = [store newObjectForMapping:mapping];
+                [store registerObject:object forMapping:mapping];
                 [store commitTransaction];
 
                 [[@([UniqueRealmObject allObjectsInRealm:realm].count) should] equal:@(1)];
@@ -94,16 +95,15 @@ describe(@"FEMRealmStore", ^{
                 [store commitTransaction];
             });
 
-            it(@"can not register object without specified PK", ^{
-                UniqueRealmObject *object = [store newObjectForMapping:mapping];
-                mapping.primaryKey = nil;
-
-                [[@([store canRegisterObject:object forMapping:mapping]) should] beFalse];
-            });
-
-            it(@"can register object with PK", ^{
+            it(@"can register objects without realm", ^{
                 UniqueRealmObject *object = [store newObjectForMapping:mapping];
                 [[@([store canRegisterObject:object forMapping:mapping]) should] beTrue];
+            });
+
+            it(@"can not register objects that are in any realm", ^{
+                UniqueRealmObject *object = [store newObjectForMapping:mapping];
+                [realm addObject:object];
+                [[@([store canRegisterObject:object forMapping:mapping]) should] beFalse];
             });
 
             it(@"should register object with PK", ^{
@@ -118,8 +118,6 @@ describe(@"FEMRealmStore", ^{
                 NSDictionary *invalidJSON = @{@"primaryKey": @(6)};
                 [[[store registeredObjectForRepresentation:invalidJSON mapping:mapping] should] beNil];
             });
-
-
         });
 
         context(@"registration prefetch", ^{
