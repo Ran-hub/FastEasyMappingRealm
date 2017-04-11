@@ -29,35 +29,14 @@
 #pragma mark - Transaction
 
 - (void)prepareTransactionForMapping:(nonnull FEMMapping *)mapping ofRepresentation:(nonnull NSArray *)representation {
-    _cache = [[FEMObjectCache alloc] initWithMapping:mapping representation:representation realm:_realm];
-    _rootMapping = mapping;
 }
 
 - (void)beginTransaction {
-    // for test purpose
-    if (_cache == nil) {
-        _cache = [[FEMObjectCache alloc] initWithRealm:_realm];
-    }
-
-    _allNewObjects = [NSHashTable hashTableWithOptions:NSHashTableObjectPointerPersonality];
-    _rootObjects = [NSHashTable hashTableWithOptions:NSHashTableObjectPointerPersonality];
-    
     [_realm beginWriteTransaction];
 }
 
 - (NSError *)commitTransaction {
-    Class realmClass = NSClassFromString(_rootMapping.entityName);
-    if ([realmClass primaryKey] != nil) {
-        [_realm addOrUpdateObjectsFromArray:_rootObjects];
-    } else {
-        [_realm addObjects:_rootObjects];
-    }
-    
-    _allNewObjects = nil;
-    _rootObjects = nil;
-
     [_realm commitWriteTransaction];
-    _rootMapping = nil;
     
     return nil;
 }
@@ -72,21 +51,23 @@
 }
 
 - (id)registeredObjectForRepresentation:(id)representation mapping:(FEMMapping *)mapping {
-    return [_cache existingObjectForRepresentation:representation mapping:mapping];
+    FEMAttribute *pk = mapping.primaryKeyAttribute;
+    if (pk != nil) {
+        id pkValue = [pk mapValue:[representation valueForKeyPath:pk.keyPath]];
+        return [_realm objectWithClassName:mapping.entityName forPrimaryKey:pkValue];
+    } else {
+        return nil;
+    }
 }
 
 - (void)registerObject:(id)object forMapping:(FEMMapping *)mapping {
-    NSParameterAssert([self canRegisterObject:object forMapping:mapping]);
-
-    [_cache addExistingObject:object mapping:mapping];
+    if ([self canRegisterObject:object forMapping:mapping]) {
+        [_realm addObject:object];
+    }
 }
 
-//- (NSDictionary *)registeredObjectsForMapping:(FEMMapping *)mapping {
-//    return [_cache existingObjectsForMapping:mapping];
-//}
-
 - (BOOL)canRegisterObject:(id)object forMapping:(FEMMapping *)mapping {
-    return mapping.primaryKey != nil && [(RLMObject *)object realm] == nil;
+    return [(RLMObject *)object realm] == nil;
 }
 
 #pragma mark - FEMRelationshipAssignmentContextDelegate
@@ -95,8 +76,6 @@
     RLMObject *rlmObject = object;
     if (rlmObject.realm == _realm) {
         [_realm deleteObject:rlmObject];
-    } else {
-//        [_newObjects removeObject:rlmObject];
     }
 }
 
