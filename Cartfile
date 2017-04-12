@@ -1,2 +1,2 @@
-github "Yalantis/FastEasyMapping" "feature/performance_improvement"
+git "/Users/zen/Developer/ios/FEM/FastEasyMapping" "feature/imp_cache"
 github "realm/realm-cocoa" ~> 2.0

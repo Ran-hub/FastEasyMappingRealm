@@ -14,13 +14,12 @@
 @implementation PerformanceObject (Mapping)
 
 + (FEMMapping *)defaultMapping {
-    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:[self className]];
+    FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
     mapping.primaryKey = @"intValue";
     
     [mapping addAttributesFromArray:@[
             @"boolValue",
             @"boolObject",
-            @"booleanValue",
             @"intValue",
             @"intObject",
             @"nsIntegerValue",

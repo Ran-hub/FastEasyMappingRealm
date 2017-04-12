@@ -43,7 +43,7 @@ describe(@"FEMRealmStore", ^{
         context(@"new object", ^{
             __block FEMMapping *mapping = nil;
             beforeAll(^{
-                mapping = [[FEMMapping alloc] initWithEntityName:[UniqueRealmObject className]];
+                mapping = [[FEMMapping alloc] initWithObjectClass:[UniqueRealmObject class]];
             });
 
             it(@"should create RLMObject specified in FEMMapping.entityName", ^{
@@ -51,7 +51,6 @@ describe(@"FEMRealmStore", ^{
 
                 UniqueRealmObject *object = [store newObjectForMapping:mapping];
                 [[object should] beKindOfClass:[UniqueRealmObject class]];
-                [[[object.class className] should] equal:mapping.entityName];
 
                 [store commitTransaction];
             });
@@ -71,7 +70,7 @@ describe(@"FEMRealmStore", ^{
            it(@"should delete object as a delegate of assingment context", ^{
                [store beginTransaction];
 
-               FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:[UniqueRealmObject className]];
+               FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:[UniqueRealmObject class]];
                UniqueRealmObject *object = [store newObjectForMapping:mapping];
                FEMRelationshipAssignmentContext *context = [store newAssignmentContext];
                [context deleteRelationshipObject:object];

@@ -9,7 +9,7 @@
 @implementation RealmObject (Mapping)
 
 + (FEMMapping *)attributesMapping {
-    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:[self className]];
+    FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
     [mapping addAttributesFromArray:@[
         @"boolValue",
         @"boolObject",
@@ -47,7 +47,7 @@
 }
 
 + (FEMMapping *)toOneRelationshipMapping {
-    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:[self className]];
+    FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
     [mapping addAttributesFromArray:@[@"integerProperty"]];
     [mapping addRelationshipMapping:[ChildRealmObject defaultMapping] forProperty:@"toOneRelationship" keyPath:@"toOneRelationship"];
 
@@ -55,7 +55,7 @@
 }
 
 + (FEMMapping *)toManyRelationshipMapping {
-    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:[self className]];
+    FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
     [mapping addAttributesFromArray:@[@"integerProperty"]];
     [mapping addToManyRelationshipMapping:[ChildRealmObject defaultMapping] forProperty:@"toManyRelationship" keyPath:@"toManyRelationship"];
 

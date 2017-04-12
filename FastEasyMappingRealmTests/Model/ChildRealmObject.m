@@ -9,7 +9,7 @@
 @implementation ChildRealmObject (Mapping)
 
 + (FEMMapping *)defaultMapping {
-    FEMMapping *mapping = [[FEMMapping alloc] initWithEntityName:[self className]];
+    FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
     [mapping addAttributesFromArray:@[@"identifier"]];
     return mapping;
 }

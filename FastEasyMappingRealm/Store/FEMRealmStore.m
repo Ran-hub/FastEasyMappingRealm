@@ -36,7 +36,7 @@
 }
 
 - (id)newObjectForMapping:(FEMMapping *)mapping {
-    Class realmObjectClass = NSClassFromString(mapping.entityName);
+    Class realmObjectClass = mapping.objectClass;
     RLMObject *object = [(RLMObject *)[realmObjectClass alloc] init];
 
     return object;
@@ -46,7 +46,7 @@
     FEMAttribute *pk = mapping.primaryKeyAttribute;
     if (pk != nil) {
         id pkValue = [pk mapValue:[representation valueForKeyPath:pk.keyPath]];
-        return [_realm objectWithClassName:mapping.entityName forPrimaryKey:pkValue];
+        return [_realm objectWithClassName:[mapping.objectClass className] forPrimaryKey:pkValue];
     } else {
         return nil;
     }
