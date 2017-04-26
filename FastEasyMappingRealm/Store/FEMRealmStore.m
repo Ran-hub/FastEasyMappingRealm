@@ -22,10 +22,11 @@
 
 #pragma mark - Transaction
 
-- (void)prepareTransactionForMapping:(nonnull FEMMapping *)mapping ofRepresentation:(nonnull NSArray *)representation {
++ (BOOL)requiresPrefetch {
+    return NO;
 }
 
-- (void)beginTransaction {
+- (void)beginTransaction:(nullable NSMapTable<FEMMapping *, NSSet<id> *> *)presentedPrimaryKeys {
     [_realm beginWriteTransaction];
 }
 
@@ -36,30 +37,27 @@
 }
 
 - (id)newObjectForMapping:(FEMMapping *)mapping {
-    Class realmObjectClass = mapping.objectClass;
-    RLMObject *object = [(RLMObject *)[realmObjectClass alloc] init];
+    Class realmClass = mapping.objectClass;
 
+    NSAssert(realmClass != nil, @"-[FEMMapping objectClass] can't be nil");
+    NSAssert(
+        [realmClass isSubclassOfClass:[RLMObjectBase class]],
+        @"-[FEMMapping objectClass] (<%@>) has to be a subclass of RLMObjectBase class",
+        NSStringFromClass(realmClass)
+    );
+
+    RLMObjectBase *object = [(RLMObjectBase *)[realmClass alloc] init];
     return object;
 }
 
-- (id)registeredObjectForRepresentation:(id)representation mapping:(FEMMapping *)mapping {
-    FEMAttribute *pk = mapping.primaryKeyAttribute;
-    if (pk != nil) {
-        id pkValue = [pk mapValue:[representation valueForKeyPath:pk.keyPath]];
-        return [_realm objectWithClassName:[mapping.objectClass className] forPrimaryKey:pkValue];
-    } else {
-        return nil;
-    }
+- (nullable id)objectForPrimaryKey:(id)primaryKey mapping:(FEMMapping *)mapping {
+    return [_realm objectWithClassName:[mapping.objectClass className] forPrimaryKey:primaryKey];
 }
 
-- (void)registerObject:(id)object forMapping:(FEMMapping *)mapping {
-    if ([self canRegisterObject:object forMapping:mapping]) {
+- (void)addObject:(id)object forPrimaryKey:(nullable id)primaryKey mapping:(FEMMapping *)mapping {
+    if ([(RLMObject *)object realm] != _realm) {
         [_realm addObject:object];
     }
-}
-
-- (BOOL)canRegisterObject:(id)object forMapping:(FEMMapping *)mapping {
-    return [(RLMObject *)object realm] == nil;
 }
 
 #pragma mark - FEMRelationshipAssignmentContextDelegate

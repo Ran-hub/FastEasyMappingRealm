@@ -33,7 +33,7 @@ describe(@"FEMRealmStore", ^{
         context(@"transaction", ^{
             it(@"should perform write transaction", ^{
                 [[@(realm.inWriteTransaction) should] beFalse];
-                [store beginTransaction];
+                [store beginTransaction:nil];
                 [[@(realm.inWriteTransaction) should] beTrue];
                 [store commitTransaction];
                 [[@(realm.inWriteTransaction) should] beFalse];
@@ -47,7 +47,7 @@ describe(@"FEMRealmStore", ^{
             });
 
             it(@"should create RLMObject specified in FEMMapping.entityName", ^{
-                [store beginTransaction];
+                [store beginTransaction:nil];
 
                 UniqueRealmObject *object = [store newObjectForMapping:mapping];
                 [[object should] beKindOfClass:[UniqueRealmObject class]];
@@ -56,9 +56,9 @@ describe(@"FEMRealmStore", ^{
             });
 
             it(@"should save new object after commit", ^{
-                [store beginTransaction];
+                [store beginTransaction:nil];
                 UniqueRealmObject *object = [store newObjectForMapping:mapping];
-                [store registerObject:object forMapping:mapping];
+                [store addObject:object forPrimaryKey:nil mapping:mapping];
                 [store commitTransaction];
 
                 [[@([UniqueRealmObject allObjectsInRealm:realm].count) should] equal:@(1)];
@@ -68,7 +68,7 @@ describe(@"FEMRealmStore", ^{
 
         context(@"delete object", ^{
            it(@"should delete object as a delegate of assingment context", ^{
-               [store beginTransaction];
+               [store beginTransaction:nil];
 
                FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:[UniqueRealmObject class]];
                UniqueRealmObject *object = [store newObjectForMapping:mapping];
@@ -81,64 +81,48 @@ describe(@"FEMRealmStore", ^{
            });
         });
 
-        context(@"registration", ^{
+        context(@"add", ^{
             __block FEMMapping *mapping = nil;
             beforeEach(^{
                 mapping = [UniqueRealmObject defaultMapping];
 
-                [store prepareTransactionForMapping:mapping ofRepresentation:@[]];
-                [store beginTransaction];
+                [store beginTransaction:nil];
             });
 
             afterEach(^{
                 [store commitTransaction];
             });
 
-            it(@"can register objects without realm", ^{
-                UniqueRealmObject *object = [store newObjectForMapping:mapping];
-                [[@([store canRegisterObject:object forMapping:mapping]) should] beTrue];
-            });
-
-            it(@"can not register objects that are in any realm", ^{
-                UniqueRealmObject *object = [store newObjectForMapping:mapping];
-                [realm addObject:object];
-                [[@([store canRegisterObject:object forMapping:mapping]) should] beFalse];
-            });
-
-            it(@"should register object with PK", ^{
+            it(@"should add object with PK", ^{
                 UniqueRealmObject *object = [store newObjectForMapping:mapping];
                 object.primaryKey = 5;
 
-                [store registerObject:object forMapping:mapping];
-
-                NSDictionary *json = @{@"primaryKey": @(5)};
-                [[[store registeredObjectForRepresentation:json mapping:mapping] should] equal:object];
-
-                NSDictionary *invalidJSON = @{@"primaryKey": @(6)};
-                [[[store registeredObjectForRepresentation:invalidJSON mapping:mapping] should] beNil];
+                [store addObject:object forPrimaryKey:@(object.primaryKey) mapping:mapping];
+                
+                [[[store objectForPrimaryKey:@(object.primaryKey) mapping:mapping] should] equal:object];
+                [[[store objectForPrimaryKey:@(object.primaryKey + 1) mapping:mapping] should] beNil];
             });
         });
 
-        context(@"registration prefetch", ^{
+        context(@"prefetch", ^{
             __block FEMMapping *mapping = nil;
             beforeEach(^{
                 mapping = [UniqueRealmObject defaultMapping];
             });
 
             it(@"should automatically register existing objects", ^{
-                NSDictionary *json = @{@"primaryKey": @(5)};
                 __block UniqueRealmObject *object = nil;
                 [realm transactionWithBlock:^{
                     object = [[UniqueRealmObject alloc] init];
                     object.primaryKey = 5;
                     [realm addObject:object];
                 }];
-
-                [store prepareTransactionForMapping:mapping ofRepresentation:@[json]];
-                [store beginTransaction];
-
-                [[[store registeredObjectForRepresentation:json mapping:mapping] should] equal:object];
-
+                
+                NSMapTable *presentedPrimaryKeys = [NSMapTable strongToStrongObjectsMapTable];
+                [presentedPrimaryKeys setObject:[NSSet setWithObject:@5] forKey:mapping];
+                
+                [store beginTransaction:presentedPrimaryKeys];
+                [[[store objectForPrimaryKey:@5 mapping:mapping] should] equal:object];
                 [store commitTransaction];
             });
         });
