@@ -15,7 +15,6 @@
 		AD361BD41E9909B2009024D2 /* FastEasyMapping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8951E982312006888E1 /* FastEasyMapping.framework */; };
 		AD361BD51E9909B2009024D2 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8961E982312006888E1 /* Realm.framework */; };
 		AD361BD81E9909B2009024D2 /* Kiwi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD361BD61E9909B2009024D2 /* Kiwi.framework */; };
-		AD361BD91E9909B2009024D2 /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD361BD71E9909B2009024D2 /* MagicalRecord.framework */; };
 		AD7A96D11E9CFF3A00A75C10 /* FastEasyMappingRealm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9400BE1E8BE11A00558F37 /* FastEasyMappingRealm.framework */; };
 		AD7A96D61E9D042800A75C10 /* FastEasyMapping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8951E982312006888E1 /* FastEasyMapping.framework */; };
 		AD7A96D71E9D042800A75C10 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8961E982312006888E1 /* Realm.framework */; };
@@ -64,7 +63,6 @@
 		AD7DF87F1E981AF3006888E1 /* FastEasyMapping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF87B1E981ABB006888E1 /* FastEasyMapping.framework */; };
 		AD7DF8801E981AF3006888E1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF87C1E981ABB006888E1 /* Realm.framework */; };
 		AD7DF8831E981AF3006888E1 /* Kiwi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8811E981AF3006888E1 /* Kiwi.framework */; };
-		AD7DF8841E981AF3006888E1 /* MagicalRecord.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF8821E981AF3006888E1 /* MagicalRecord.framework */; };
 		AD7DF8881E981E37006888E1 /* FastEasyMapping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF87B1E981ABB006888E1 /* FastEasyMapping.framework */; };
 		AD7DF8891E981E37006888E1 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD7DF87C1E981ABB006888E1 /* Realm.framework */; };
 		AD7DF8921E98229E006888E1 /* FEMRealmStore.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400E41E8BE75000558F37 /* FEMRealmStore.m */; };
@@ -112,6 +110,12 @@
 		AD9F7B491E9E208F00A58327 /* FEMMapping+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F7B431E9E208F00A58327 /* FEMMapping+Realm.m */; };
 		AD9F7B4A1E9E208F00A58327 /* FEMMapping+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F7B431E9E208F00A58327 /* FEMMapping+Realm.m */; };
 		AD9F7B4B1E9E208F00A58327 /* FEMMapping+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F7B431E9E208F00A58327 /* FEMMapping+Realm.m */; };
+		ADDBBD791EB0A35100BFFD77 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD771EB0A35100BFFD77 /* Nimble.framework */; };
+		ADDBBD7A1EB0A35100BFFD77 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD781EB0A35100BFFD77 /* Quick.framework */; };
+		ADDBBD7D1EB0A36500BFFD77 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD7B1EB0A36500BFFD77 /* Nimble.framework */; };
+		ADDBBD7E1EB0A36500BFFD77 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD7C1EB0A36500BFFD77 /* Quick.framework */; };
+		ADDBBD801EB0A3AE00BFFD77 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD7F1EB0A3AE00BFFD77 /* RealmSwift.framework */; };
+		ADDBBD821EB0A3BC00BFFD77 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD811EB0A3BC00BFFD77 /* RealmSwift.framework */; };
 		ADE1F3671E9A70A100F457E9 /* PerformanceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3641E9A70A100F457E9 /* PerformanceObject.m */; };
 		ADE1F3681E9A70A100F457E9 /* Benchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3661E9A70A100F457E9 /* Benchmark.m */; };
 /* End PBXBuildFile section */
@@ -200,6 +204,12 @@
 		AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMRealmStoreSpeс.m"; sourceTree = "<group>"; };
 		AD9F7B421E9E208F00A58327 /* FEMMapping+Realm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FEMMapping+Realm.h"; sourceTree = "<group>"; };
 		AD9F7B431E9E208F00A58327 /* FEMMapping+Realm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMMapping+Realm.m"; sourceTree = "<group>"; };
+		ADDBBD771EB0A35100BFFD77 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
+		ADDBBD781EB0A35100BFFD77 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
+		ADDBBD7B1EB0A36500BFFD77 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		ADDBBD7C1EB0A36500BFFD77 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		ADDBBD7F1EB0A3AE00BFFD77 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		ADDBBD811EB0A3BC00BFFD77 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/Mac/RealmSwift.framework; sourceTree = "<group>"; };
 		ADE1F3571E9A702D00F457E9 /* Benchmark.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Benchmark.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE1F35B1E9A702D00F457E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE1F3631E9A70A100F457E9 /* PerformanceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceObject.h; sourceTree = "<group>"; };
@@ -221,8 +231,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADDBBD821EB0A3BC00BFFD77 /* RealmSwift.framework in Frameworks */,
+				ADDBBD791EB0A35100BFFD77 /* Nimble.framework in Frameworks */,
+				ADDBBD7A1EB0A35100BFFD77 /* Quick.framework in Frameworks */,
 				AD361BD81E9909B2009024D2 /* Kiwi.framework in Frameworks */,
-				AD361BD91E9909B2009024D2 /* MagicalRecord.framework in Frameworks */,
 				AD361BD41E9909B2009024D2 /* FastEasyMapping.framework in Frameworks */,
 				AD361BD51E9909B2009024D2 /* Realm.framework in Frameworks */,
 				AD7DF81F1E9814EB006888E1 /* FastEasyMappingRealm.framework in Frameworks */,
@@ -260,8 +272,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADDBBD801EB0A3AE00BFFD77 /* RealmSwift.framework in Frameworks */,
+				ADDBBD7D1EB0A36500BFFD77 /* Nimble.framework in Frameworks */,
+				ADDBBD7E1EB0A36500BFFD77 /* Quick.framework in Frameworks */,
 				AD7DF8831E981AF3006888E1 /* Kiwi.framework in Frameworks */,
-				AD7DF8841E981AF3006888E1 /* MagicalRecord.framework in Frameworks */,
 				AD7DF87F1E981AF3006888E1 /* FastEasyMapping.framework in Frameworks */,
 				AD7DF8801E981AF3006888E1 /* Realm.framework in Frameworks */,
 				AD9400C81E8BE11A00558F37 /* FastEasyMappingRealm.framework in Frameworks */,
@@ -293,6 +307,12 @@
 		AD7DF87A1E981ABA006888E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ADDBBD811EB0A3BC00BFFD77 /* RealmSwift.framework */,
+				ADDBBD7F1EB0A3AE00BFFD77 /* RealmSwift.framework */,
+				ADDBBD7B1EB0A36500BFFD77 /* Nimble.framework */,
+				ADDBBD7C1EB0A36500BFFD77 /* Quick.framework */,
+				ADDBBD771EB0A35100BFFD77 /* Nimble.framework */,
+				ADDBBD781EB0A35100BFFD77 /* Quick.framework */,
 				AD361BD61E9909B2009024D2 /* Kiwi.framework */,
 				AD361BD71E9909B2009024D2 /* MagicalRecord.framework */,
 				AD7DF89D1E98232E006888E1 /* FastEasyMapping.framework */,
@@ -805,9 +825,11 @@
 			);
 			inputPaths = (
 				"$(CARTHAGE_BUILD)/Kiwi.framework",
-				"$(CARTHAGE_BUILD)/MagicalRecord.framework",
 				"$(CARTHAGE_BUILD)/Realm.framework",
 				"$(CARTHAGE_BUILD)/FastEasyMapping.framework",
+				"$(CARTHAGE_BUILD)/Nimble.framework",
+				"$(CARTHAGE_BUILD)/Quick.framework",
+				"$(CARTHAGE_BUILD)/RealmSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -823,9 +845,11 @@
 			);
 			inputPaths = (
 				"$(CARTHAGE_BUILD)/Kiwi.framework",
-				"$(CARTHAGE_BUILD)/MagicalRecord.framework",
 				"$(CARTHAGE_BUILD)/Realm.framework",
 				"$(CARTHAGE_BUILD)/FastEasyMapping.framework",
+				"$(CARTHAGE_BUILD)/Quick.framework",
+				"$(CARTHAGE_BUILD)/Nimble.framework",
+				"$(CARTHAGE_BUILD)/RealmSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (

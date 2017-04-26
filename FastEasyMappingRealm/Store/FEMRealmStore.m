@@ -56,7 +56,7 @@
 
 - (void)addObject:(id)object forPrimaryKey:(nullable id)primaryKey mapping:(FEMMapping *)mapping {
     if ([(RLMObject *)object realm] != _realm) {
-        [_realm addObject:object];
+        [_realm addObject:object];  
     }
 }
 

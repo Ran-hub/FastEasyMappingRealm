@@ -1,2 +1,2 @@
-git "/Users/zen/Developer/ios/FEM/FastEasyMapping" "feature/imp_cache"
+git "/Users/zen/Developer/ios/FEM/FastEasyMapping" "master"
 github "realm/realm-cocoa" ~> 2.0
