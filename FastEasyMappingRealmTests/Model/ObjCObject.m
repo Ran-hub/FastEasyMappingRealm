@@ -1,23 +1,26 @@
 
 #import <Realm/Realm.h>
 #import <FastEasyMapping/FEMMapping.h>
-#import "RealmObject.h"
+#import "ObjCObject.h"
 
-@implementation RealmObject
+@implementation ObjCObject
 @end
 
-@implementation RealmObject (Mapping)
+@implementation ObjCObject (Mapping)
 
 + (FEMMapping *)attributesMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
     [mapping addAttributesFromArray:@[
         @"boolValue",
         @"boolObject",
-        @"booleanValue",
+        @"malformedBoolValue",
+        @"malformedBoolObject",
+//        @"charValue",
+//        @"charObject",
+        @"shortValue",
+        @"shortObject",
         @"intValue",
         @"intObject",
-        @"nsIntegerValue",
-        @"nsIntegerObject",
         @"longValue",
         @"longObject",
         @"longLongValue",
@@ -49,7 +52,7 @@
 + (FEMMapping *)toOneRelationshipMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
     [mapping addAttributesFromArray:@[@"integerProperty"]];
-    [mapping addRelationshipMapping:[ChildRealmObject defaultMapping] forProperty:@"toOneRelationship" keyPath:@"toOneRelationship"];
+    [mapping addRelationshipMapping:[ObjCChildObject defaultMapping] forProperty:@"toOneRelationship" keyPath:@"toOneRelationship"];
 
     return mapping;
 }
@@ -57,7 +60,7 @@
 + (FEMMapping *)toManyRelationshipMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
     [mapping addAttributesFromArray:@[@"integerProperty"]];
-    [mapping addToManyRelationshipMapping:[ChildRealmObject defaultMapping] forProperty:@"toManyRelationship" keyPath:@"toManyRelationship"];
+    [mapping addToManyRelationshipMapping:[ObjCChildObject defaultMapping] forProperty:@"toManyRelationship" keyPath:@"toManyRelationship"];
 
     return mapping;
 }

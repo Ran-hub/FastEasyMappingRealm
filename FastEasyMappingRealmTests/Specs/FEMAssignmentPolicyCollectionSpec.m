@@ -6,7 +6,7 @@
 #import <Realm/Realm.h>
 #import <Realm/RLMRealm_Dynamic.h>
 
-#import "RealmObject.h"
+#import "ObjCObject.h"
 #import "UniqueRealmObject.h"
 #import "UniqueToManyChildRealmObject.h"
 #import "FEMRealmAssignmentPolicy.h"

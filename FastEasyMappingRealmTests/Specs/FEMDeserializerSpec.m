@@ -4,7 +4,7 @@
 #import <FastEasyMapping/FastEasyMapping.h>
 #import <FastEasyMappingRealm/FastEasyMappingRealm.h>
 #import <Realm/Realm.h>
-#import "RealmObject.h"
+#import "ObjCObject.h"
 
 #import "Fixture.h"
 
@@ -34,7 +34,7 @@ describe(@"FEMDeserializer", ^{
         });
 
         context(@"attributes", ^{
-            __block RealmObject *realmObject = nil;
+            __block ObjCObject *realmObject = nil;
 
             afterEach(^{
                 [realm transactionWithBlock:^{
@@ -47,7 +47,7 @@ describe(@"FEMDeserializer", ^{
                 __block FEMMapping *mapping = nil;
 
                 beforeEach(^{
-                    mapping = [RealmObject attributesMapping];
+                    mapping = [ObjCObject attributesMapping];
                     NSDictionary *json = [Fixture buildUsingFixture:@"SupportedTypes"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                 });
@@ -57,13 +57,39 @@ describe(@"FEMDeserializer", ^{
                 });
 
                 it(@"should map BOOL value", ^{
-                    BOOL expected = YES;
-                    [[@(realmObject.boolValue) should] equal:@(expected)];
+                    [[theValue(realmObject.boolValue) should] beTrue];
                 });
 
                 it(@"should map BOOL object", ^{
-                    BOOL expected = YES;
-                    [[realmObject.boolObject should] equal:@(expected)];
+                    [[realmObject.boolObject should] beTrue];
+                });
+
+                it(@"should map malformed bool value", ^{
+                    [[theValue(realmObject.malformedBoolValue) should] beTrue];
+                });
+
+                it(@"should map malformed bool object", ^{
+                    [[realmObject.malformedBoolObject should] beTrue];
+                });
+
+//                it(@"should map char value", ^{
+//                    char expected = CHAR_MAX;
+//                    [[@(realmObject.charValue) should] equal:@(expected)];
+//                });
+//
+//                it(@"should map char object", ^{
+//                    char expected = CHAR_MAX;
+//                    [[realmObject.charObject should] equal:@(expected)];
+//                });
+
+                it(@"should map short value", ^{
+                    short expected = SHRT_MAX;
+                    [[@(realmObject.shortValue) should] equal:@(expected)];
+                });
+
+                it(@"should map short object", ^{
+                    short expected = SHRT_MAX;
+                    [[realmObject.shortObject should] equal:@(expected)];
                 });
 
                 it(@"should map int value", ^{
@@ -76,23 +102,13 @@ describe(@"FEMDeserializer", ^{
                     [[realmObject.intObject should] equal:@(expected)];
                 });
 
-                it(@"should map NSInteger value", ^{
-                    NSInteger expected = NSIntegerMax;
-                    [[@(realmObject.nsIntegerValue) should] equal:@(expected)];
-                });
-
-                it(@"should map NSInteger object", ^{
-                    NSInteger expected = NSIntegerMax;
-                    [[realmObject.nsIntegerObject should] equal:@(expected)];
-                });
-
                 it(@"should map long value", ^{
-                    long expected = LONG_MAX;
+                    long expected = INT_MAX;
                     [[@(realmObject.longValue) should] equal:@(expected)];
                 });
 
                 it(@"should map long object", ^{
-                    long expected = LONG_MAX;
+                    long expected = INT_MAX;
                     [[realmObject.longObject should] equal:@(expected)];
                 });
 
@@ -146,7 +162,7 @@ describe(@"FEMDeserializer", ^{
 
             context(@"null values", ^{
                 beforeEach(^{
-                    FEMMapping *mapping = [RealmObject attributesMapping];
+                    FEMMapping *mapping = [ObjCObject attributesMapping];
                     NSDictionary *json = [Fixture buildUsingFixture:@"SupportedNullTypes"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                 });
@@ -159,20 +175,36 @@ describe(@"FEMDeserializer", ^{
                     [[realmObject.boolObject should] beNil];
                 });
 
+                it(@"should skip malformed bool value", ^{
+                    [[theValue(realmObject.malformedBoolValue) should] beFalse];
+                });
+
+                it(@"should nil malformed bool object", ^{
+                    [[realmObject.malformedBoolObject should] beNil];
+                });
+
+//                it(@"should skip char value", ^{
+//                    [[@(realmObject.charValue) should] beZero];
+//                });
+//
+//                it(@"should nil char object", ^{
+//                    [[realmObject.charObject should] beNil];
+//                });
+
+                it(@"should skip short value", ^{
+                    [[@(realmObject.intValue) should] beZero];
+                });
+
+                it(@"should nil short object", ^{
+                    [[realmObject.intObject should] beNil];
+                });
+
                 it(@"should skip int value", ^{
                     [[@(realmObject.intValue) should] beZero];
                 });
 
                 it(@"should nil int object", ^{
                     [[realmObject.intObject should] beNil];
-                });
-
-                it(@"should skip NSInteger value", ^{
-                    [[@(realmObject.nsIntegerValue) should] beZero];
-                });
-
-                it(@"should nil NSInteger object", ^{
-                    [[realmObject.nsIntegerObject should] beNil];
                 });
 
                 it(@"should skip long value", ^{
@@ -222,7 +254,7 @@ describe(@"FEMDeserializer", ^{
 
             context(@"update by null values", ^{
                 beforeEach(^{
-                    FEMMapping *mapping = [RealmObject attributesMapping];
+                    FEMMapping *mapping = [ObjCObject attributesMapping];
                     NSDictionary *json = [Fixture buildUsingFixture:@"SupportedTypes"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
 
@@ -231,12 +263,37 @@ describe(@"FEMDeserializer", ^{
                 });
 
                 it(@"should skip BOOL value", ^{
-                    BOOL expected = YES;
-                    [[@(realmObject.boolValue) should] equal:@(expected)];
+                    [[theValue(realmObject.boolValue) should] beTrue];
                 });
 
                 it(@"should nil BOOL object", ^{
                     [[realmObject.boolObject should] beNil];
+                });
+
+                it(@"should skip malformed bool value", ^{
+                    [[theValue(realmObject.malformedBoolValue) should] beTrue];
+                });
+
+                it(@"should nil malformed bool object", ^{
+                    [[realmObject.malformedBoolObject should] beNil];
+                });
+
+//                it(@"should skip char value", ^{
+//                    char expected = CHAR_MAX;
+//                    [[@(realmObject.charValue) should] equal:@(expected)];
+//                });
+
+//                it(@"should nil char object", ^{
+//                    [[realmObject.charObject should] beNil];
+//                });
+
+                it(@"should skip short value", ^{
+                    short expected = SHRT_MAX;
+                    [[@(realmObject.shortValue) should] equal:@(expected)];
+                });
+
+                it(@"should nil short object", ^{
+                    [[realmObject.shortObject should] beNil];
                 });
 
                 it(@"should skip int value", ^{
@@ -248,17 +305,8 @@ describe(@"FEMDeserializer", ^{
                     [[realmObject.intObject should] beNil];
                 });
 
-                it(@"should skip NSInteger value", ^{
-                    NSInteger expected = NSIntegerMax;
-                    [[@(realmObject.nsIntegerValue) should] equal:@(expected)];
-                });
-
-                it(@"should nil NSInteger object", ^{
-                    [[realmObject.nsIntegerObject should] beNil];
-                });
-
                 it(@"should skip long value", ^{
-                    long expected = LONG_MAX;
+                    long expected = INT_MAX;
                     [[@(realmObject.longValue) should] equal:@(expected)];
                 });
 
@@ -310,26 +358,26 @@ describe(@"FEMDeserializer", ^{
 
         context(@"to-one relationship", ^{
             context(@"nonnull value", ^{
-                __block RealmObject *realmObject = nil;
-                __block ChildRealmObject *childRealmObject = nil;
+                __block ObjCObject *realmObject = nil;
+                __block ObjCChildObject *childObjCObject = nil;
 
                 beforeEach(^{
-                    FEMMapping *mapping = [RealmObject toOneRelationshipMapping];
+                    FEMMapping *mapping = [ObjCObject toOneRelationshipMapping];
                     NSDictionary *json = [Fixture buildUsingFixture:@"ToOneRelationship"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
-                    childRealmObject = realmObject.toOneRelationship;
+                    childObjCObject = realmObject.toOneRelationship;
                 });
 
                 it(@"should map relationship", ^{
                     [[realmObject.toOneRelationship shouldNot] beNil];
-                    [[@(childRealmObject.identifier) should] equal:@(10)];
+                    [[@(childObjCObject.identifier) should] equal:@(10)];
                 });
             });
 
             context(@"null value", ^{
-                __block RealmObject *realmObject = nil;
+                __block ObjCObject *realmObject = nil;
                 beforeEach(^{
-                    FEMMapping *mapping = [RealmObject toOneRelationshipMapping];
+                    FEMMapping *mapping = [ObjCObject toOneRelationshipMapping];
                     NSDictionary *json = [Fixture buildUsingFixture:@"ToOneNullRelationship"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                 });
@@ -342,11 +390,11 @@ describe(@"FEMDeserializer", ^{
 
         context(@"to-many relationship", ^{
             context(@"nonnull value", ^{
-                __block RealmObject *realmObject = nil;
-                __block RLMArray<ChildRealmObject *> *relationship = nil;
+                __block ObjCObject *realmObject = nil;
+                __block RLMArray<ObjCChildObject *> *relationship = nil;
 
                 beforeEach(^{
-                    FEMMapping *mapping = [RealmObject toManyRelationshipMapping];
+                    FEMMapping *mapping = [ObjCObject toManyRelationshipMapping];
                     NSDictionary *json = [Fixture buildUsingFixture:@"ToManyRelationship"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                     relationship = realmObject.toManyRelationship;
@@ -358,20 +406,20 @@ describe(@"FEMDeserializer", ^{
                 });
 
                 it(@"should set correct relationship attributes", ^{
-                    ChildRealmObject *child0 = relationship[0];
+                    ObjCChildObject *child0 = relationship[0];
                     [[@(child0.identifier) should] equal:@(20)];
 
-                    ChildRealmObject *child1 = relationship[1];
+                    ObjCChildObject *child1 = relationship[1];
                     [[@(child1.identifier) should] equal:@(21)];
                 });
             });
 
             context(@"null value", ^{
-                __block RealmObject *realmObject = nil;
-                __block RLMArray<ChildRealmObject *> *relationship = nil;
+                __block ObjCObject *realmObject = nil;
+                __block RLMArray<ObjCChildObject *> *relationship = nil;
 
                 beforeEach(^{
-                    FEMMapping *mapping = [RealmObject toManyRelationshipMapping];
+                    FEMMapping *mapping = [ObjCObject toManyRelationshipMapping];
                     NSDictionary *json = [Fixture buildUsingFixture:@"ToManyNullRelationship"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                     relationship = realmObject.toManyRelationship;

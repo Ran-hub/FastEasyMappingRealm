@@ -51,8 +51,8 @@
 		AD7DF86D1E98168F006888E1 /* AssignmentPolicyToOneNull.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3F3CBAED31FB56A1BACA /* AssignmentPolicyToOneNull.json */; };
 		AD7DF86E1E98168F006888E1 /* AssignmentPolicyToOneInit.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3B226D8E5C958A3A810B /* AssignmentPolicyToOneInit.json */; };
 		AD7DF86F1E98168F006888E1 /* AssignmentPolicyToOneUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3FBBE6A00A55297E22F9 /* AssignmentPolicyToOneUpdate.json */; };
-		AD7DF8701E981696006888E1 /* ChildRealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FD1E8BE7B100558F37 /* ChildRealmObject.m */; };
-		AD7DF8711E981696006888E1 /* RealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FF1E8BE7B100558F37 /* RealmObject.m */; };
+		AD7DF8701E981696006888E1 /* ObjCChildObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FD1E8BE7B100558F37 /* ObjCChildObject.m */; };
+		AD7DF8711E981696006888E1 /* ObjCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FF1E8BE7B100558F37 /* ObjCObject.m */; };
 		AD7DF8721E981696006888E1 /* UniqueChildRealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401011E8BE7B100558F37 /* UniqueChildRealmObject.m */; };
 		AD7DF8731E981696006888E1 /* UniqueRealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401031E8BE7B100558F37 /* UniqueRealmObject.m */; };
 		AD7DF8741E981696006888E1 /* UniqueToManyChildRealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401051E8BE7B100558F37 /* UniqueToManyChildRealmObject.m */; };
@@ -94,8 +94,8 @@
 		AD9401121E8BE7B100558F37 /* ToManyRelationship.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F81E8BE7B100558F37 /* ToManyRelationship.json */; };
 		AD9401131E8BE7B100558F37 /* ToOneNullRelationship.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F91E8BE7B100558F37 /* ToOneNullRelationship.json */; };
 		AD9401141E8BE7B100558F37 /* ToOneRelationship.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400FA1E8BE7B100558F37 /* ToOneRelationship.json */; };
-		AD9401151E8BE7B100558F37 /* ChildRealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FD1E8BE7B100558F37 /* ChildRealmObject.m */; };
-		AD9401161E8BE7B100558F37 /* RealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FF1E8BE7B100558F37 /* RealmObject.m */; };
+		AD9401151E8BE7B100558F37 /* ObjCChildObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FD1E8BE7B100558F37 /* ObjCChildObject.m */; };
+		AD9401161E8BE7B100558F37 /* ObjCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FF1E8BE7B100558F37 /* ObjCObject.m */; };
 		AD9401171E8BE7B100558F37 /* UniqueChildRealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401011E8BE7B100558F37 /* UniqueChildRealmObject.m */; };
 		AD9401181E8BE7B100558F37 /* UniqueRealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401031E8BE7B100558F37 /* UniqueRealmObject.m */; };
 		AD9401191E8BE7B100558F37 /* UniqueToManyChildRealmObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401051E8BE7B100558F37 /* UniqueToManyChildRealmObject.m */; };
@@ -116,6 +116,10 @@
 		ADDBBD7E1EB0A36500BFFD77 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD7C1EB0A36500BFFD77 /* Quick.framework */; };
 		ADDBBD801EB0A3AE00BFFD77 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD7F1EB0A3AE00BFFD77 /* RealmSwift.framework */; };
 		ADDBBD821EB0A3BC00BFFD77 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD811EB0A3BC00BFFD77 /* RealmSwift.framework */; };
+		ADDBBD8B1EB0A45F00BFFD77 /* SwiftRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD881EB0A45F00BFFD77 /* SwiftRealmObject.swift */; };
+		ADDBBD8C1EB0A45F00BFFD77 /* SwiftRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD881EB0A45F00BFFD77 /* SwiftRealmObject.swift */; };
+		ADDBBD8F1EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD8A1EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift */; };
+		ADDBBD901EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD8A1EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift */; };
 		ADE1F3671E9A70A100F457E9 /* PerformanceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3641E9A70A100F457E9 /* PerformanceObject.m */; };
 		ADE1F3681E9A70A100F457E9 /* Benchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3661E9A70A100F457E9 /* Benchmark.m */; };
 /* End PBXBuildFile section */
@@ -189,10 +193,10 @@
 		AD9400F81E8BE7B100558F37 /* ToManyRelationship.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ToManyRelationship.json; sourceTree = "<group>"; };
 		AD9400F91E8BE7B100558F37 /* ToOneNullRelationship.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ToOneNullRelationship.json; sourceTree = "<group>"; };
 		AD9400FA1E8BE7B100558F37 /* ToOneRelationship.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ToOneRelationship.json; sourceTree = "<group>"; };
-		AD9400FC1E8BE7B100558F37 /* ChildRealmObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildRealmObject.h; sourceTree = "<group>"; };
-		AD9400FD1E8BE7B100558F37 /* ChildRealmObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildRealmObject.m; sourceTree = "<group>"; };
-		AD9400FE1E8BE7B100558F37 /* RealmObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealmObject.h; sourceTree = "<group>"; };
-		AD9400FF1E8BE7B100558F37 /* RealmObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealmObject.m; sourceTree = "<group>"; };
+		AD9400FC1E8BE7B100558F37 /* ObjCChildObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCChildObject.h; sourceTree = "<group>"; };
+		AD9400FD1E8BE7B100558F37 /* ObjCChildObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCChildObject.m; sourceTree = "<group>"; };
+		AD9400FE1E8BE7B100558F37 /* ObjCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCObject.h; sourceTree = "<group>"; };
+		AD9400FF1E8BE7B100558F37 /* ObjCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCObject.m; sourceTree = "<group>"; };
 		AD9401001E8BE7B100558F37 /* UniqueChildRealmObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniqueChildRealmObject.h; sourceTree = "<group>"; };
 		AD9401011E8BE7B100558F37 /* UniqueChildRealmObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniqueChildRealmObject.m; sourceTree = "<group>"; };
 		AD9401021E8BE7B100558F37 /* UniqueRealmObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniqueRealmObject.h; sourceTree = "<group>"; };
@@ -210,6 +214,9 @@
 		ADDBBD7C1EB0A36500BFFD77 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		ADDBBD7F1EB0A3AE00BFFD77 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		ADDBBD811EB0A3BC00BFFD77 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/Mac/RealmSwift.framework; sourceTree = "<group>"; };
+		ADDBBD851EB0A42800BFFD77 /* ObjectMappingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectMappingSpec.swift; sourceTree = "<group>"; };
+		ADDBBD881EB0A45F00BFFD77 /* SwiftRealmObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRealmObject.swift; sourceTree = "<group>"; };
+		ADDBBD8A1EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRealmObjectChild.swift; sourceTree = "<group>"; };
 		ADE1F3571E9A702D00F457E9 /* Benchmark.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Benchmark.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE1F35B1E9A702D00F457E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE1F3631E9A70A100F457E9 /* PerformanceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceObject.h; sourceTree = "<group>"; };
@@ -431,10 +438,12 @@
 		AD9400FB1E8BE7B100558F37 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AD9400FC1E8BE7B100558F37 /* ChildRealmObject.h */,
-				AD9400FD1E8BE7B100558F37 /* ChildRealmObject.m */,
-				AD9400FE1E8BE7B100558F37 /* RealmObject.h */,
-				AD9400FF1E8BE7B100558F37 /* RealmObject.m */,
+				ADDBBD881EB0A45F00BFFD77 /* SwiftRealmObject.swift */,
+				ADDBBD8A1EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift */,
+				AD9400FC1E8BE7B100558F37 /* ObjCChildObject.h */,
+				AD9400FD1E8BE7B100558F37 /* ObjCChildObject.m */,
+				AD9400FE1E8BE7B100558F37 /* ObjCObject.h */,
+				AD9400FF1E8BE7B100558F37 /* ObjCObject.m */,
 				AD9401001E8BE7B100558F37 /* UniqueChildRealmObject.h */,
 				AD9401011E8BE7B100558F37 /* UniqueChildRealmObject.m */,
 				AD9401021E8BE7B100558F37 /* UniqueRealmObject.h */,
@@ -448,6 +457,7 @@
 		AD9401061E8BE7B100558F37 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
+				ADDBBD851EB0A42800BFFD77 /* ObjectMappingSpec.swift */,
 				AD9401071E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m */,
 				AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */,
 				AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */,
@@ -684,6 +694,7 @@
 					AD7DF81D1E9814EB006888E1 = {
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = B22C3P93TG;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					AD7DF8311E981501006888E1 = {
@@ -704,6 +715,7 @@
 					AD9400C61E8BE11A00558F37 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = B22C3P93TG;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					ADE1F3561E9A702D00F457E9 = {
@@ -899,9 +911,11 @@
 				AD7DF8791E9816A1006888E1 /* Fixture.m in Sources */,
 				AD7DF8751E98169B006888E1 /* FEMAssignmentPolicyObjectSpec.m in Sources */,
 				AD7DF8731E981696006888E1 /* UniqueRealmObject.m in Sources */,
-				AD7DF8711E981696006888E1 /* RealmObject.m in Sources */,
+				AD7DF8711E981696006888E1 /* ObjCObject.m in Sources */,
+				ADDBBD901EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift in Sources */,
 				AD7DF8741E981696006888E1 /* UniqueToManyChildRealmObject.m in Sources */,
-				AD7DF8701E981696006888E1 /* ChildRealmObject.m in Sources */,
+				ADDBBD8C1EB0A45F00BFFD77 /* SwiftRealmObject.swift in Sources */,
+				AD7DF8701E981696006888E1 /* ObjCChildObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -946,11 +960,13 @@
 				AD9401181E8BE7B100558F37 /* UniqueRealmObject.m in Sources */,
 				AD94011A1E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m in Sources */,
 				AD9401191E8BE7B100558F37 /* UniqueToManyChildRealmObject.m in Sources */,
-				AD9401151E8BE7B100558F37 /* ChildRealmObject.m in Sources */,
+				AD9401151E8BE7B100558F37 /* ObjCChildObject.m in Sources */,
 				AD9401171E8BE7B100558F37 /* UniqueChildRealmObject.m in Sources */,
 				AD94011B1E8BE7B100558F37 /* FEMDeserializerSpec.m in Sources */,
-				AD9401161E8BE7B100558F37 /* RealmObject.m in Sources */,
+				AD9401161E8BE7B100558F37 /* ObjCObject.m in Sources */,
+				ADDBBD8F1EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift in Sources */,
 				1D6A3B21882F44C2845BBE57 /* Fixture.m in Sources */,
+				ADDBBD8B1EB0A45F00BFFD77 /* SwiftRealmObject.swift in Sources */,
 				1D6A33A75AAF19C278C15784 /* FEMAssignmentPolicyCollectionSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1035,6 +1051,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/Mac";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
@@ -1047,6 +1064,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FastEasyMapping.FastEasyMappingRealm-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1054,6 +1073,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/Mac";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
@@ -1066,6 +1086,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FastEasyMapping.FastEasyMappingRealm-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1315,6 +1336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/iOS";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1324,6 +1346,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.FastEasyMappingRealmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1331,6 +1355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CARTHAGE_BUILD = "$(CARTHAGE_BUILD)/iOS";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = B22C3P93TG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1340,6 +1365,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.FastEasyMappingRealmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
