@@ -6,11 +6,11 @@
 #import <Realm/Realm.h>
 #import <Realm/RLMRealm_Dynamic.h>
 
-#import "ObjCObject.h"
-#import "UniqueRealmObject.h"
+#import "Object.h"
+#import "UniqueObject.h"
 #import "FEMRealmAssignmentPolicy.h"
 #import "Fixture.h"
-#import "UniqueChildRealmObject.h"
+#import "UniqueChildObject.h"
 
 SPEC_BEGIN(FEMAssignmentPolicyObjectSpec)
 describe(@"FEMAssignmentPolicyObject", ^{
@@ -18,8 +18,8 @@ describe(@"FEMAssignmentPolicyObject", ^{
     __block FEMRealmStore *store = nil;
     __block FEMDeserializer *deserializer = nil;
 
-    __block UniqueRealmObject *object;
-    __block UniqueChildRealmObject *child;
+    __block UniqueObject *object;
+    __block UniqueChildObject *child;
 
     beforeEach(^{
         RLMRealmConfiguration *configuration = [[RLMRealmConfiguration alloc] init];
@@ -45,7 +45,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
     // We re-test built-in policies to make sure that Realm works as expected
 
     context(@"assign", ^{
-        FEMMapping *mapping = [UniqueRealmObject toOneRelationshipMappingWithPolicy:FEMAssignmentPolicyAssign];
+        FEMMapping *mapping = [UniqueObject toOneRelationshipMappingWithPolicy:FEMAssignmentPolicyAssign];
 
         context(@"when old value null", ^{
             beforeEach(^{
@@ -62,7 +62,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
                 it(@"should assign new value", ^{
                     [[object.toOneRelationship shouldNot] beNil];
                     [[theValue(object.toOneRelationship.identifier) should] equal:theValue(10)];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
+                    [[theValue([realm allObjects:[UniqueChildObject className]].count) should] equal:theValue(1)];
                 });
             });
         });
@@ -89,8 +89,8 @@ describe(@"FEMAssignmentPolicyObject", ^{
                     [[theValue(child.invalidated) should] beFalse];
                     [[child.realm should] equal:realm];
 
-                    [[[realm objectWithClassName:[UniqueChildRealmObject className] forPrimaryKey:@(10)] should] equal:child];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(2)];
+                    [[[realm objectWithClassName:[UniqueChildObject className] forPrimaryKey:@(10)] should] equal:child];
+                    [[theValue([realm allObjects:[UniqueChildObject className]].count) should] equal:theValue(2)];
                 });
             });
 
@@ -108,15 +108,15 @@ describe(@"FEMAssignmentPolicyObject", ^{
                     [[theValue(child.invalidated) should] beFalse];
                     [[child.realm should] equal:realm];
 
-                    [[[realm objectWithClassName:[UniqueChildRealmObject className] forPrimaryKey:@(10)] should] equal:child];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
+                    [[[realm objectWithClassName:[UniqueChildObject className] forPrimaryKey:@(10)] should] equal:child];
+                    [[theValue([realm allObjects:[UniqueChildObject className]].count) should] equal:theValue(1)];
                 });
             });
         });
     });
 
     context(@"merge", ^{
-        FEMMapping *mapping = [UniqueRealmObject toOneRelationshipMappingWithPolicy:FEMAssignmentPolicyObjectMerge];
+        FEMMapping *mapping = [UniqueObject toOneRelationshipMappingWithPolicy:FEMAssignmentPolicyObjectMerge];
 
         context(@"when old value null", ^{
             beforeEach(^{
@@ -133,7 +133,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
                 it(@"should assign new value", ^{
                     [[object.toOneRelationship shouldNot] beNil];
                     [[theValue(object.toOneRelationship.identifier) should] equal:theValue(10)];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
+                    [[theValue([realm allObjects:[UniqueChildObject className]].count) should] equal:theValue(1)];
                 });
             });
         });
@@ -160,8 +160,8 @@ describe(@"FEMAssignmentPolicyObject", ^{
                     [[theValue(child.invalidated) should] beFalse];
                     [[child.realm should] equal:realm];
 
-                    [[[realm objectWithClassName:[UniqueChildRealmObject className] forPrimaryKey:@(10)] should] equal:child];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(2)];
+                    [[[realm objectWithClassName:[UniqueChildObject className] forPrimaryKey:@(10)] should] equal:child];
+                    [[theValue([realm allObjects:[UniqueChildObject className]].count) should] equal:theValue(2)];
                 });
             });
 
@@ -174,14 +174,14 @@ describe(@"FEMAssignmentPolicyObject", ^{
                 it(@"should preserve old value", ^{
                     [[object.toOneRelationship shouldNot] beNil];
                     [[theValue(object.toOneRelationship.identifier) should] equal:theValue(10)];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
+                    [[theValue([realm allObjects:[UniqueChildObject className]].count) should] equal:theValue(1)];
                 });
             });
         });
     });
 
     context(@"replace", ^{
-        FEMMapping *mapping = [UniqueRealmObject toOneRelationshipMappingWithPolicy:FEMAssignmentPolicyObjectReplace];
+        FEMMapping *mapping = [UniqueObject toOneRelationshipMappingWithPolicy:FEMAssignmentPolicyObjectReplace];
 
         context(@"when old value null", ^{
             beforeEach(^{
@@ -198,7 +198,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
                 it(@"should assign new value", ^{
                     [[object.toOneRelationship shouldNot] beNil];
                     [[theValue(object.toOneRelationship.identifier) should] equal:theValue(10)];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
+                    [[theValue([realm allObjects:[UniqueChildObject className]].count) should] equal:theValue(1)];
                 });
             });
         });
@@ -224,8 +224,8 @@ describe(@"FEMAssignmentPolicyObject", ^{
                 it(@"should remove old value", ^{
                     [[theValue(child.invalidated) should] beTrue];
 
-                    [[[realm objectWithClassName:[UniqueChildRealmObject className] forPrimaryKey:@(10)] should] beNil];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
+                    [[[realm objectWithClassName:[UniqueChildObject className] forPrimaryKey:@(10)] should] beNil];
+                    [[theValue([realm allObjects:[UniqueChildObject className]].count) should] equal:theValue(1)];
                 });
             });
 
@@ -242,8 +242,8 @@ describe(@"FEMAssignmentPolicyObject", ^{
                 it(@"should remove old value", ^{
                     [[theValue(child.invalidated) should] beTrue];
 
-                    [[[realm objectWithClassName:[UniqueChildRealmObject className] forPrimaryKey:@(10)] should] beNil];
-                    [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(0)];
+                    [[[realm objectWithClassName:[UniqueChildObject className] forPrimaryKey:@(10)] should] beNil];
+                    [[theValue([realm allObjects:[UniqueChildObject className]].count) should] equal:theValue(0)];
                 });
             });
         });

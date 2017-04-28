@@ -1,8 +1,8 @@
 
 #import <FastEasyMapping/FastEasyMapping.h>
-#import "UniqueChildRealmObject.h"
+#import "UniqueChildObject.h"
 
-@implementation UniqueChildRealmObject
+@implementation UniqueChildObject
 
 + (NSString *)primaryKey {
     return @"identifier";
@@ -10,7 +10,7 @@
 
 @end
 
-@implementation UniqueChildRealmObject (Mapping)
+@implementation UniqueChildObject (Mapping)
 
 + (FEMMapping *)defaultMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];

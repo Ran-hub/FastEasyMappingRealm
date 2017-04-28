@@ -5,20 +5,20 @@
 #import <Realm/RLMArray.h>
 #import <FastEasyMapping/FastEasyMapping.h>
 
-#import "UniqueChildRealmObject.h"
+#import "UniqueChildObject.h"
 
-@class UniqueChildRealmObject;
+@class UniqueChildObject;
 
-@interface UniqueRealmObject : RLMObject
+@interface UniqueObject : RLMObject
 
 @property (nonatomic) int identifier;
 
-@property (nonatomic, strong) UniqueChildRealmObject *toOneRelationship;
-@property (nonatomic, strong) RLMArray<UniqueChildRealmObject *><UniqueChildRealmObject> *toManyRelationship;
+@property (nonatomic, strong) UniqueChildObject *toOneRelationship;
+@property (nonatomic, strong) RLMArray<UniqueChildObject *><UniqueChildObject> *toManyRelationship;
 
 @end
 
-@interface UniqueRealmObject (Mapping)
+@interface UniqueObject (Mapping)
 
 + (FEMMapping *)defaultMapping;
 + (FEMMapping *)toOneRelationshipMappingWithPolicy:(FEMAssignmentPolicy)policy;

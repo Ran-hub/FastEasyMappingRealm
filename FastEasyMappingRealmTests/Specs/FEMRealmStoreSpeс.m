@@ -5,7 +5,7 @@
 @import FastEasyMappingRealm;
 @import Realm;
 
-#import "UniqueRealmObject.h"
+#import "UniqueObject.h"
 
 SPEC_BEGIN(FEMRealmStoreSpec)
 describe(@"FEMRealmStore", ^{
@@ -43,25 +43,25 @@ describe(@"FEMRealmStore", ^{
         context(@"new object", ^{
             __block FEMMapping *mapping = nil;
             beforeAll(^{
-                mapping = [[FEMMapping alloc] initWithObjectClass:[UniqueRealmObject class]];
+                mapping = [[FEMMapping alloc] initWithObjectClass:[UniqueObject class]];
             });
 
             it(@"should create RLMObject specified in FEMMapping.entityName", ^{
                 [store beginTransaction:nil];
 
-                UniqueRealmObject *object = [store newObjectForMapping:mapping];
-                [[object should] beKindOfClass:[UniqueRealmObject class]];
+                UniqueObject *object = [store newObjectForMapping:mapping];
+                [[object should] beKindOfClass:[UniqueObject class]];
 
                 [store commitTransaction];
             });
 
             it(@"should save new object after commit", ^{
                 [store beginTransaction:nil];
-                UniqueRealmObject *object = [store newObjectForMapping:mapping];
+                UniqueObject *object = [store newObjectForMapping:mapping];
                 [store addObject:object forPrimaryKey:nil mapping:mapping];
                 [store commitTransaction];
 
-                [[@([UniqueRealmObject allObjectsInRealm:realm].count) should] equal:@(1)];
+                [[@([UniqueObject allObjectsInRealm:realm].count) should] equal:@(1)];
             });
         });
 
@@ -70,21 +70,21 @@ describe(@"FEMRealmStore", ^{
            it(@"should delete object as a delegate of assingment context", ^{
                [store beginTransaction:nil];
 
-               FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:[UniqueRealmObject class]];
-               UniqueRealmObject *object = [store newObjectForMapping:mapping];
+               FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:[UniqueObject class]];
+               UniqueObject *object = [store newObjectForMapping:mapping];
                FEMRelationshipAssignmentContext *context = [store newAssignmentContext];
                [context deleteRelationshipObject:object];
 
                [store commitTransaction];
 
-               [[@([UniqueRealmObject allObjectsInRealm:realm].count) should] equal:@(0)];
+               [[@([UniqueObject allObjectsInRealm:realm].count) should] equal:@(0)];
            });
         });
 
         context(@"add", ^{
             __block FEMMapping *mapping = nil;
             beforeEach(^{
-                mapping = [UniqueRealmObject defaultMapping];
+                mapping = [UniqueObject defaultMapping];
 
                 [store beginTransaction:nil];
             });
@@ -94,7 +94,7 @@ describe(@"FEMRealmStore", ^{
             });
 
             it(@"should add object with PK", ^{
-                UniqueRealmObject *object = [store newObjectForMapping:mapping];
+                UniqueObject *object = [store newObjectForMapping:mapping];
                 object.identifier = 5;
 
                 [store addObject:object forPrimaryKey:@(object.identifier) mapping:mapping];
@@ -107,13 +107,13 @@ describe(@"FEMRealmStore", ^{
         context(@"prefetch", ^{
             __block FEMMapping *mapping = nil;
             beforeEach(^{
-                mapping = [UniqueRealmObject defaultMapping];
+                mapping = [UniqueObject defaultMapping];
             });
 
             it(@"should automatically register existing objects", ^{
-                __block UniqueRealmObject *object = nil;
+                __block UniqueObject *object = nil;
                 [realm transactionWithBlock:^{
-                    object = [[UniqueRealmObject alloc] init];
+                    object = [[UniqueObject alloc] init];
                     object.identifier = 5;
                     [realm addObject:object];
                 }];

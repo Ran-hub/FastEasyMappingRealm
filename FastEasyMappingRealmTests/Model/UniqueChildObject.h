@@ -5,17 +5,17 @@
 
 @class FEMMapping;
 
-@interface UniqueChildRealmObject : RLMObject
+@interface UniqueChildObject : RLMObject
 
 @property (nonatomic) int identifier;
 
 @end
 
 
-@interface UniqueChildRealmObject (Mapping)
+@interface UniqueChildObject (Mapping)
 
 + (FEMMapping *)defaultMapping;
 
 @end
 
-RLM_ARRAY_TYPE(UniqueChildRealmObject);
+RLM_ARRAY_TYPE(UniqueChildObject);

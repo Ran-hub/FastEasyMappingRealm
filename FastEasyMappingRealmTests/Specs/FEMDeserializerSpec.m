@@ -4,7 +4,7 @@
 #import <FastEasyMapping/FastEasyMapping.h>
 #import <FastEasyMappingRealm/FastEasyMappingRealm.h>
 #import <Realm/Realm.h>
-#import "ObjCObject.h"
+#import "Object.h"
 
 #import "Fixture.h"
 
@@ -34,7 +34,7 @@ describe(@"FEMDeserializer", ^{
         });
 
         context(@"attributes", ^{
-            __block ObjCObject *realmObject = nil;
+            __block Object *realmObject = nil;
 
             afterEach(^{
                 [realm transactionWithBlock:^{
@@ -47,7 +47,7 @@ describe(@"FEMDeserializer", ^{
                 __block FEMMapping *mapping = nil;
 
                 beforeEach(^{
-                    mapping = [ObjCObject attributesMapping];
+                    mapping = [Object attributesMapping];
                     NSDictionary *json = [Fixture buildUsingFixture:@"SupportedTypes"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                 });
@@ -162,7 +162,7 @@ describe(@"FEMDeserializer", ^{
 
             context(@"null values", ^{
                 beforeEach(^{
-                    FEMMapping *mapping = [ObjCObject attributesMapping];
+                    FEMMapping *mapping = [Object attributesMapping];
                     NSDictionary *json = [Fixture buildUsingFixture:@"SupportedTypesNull"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                 });
@@ -254,7 +254,7 @@ describe(@"FEMDeserializer", ^{
 
             context(@"update by null values", ^{
                 beforeEach(^{
-                    FEMMapping *mapping = [ObjCObject attributesMapping];
+                    FEMMapping *mapping = [Object attributesMapping];
                     NSDictionary *json = [Fixture buildUsingFixture:@"SupportedTypes"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
 
@@ -357,11 +357,11 @@ describe(@"FEMDeserializer", ^{
 
         context(@"to-one relationship", ^{
             context(@"nonnull value", ^{
-                __block ObjCObject *realmObject = nil;
-                __block ObjCChildObject *childObjCObject = nil;
+                __block Object *realmObject = nil;
+                __block ChildObject *childObjCObject = nil;
 
                 beforeEach(^{
-                    FEMMapping *mapping = [ObjCObject toOneRelationshipMapping];
+                    FEMMapping *mapping = [Object toOneRelationshipMapping];
                     NSDictionary *json = [Fixture buildUsingFixture:@"ToOneRelationship"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                     childObjCObject = realmObject.toOneRelationship;
@@ -374,9 +374,9 @@ describe(@"FEMDeserializer", ^{
             });
 
             context(@"null value", ^{
-                __block ObjCObject *realmObject = nil;
+                __block Object *realmObject = nil;
                 beforeEach(^{
-                    FEMMapping *mapping = [ObjCObject toOneRelationshipMapping];
+                    FEMMapping *mapping = [Object toOneRelationshipMapping];
                     NSDictionary *json = [Fixture buildUsingFixture:@"ToOneNullRelationship"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                 });
@@ -389,11 +389,11 @@ describe(@"FEMDeserializer", ^{
 
         context(@"to-many relationship", ^{
             context(@"nonnull value", ^{
-                __block ObjCObject *realmObject = nil;
-                __block RLMArray<ObjCChildObject *> *relationship = nil;
+                __block Object *realmObject = nil;
+                __block RLMArray<ChildObject *> *relationship = nil;
 
                 beforeEach(^{
-                    FEMMapping *mapping = [ObjCObject toManyRelationshipMapping];
+                    FEMMapping *mapping = [Object toManyRelationshipMapping];
                     NSDictionary *json = [Fixture buildUsingFixture:@"ToManyRelationship"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                     relationship = realmObject.toManyRelationship;
@@ -405,20 +405,20 @@ describe(@"FEMDeserializer", ^{
                 });
 
                 it(@"should set correct relationship attributes", ^{
-                    ObjCChildObject *child0 = relationship[0];
+                    ChildObject *child0 = relationship[0];
                     [[@(child0.identifier) should] equal:@(20)];
 
-                    ObjCChildObject *child1 = relationship[1];
+                    ChildObject *child1 = relationship[1];
                     [[@(child1.identifier) should] equal:@(21)];
                 });
             });
 
             context(@"null value", ^{
-                __block ObjCObject *realmObject = nil;
-                __block RLMArray<ObjCChildObject *> *relationship = nil;
+                __block Object *realmObject = nil;
+                __block RLMArray<ChildObject *> *relationship = nil;
 
                 beforeEach(^{
-                    FEMMapping *mapping = [ObjCObject toManyRelationshipMapping];
+                    FEMMapping *mapping = [Object toManyRelationshipMapping];
                     NSDictionary *json = [Fixture buildUsingFixture:@"ToManyNullRelationship"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                     relationship = realmObject.toManyRelationship;

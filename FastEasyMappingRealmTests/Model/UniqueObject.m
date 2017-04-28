@@ -3,13 +3,13 @@
 // Copyright (c) 2015 Yalantis. All rights reserved.
 //
 
-#import "UniqueRealmObject.h"
-#import "UniqueChildRealmObject.h"
+#import "UniqueObject.h"
+#import "UniqueChildObject.h"
 
 #import <FastEasyMapping/FastEasyMapping.h>
 #import <Realm/Realm.h>
 
-@implementation UniqueRealmObject
+@implementation UniqueObject
 
 + (NSString *)primaryKey {
     return @"identifier";
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation UniqueRealmObject (Mapping)
+@implementation UniqueObject (Mapping)
 
 + (FEMMapping *)defaultMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
@@ -30,7 +30,7 @@
 + (FEMMapping *)toOneRelationshipMappingWithPolicy:(FEMAssignmentPolicy)policy {
     FEMMapping *mapping = [self defaultMapping];
 
-    FEMMapping *child = [UniqueChildRealmObject defaultMapping];
+    FEMMapping *child = [UniqueChildObject defaultMapping];
     FEMRelationship *relationship = [[FEMRelationship alloc] initWithProperty:@"toOneRelationship" keyPath:@"toOne" mapping:child];
     relationship.assignmentPolicy = policy;
     [mapping addRelationship:relationship];
@@ -41,7 +41,7 @@
 + (FEMMapping *)toManyRelationshipMappingWithPolicy:(FEMAssignmentPolicy)policy {
     FEMMapping *mapping = [self defaultMapping];
 
-    FEMMapping *child = [UniqueChildRealmObject defaultMapping];
+    FEMMapping *child = [UniqueChildObject defaultMapping];
     FEMRelationship *relationship = [[FEMRelationship alloc] initWithProperty:@"toManyRelationship" keyPath:@"toMany" mapping:child];
     relationship.toMany = YES;
     relationship.assignmentPolicy = policy;

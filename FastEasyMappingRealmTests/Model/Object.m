@@ -1,12 +1,12 @@
 
 #import <Realm/Realm.h>
 #import <FastEasyMapping/FEMMapping.h>
-#import "ObjCObject.h"
+#import "Object.h"
 
-@implementation ObjCObject
+@implementation Object
 @end
 
-@implementation ObjCObject (Mapping)
+@implementation Object (Mapping)
 
 + (FEMMapping *)attributesMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
@@ -52,7 +52,7 @@
 + (FEMMapping *)toOneRelationshipMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
     [mapping addAttributesFromArray:@[@"integerProperty"]];
-    [mapping addRelationshipMapping:[ObjCChildObject defaultMapping] forProperty:@"toOneRelationship" keyPath:@"toOneRelationship"];
+    [mapping addRelationshipMapping:[ChildObject defaultMapping] forProperty:@"toOneRelationship" keyPath:@"toOneRelationship"];
 
     return mapping;
 }
@@ -60,7 +60,7 @@
 + (FEMMapping *)toManyRelationshipMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
     [mapping addAttributesFromArray:@[@"integerProperty"]];
-    [mapping addToManyRelationshipMapping:[ObjCChildObject defaultMapping] forProperty:@"toManyRelationship" keyPath:@"toManyRelationship"];
+    [mapping addToManyRelationshipMapping:[ChildObject defaultMapping] forProperty:@"toManyRelationship" keyPath:@"toManyRelationship"];
 
     return mapping;
 }
