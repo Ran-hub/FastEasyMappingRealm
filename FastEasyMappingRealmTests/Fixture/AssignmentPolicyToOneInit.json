@@ -1,6 +1,6 @@
 {
-  "primaryKey": 5,
+  "identifier": 5,
   "toOne": {
-    "primaryKey": 10
+    "identifier": 10
   }
 }

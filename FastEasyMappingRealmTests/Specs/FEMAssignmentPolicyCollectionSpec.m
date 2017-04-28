@@ -51,41 +51,41 @@ describe(@"FEMAssignmentPolicyCollection", ^{
         });
 
         it(@"should assign value", ^{
-            [[@(object.primaryKey) should] equal:@5];
+            [[@(object.identifier) should] equal:@5];
             [[@(object.toManyRelationship.count) should] equal:@2];
 
             UniqueToManyChildRealmObject *child0 = object.toManyRelationship[0];
-            [[@(child0.primaryKey) should] equal:@10];
+            [[@(child0.identifier) should] equal:@10];
             UniqueToManyChildRealmObject *child1 = object.toManyRelationship[1];
-            [[@(child1.primaryKey) should] equal:@11];
+            [[@(child1.identifier) should] equal:@11];
         });
 
         it(@"should re-assign value", ^{
             NSDictionary *fixture1 = [Fixture buildUsingFixture:@"AssignmentPolicyToManyUpdate"];
             [deserializer fillObject:object fromRepresentation:fixture1 mapping:mapping];
 
-            [[@(object.primaryKey) should] equal:@5];
+            [[@(object.identifier) should] equal:@5];
             [[@(object.toManyRelationship.count) should] equal:@2];
 
             UniqueToManyChildRealmObject *child0 = object.toManyRelationship[0];
-            [[@(child0.primaryKey) should] equal:@11];
+            [[@(child0.identifier) should] equal:@11];
             UniqueToManyChildRealmObject *child1 = object.toManyRelationship[1];
-            [[@(child1.primaryKey) should] equal:@12];
+            [[@(child1.identifier) should] equal:@12];
 
             [[@([UniqueToManyChildRealmObject allObjectsInRealm:realm].count) should] equal:@3];
-            [[@([UniqueToManyChildRealmObject objectsInRealm:realm where:@"primaryKey == 10"].count) shouldNot] beZero];
+            [[@([UniqueToManyChildRealmObject objectsInRealm:realm where:@"identifier == 10"].count) shouldNot] beZero];
         });
 
         it(@"should assign null", ^{
             NSDictionary *fixture2 = [Fixture buildUsingFixture:@"AssignmentPolicyToManyNull"];
             [deserializer fillObject:object fromRepresentation:fixture2 mapping:mapping];
 
-            [[@(object.primaryKey) should] equal:@5];
+            [[@(object.identifier) should] equal:@5];
             [[@(object.toManyRelationship.count) should] equal:@0];
 
             [[@([UniqueToManyChildRealmObject allObjectsInRealm:realm].count) should] equal:@2];
-            [[@([UniqueToManyChildRealmObject objectsInRealm:realm where:@"primaryKey == 10"].count) shouldNot] beZero];
-            [[@([UniqueToManyChildRealmObject objectsInRealm:realm where:@"primaryKey == 11"].count) shouldNot] beZero];
+            [[@([UniqueToManyChildRealmObject objectsInRealm:realm where:@"identifier == 10"].count) shouldNot] beZero];
+            [[@([UniqueToManyChildRealmObject objectsInRealm:realm where:@"identifier == 11"].count) shouldNot] beZero];
         });
     });
 
@@ -105,13 +105,13 @@ describe(@"FEMAssignmentPolicyCollection", ^{
         });
 
         it(@"should assign value", ^{
-            [[@(object.primaryKey) should] equal:@5];
+            [[@(object.identifier) should] equal:@5];
             [[@(object.toManyRelationship.count) should] equal:@2];
 
             UniqueToManyChildRealmObject *child0 = object.toManyRelationship[0];
-            [[@(child0.primaryKey) should] equal:@10];
+            [[@(child0.identifier) should] equal:@10];
             UniqueToManyChildRealmObject *child1 = object.toManyRelationship[1];
-            [[@(child1.primaryKey) should] equal:@11];
+            [[@(child1.identifier) should] equal:@11];
 
             [[@([UniqueToManyChildRealmObject allObjectsInRealm:realm].count) should] equal:@2];
         });
@@ -120,15 +120,15 @@ describe(@"FEMAssignmentPolicyCollection", ^{
             NSDictionary *fixture1 = [Fixture buildUsingFixture:@"AssignmentPolicyToManyUpdate"];
             [deserializer fillObject:object fromRepresentation:fixture1 mapping:mapping];
 
-            [[@(object.primaryKey) should] equal:@5];
+            [[@(object.identifier) should] equal:@5];
             [[@(object.toManyRelationship.count) should] equal:@3];
 
             UniqueToManyChildRealmObject *child0 = object.toManyRelationship[0];
-            [[@(child0.primaryKey) should] equal:@10];
+            [[@(child0.identifier) should] equal:@10];
             UniqueToManyChildRealmObject *child1 = object.toManyRelationship[1];
-            [[@(child1.primaryKey) should] equal:@11];
+            [[@(child1.identifier) should] equal:@11];
             UniqueToManyChildRealmObject *child2 = object.toManyRelationship[2];
-            [[@(child2.primaryKey) should] equal:@12];
+            [[@(child2.identifier) should] equal:@12];
 
             [[@([UniqueToManyChildRealmObject allObjectsInRealm:realm].count) should] equal:@3];
         });
@@ -137,13 +137,13 @@ describe(@"FEMAssignmentPolicyCollection", ^{
             NSDictionary *fixture2 = [Fixture buildUsingFixture:@"AssignmentPolicyToManyNull"];
             [deserializer fillObject:object fromRepresentation:fixture2 mapping:mapping];
 
-            [[@(object.primaryKey) should] equal:@5];
+            [[@(object.identifier) should] equal:@5];
             [[@(object.toManyRelationship.count) should] equal:@2];
 
             UniqueToManyChildRealmObject *child0 = object.toManyRelationship[0];
-            [[@(child0.primaryKey) should] equal:@10];
+            [[@(child0.identifier) should] equal:@10];
             UniqueToManyChildRealmObject *child1 = object.toManyRelationship[1];
-            [[@(child1.primaryKey) should] equal:@11];
+            [[@(child1.identifier) should] equal:@11];
 
             [[@([UniqueToManyChildRealmObject allObjectsInRealm:realm].count) should] equal:@2];
         });
@@ -152,13 +152,13 @@ describe(@"FEMAssignmentPolicyCollection", ^{
             NSDictionary *fixture3 = [Fixture buildUsingFixture:@"AssignmentPolicyToManyEmptyArray"];
             [deserializer fillObject:object fromRepresentation:fixture3 mapping:mapping];
 
-            [[@(object.primaryKey) should] equal:@5];
+            [[@(object.identifier) should] equal:@5];
             [[@(object.toManyRelationship.count) should] equal:@2];
 
             UniqueToManyChildRealmObject *child0 = object.toManyRelationship[0];
-            [[@(child0.primaryKey) should] equal:@10];
+            [[@(child0.identifier) should] equal:@10];
             UniqueToManyChildRealmObject *child1 = object.toManyRelationship[1];
-            [[@(child1.primaryKey) should] equal:@11];
+            [[@(child1.identifier) should] equal:@11];
 
             [[@([UniqueToManyChildRealmObject allObjectsInRealm:realm].count) should] equal:@2];
         });
@@ -180,13 +180,13 @@ describe(@"FEMAssignmentPolicyCollection", ^{
         });
 
         it(@"should assign value", ^{
-            [[@(object.primaryKey) should] equal:@5];
+            [[@(object.identifier) should] equal:@5];
             [[@(object.toManyRelationship.count) should] equal:@2];
 
             UniqueToManyChildRealmObject *child0 = object.toManyRelationship[0];
-            [[@(child0.primaryKey) should] equal:@10];
+            [[@(child0.identifier) should] equal:@10];
             UniqueToManyChildRealmObject *child1 = object.toManyRelationship[1];
-            [[@(child1.primaryKey) should] equal:@11];
+            [[@(child1.identifier) should] equal:@11];
 
             [[@([UniqueToManyChildRealmObject allObjectsInRealm:realm].count) should] equal:@2];
         });
@@ -195,23 +195,23 @@ describe(@"FEMAssignmentPolicyCollection", ^{
             NSDictionary *fixture1 = [Fixture buildUsingFixture:@"AssignmentPolicyToManyUpdate"];
             [deserializer fillObject:object fromRepresentation:fixture1 mapping:mapping];
 
-            [[@(object.primaryKey) should] equal:@5];
+            [[@(object.identifier) should] equal:@5];
             [[@(object.toManyRelationship.count) should] equal:@2];
 
             UniqueToManyChildRealmObject *child0 = object.toManyRelationship[0];
-            [[@(child0.primaryKey) should] equal:@11];
+            [[@(child0.identifier) should] equal:@11];
             UniqueToManyChildRealmObject *child1 = object.toManyRelationship[1];
-            [[@(child1.primaryKey) should] equal:@12];
+            [[@(child1.identifier) should] equal:@12];
 
             [[@([UniqueToManyChildRealmObject allObjectsInRealm:realm].count) should] equal:@2];
-            [[@([UniqueToManyChildRealmObject objectsInRealm:realm where:@"primaryKey == 10"].count) should] beZero];
+            [[@([UniqueToManyChildRealmObject objectsInRealm:realm where:@"identifier == 10"].count) should] beZero];
         });
 
         it(@"should replace by null value", ^{
             NSDictionary *fixture2 = [Fixture buildUsingFixture:@"AssignmentPolicyToManyNull"];
             [deserializer fillObject:object fromRepresentation:fixture2 mapping:mapping];
 
-            [[@(object.primaryKey) should] equal:@5];
+            [[@(object.identifier) should] equal:@5];
             [[@(object.toManyRelationship.count) should] equal:@0];
 
             [[@([UniqueToManyChildRealmObject allObjectsInRealm:realm].count) should] equal:@0];
@@ -221,7 +221,7 @@ describe(@"FEMAssignmentPolicyCollection", ^{
             NSDictionary *fixture3 = [Fixture buildUsingFixture:@"AssignmentPolicyToManyEmptyArray"];
             [deserializer fillObject:object fromRepresentation:fixture3 mapping:mapping];
 
-            [[@(object.primaryKey) should] equal:@5];
+            [[@(object.identifier) should] equal:@5];
             [[@(object.toManyRelationship.count) should] equal:@0];
 
             [[@([UniqueToManyChildRealmObject allObjectsInRealm:realm].count) should] equal:@0];

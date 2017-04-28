@@ -62,7 +62,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
 
                 it(@"should assign new value", ^{
                     [[object.toOneRelationship shouldNot] beNil];
-                    [[theValue(object.toOneRelationship.primaryKey) should] equal:theValue(10)];
+                    [[theValue(object.toOneRelationship.identifier) should] equal:theValue(10)];
                     [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
                 });
             });
@@ -83,7 +83,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
 
                 it(@"should assign new value", ^{
                     [[object.toOneRelationship shouldNot] beNil];
-                    [[theValue(object.toOneRelationship.primaryKey) should] equal:theValue(11)];
+                    [[theValue(object.toOneRelationship.identifier) should] equal:theValue(11)];
                 });
 
                 it(@"shouldn't remove old value", ^{
@@ -133,7 +133,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
 
                 it(@"should assign new value", ^{
                     [[object.toOneRelationship shouldNot] beNil];
-                    [[theValue(object.toOneRelationship.primaryKey) should] equal:theValue(10)];
+                    [[theValue(object.toOneRelationship.identifier) should] equal:theValue(10)];
                     [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
                 });
             });
@@ -154,7 +154,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
 
                 it(@"should assign new value", ^{
                     [[object.toOneRelationship shouldNot] beNil];
-                    [[theValue(object.toOneRelationship.primaryKey) should] equal:theValue(11)];
+                    [[theValue(object.toOneRelationship.identifier) should] equal:theValue(11)];
                 });
 
                 it(@"shouldn't remove old value", ^{
@@ -174,7 +174,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
 
                 it(@"should preserve old value", ^{
                     [[object.toOneRelationship shouldNot] beNil];
-                    [[theValue(object.toOneRelationship.primaryKey) should] equal:theValue(10)];
+                    [[theValue(object.toOneRelationship.identifier) should] equal:theValue(10)];
                     [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
                 });
             });
@@ -198,7 +198,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
 
                 it(@"should assign new value", ^{
                     [[object.toOneRelationship shouldNot] beNil];
-                    [[theValue(object.toOneRelationship.primaryKey) should] equal:theValue(10)];
+                    [[theValue(object.toOneRelationship.identifier) should] equal:theValue(10)];
                     [[theValue([realm allObjects:[UniqueChildRealmObject className]].count) should] equal:theValue(1)];
                 });
             });
@@ -219,7 +219,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
 
                 it(@"should assign new value", ^{
                     [[object.toOneRelationship shouldNot] beNil];
-                    [[theValue(object.toOneRelationship.primaryKey) should] equal:theValue(11)];
+                    [[theValue(object.toOneRelationship.identifier) should] equal:theValue(11)];
                 });
 
                 it(@"should remove old value", ^{

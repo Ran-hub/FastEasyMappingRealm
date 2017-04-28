@@ -9,7 +9,7 @@
 
 @interface UniqueToManyChildRealmObject : RLMObject
 
-@property (nonatomic) NSInteger primaryKey;
+@property (nonatomic) int identifier;
 
 @end
 

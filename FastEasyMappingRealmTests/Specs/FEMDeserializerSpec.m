@@ -163,7 +163,7 @@ describe(@"FEMDeserializer", ^{
             context(@"null values", ^{
                 beforeEach(^{
                     FEMMapping *mapping = [ObjCObject attributesMapping];
-                    NSDictionary *json = [Fixture buildUsingFixture:@"SupportedNullTypes"];
+                    NSDictionary *json = [Fixture buildUsingFixture:@"SupportedTypesNull"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
                 });
 
@@ -258,7 +258,7 @@ describe(@"FEMDeserializer", ^{
                     NSDictionary *json = [Fixture buildUsingFixture:@"SupportedTypes"];
                     realmObject = [deserializer objectFromRepresentation:json mapping:mapping];
 
-                    NSDictionary *nullJSON = [Fixture buildUsingFixture:@"SupportedNullTypes"];
+                    NSDictionary *nullJSON = [Fixture buildUsingFixture:@"SupportedTypesNull"];
                     [deserializer fillObject:realmObject fromRepresentation:nullJSON mapping:mapping];
                 });
 

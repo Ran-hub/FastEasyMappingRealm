@@ -8,7 +8,7 @@
 @implementation UniqueToManyChildRealmObject
 
 + (NSString *)primaryKey {
-    return @"primaryKey";
+    return @"identifier";
 }
 
 @end

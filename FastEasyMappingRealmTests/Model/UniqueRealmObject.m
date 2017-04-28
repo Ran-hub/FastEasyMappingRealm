@@ -13,7 +13,7 @@
 @implementation UniqueRealmObject
 
 + (NSString *)primaryKey {
-    return @"primaryKey";
+    return @"identifier";
 }
 
 @end
@@ -23,7 +23,7 @@
 + (FEMMapping *)defaultMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
     mapping.primaryKey = [self primaryKey];
-    [mapping addAttributesFromArray:@[@"primaryKey"]];
+    [mapping addAttributesFromArray:@[@"identifier"]];
 
     return mapping;
 }
@@ -32,8 +32,8 @@
     FEMMapping *mapping = [self defaultMapping];
 
     FEMMapping *relationshipMapping = [[FEMMapping alloc] initWithObjectClass:[UniqueChildRealmObject class]];
-    relationshipMapping.primaryKey = @"primaryKey";
-    [relationshipMapping addAttributesFromArray:@[@"primaryKey"]];
+    relationshipMapping.primaryKey = @"identifier";
+    [relationshipMapping addAttributesFromArray:@[@"identifier"]];
 
     FEMRelationship *relationship = [[FEMRelationship alloc] initWithProperty:@"toOneRelationship" keyPath:@"toOne" mapping:relationshipMapping];
     relationship.assignmentPolicy = policy;
@@ -46,8 +46,8 @@
     FEMMapping *mapping = [self defaultMapping];
 
     FEMMapping *relationshipMapping = [[FEMMapping alloc] initWithObjectClass:[UniqueToManyChildRealmObject class]];
-    relationshipMapping.primaryKey = @"primaryKey";
-    [relationshipMapping addAttributesFromArray:@[@"primaryKey"]];
+    relationshipMapping.primaryKey = @"identifier";
+    [relationshipMapping addAttributesFromArray:@[@"identifier"]];
 
     FEMRelationship *relationship = [[FEMRelationship alloc] initWithProperty:@"toManyRelationship" keyPath:@"toMany" mapping:relationshipMapping];
     relationship.toMany = YES;

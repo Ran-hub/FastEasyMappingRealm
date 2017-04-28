@@ -11,7 +11,7 @@
 
 @interface UniqueRealmObject : RLMObject
 
-@property (nonatomic) int primaryKey;
+@property (nonatomic) int identifier;
 
 @property (nonatomic, strong) UniqueChildRealmObject *toOneRelationship;
 @property (nonatomic, strong) RLMArray<UniqueToManyChildRealmObject *><UniqueToManyChildRealmObject> *toManyRelationship;

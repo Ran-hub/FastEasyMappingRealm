@@ -1,11 +1,11 @@
 {
-  "primaryKey": 5,
+  "identifier": 5,
   "toMany": [
     {
-      "primaryKey": 11
+      "identifier": 11
     },
     {
-      "primaryKey": 12
+      "identifier": 12
     }
   ]
 }

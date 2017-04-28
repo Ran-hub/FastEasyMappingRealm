@@ -95,12 +95,12 @@ describe(@"FEMRealmStore", ^{
 
             it(@"should add object with PK", ^{
                 UniqueRealmObject *object = [store newObjectForMapping:mapping];
-                object.primaryKey = 5;
+                object.identifier = 5;
 
-                [store addObject:object forPrimaryKey:@(object.primaryKey) mapping:mapping];
+                [store addObject:object forPrimaryKey:@(object.identifier) mapping:mapping];
                 
-                [[[store objectForPrimaryKey:@(object.primaryKey) mapping:mapping] should] equal:object];
-                [[[store objectForPrimaryKey:@(object.primaryKey + 1) mapping:mapping] should] beNil];
+                [[[store objectForPrimaryKey:@(object.identifier) mapping:mapping] should] equal:object];
+                [[[store objectForPrimaryKey:@(object.identifier + 1) mapping:mapping] should] beNil];
             });
         });
 
@@ -114,7 +114,7 @@ describe(@"FEMRealmStore", ^{
                 __block UniqueRealmObject *object = nil;
                 [realm transactionWithBlock:^{
                     object = [[UniqueRealmObject alloc] init];
-                    object.primaryKey = 5;
+                    object.identifier = 5;
                     [realm addObject:object];
                 }];
                 
