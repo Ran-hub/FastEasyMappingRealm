@@ -110,6 +110,14 @@
 		AD9F7B491E9E208F00A58327 /* FEMMapping+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F7B431E9E208F00A58327 /* FEMMapping+Realm.m */; };
 		AD9F7B4A1E9E208F00A58327 /* FEMMapping+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F7B431E9E208F00A58327 /* FEMMapping+Realm.m */; };
 		AD9F7B4B1E9E208F00A58327 /* FEMMapping+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F7B431E9E208F00A58327 /* FEMMapping+Realm.m */; };
+		ADA44C721EB34A5A0014C46D /* AssignmentPolicyCollectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA44C701EB34A5A0014C46D /* AssignmentPolicyCollectionSpec.swift */; };
+		ADA44C731EB34A5A0014C46D /* AssignmentPolicyCollectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA44C701EB34A5A0014C46D /* AssignmentPolicyCollectionSpec.swift */; };
+		ADA44C741EB34A5A0014C46D /* AssignmentPolicyObjectSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA44C711EB34A5A0014C46D /* AssignmentPolicyObjectSpec.swift */; };
+		ADA44C751EB34A5A0014C46D /* AssignmentPolicyObjectSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA44C711EB34A5A0014C46D /* AssignmentPolicyObjectSpec.swift */; };
+		ADA44C781EB34A990014C46D /* SwiftUniqueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA44C761EB34A990014C46D /* SwiftUniqueObject.swift */; };
+		ADA44C791EB34A990014C46D /* SwiftUniqueObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA44C761EB34A990014C46D /* SwiftUniqueObject.swift */; };
+		ADA44C7A1EB34A990014C46D /* SwiftUniqueObjectChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA44C771EB34A990014C46D /* SwiftUniqueObjectChild.swift */; };
+		ADA44C7B1EB34A990014C46D /* SwiftUniqueObjectChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA44C771EB34A990014C46D /* SwiftUniqueObjectChild.swift */; };
 		ADDBBD791EB0A35100BFFD77 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD771EB0A35100BFFD77 /* Nimble.framework */; };
 		ADDBBD7A1EB0A35100BFFD77 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD781EB0A35100BFFD77 /* Quick.framework */; };
 		ADDBBD7D1EB0A36500BFFD77 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD7B1EB0A36500BFFD77 /* Nimble.framework */; };
@@ -212,6 +220,10 @@
 		AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMRealmStoreSpeс.m"; sourceTree = "<group>"; };
 		AD9F7B421E9E208F00A58327 /* FEMMapping+Realm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FEMMapping+Realm.h"; sourceTree = "<group>"; };
 		AD9F7B431E9E208F00A58327 /* FEMMapping+Realm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMMapping+Realm.m"; sourceTree = "<group>"; };
+		ADA44C701EB34A5A0014C46D /* AssignmentPolicyCollectionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentPolicyCollectionSpec.swift; sourceTree = "<group>"; };
+		ADA44C711EB34A5A0014C46D /* AssignmentPolicyObjectSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentPolicyObjectSpec.swift; sourceTree = "<group>"; };
+		ADA44C761EB34A990014C46D /* SwiftUniqueObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUniqueObject.swift; sourceTree = "<group>"; };
+		ADA44C771EB34A990014C46D /* SwiftUniqueObjectChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUniqueObjectChild.swift; sourceTree = "<group>"; };
 		ADDBBD771EB0A35100BFFD77 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/Mac/Nimble.framework; sourceTree = "<group>"; };
 		ADDBBD781EB0A35100BFFD77 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/Mac/Quick.framework; sourceTree = "<group>"; };
 		ADDBBD7B1EB0A36500BFFD77 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -425,6 +437,9 @@
 		AD9400EF1E8BE7B100558F37 /* Fixture */ = {
 			isa = PBXGroup;
 			children = (
+				1D6A3F3CBAED31FB56A1BACA /* AssignmentPolicyToOneNull.json */,
+				1D6A3B226D8E5C958A3A810B /* AssignmentPolicyToOneInit.json */,
+				1D6A3FBBE6A00A55297E22F9 /* AssignmentPolicyToOneUpdate.json */,
 				AD9400F01E8BE7B100558F37 /* AssignmentPolicyToManyEmptyArray.json */,
 				AD9400F11E8BE7B100558F37 /* AssignmentPolicyToManyInit.json */,
 				AD9400F21E8BE7B100558F37 /* AssignmentPolicyToManyNull.json */,
@@ -436,9 +451,6 @@
 				AD9400F81E8BE7B100558F37 /* ToManyRelationship.json */,
 				AD9400F91E8BE7B100558F37 /* ToOneNullRelationship.json */,
 				AD9400FA1E8BE7B100558F37 /* ToOneRelationship.json */,
-				1D6A3F3CBAED31FB56A1BACA /* AssignmentPolicyToOneNull.json */,
-				1D6A3B226D8E5C958A3A810B /* AssignmentPolicyToOneInit.json */,
-				1D6A3FBBE6A00A55297E22F9 /* AssignmentPolicyToOneUpdate.json */,
 			);
 			path = Fixture;
 			sourceTree = "<group>";
@@ -448,6 +460,8 @@
 			children = (
 				ADDBBD881EB0A45F00BFFD77 /* SwiftObject.swift */,
 				ADDBBD8A1EB0A45F00BFFD77 /* SwiftObjectChild.swift */,
+				ADA44C761EB34A990014C46D /* SwiftUniqueObject.swift */,
+				ADA44C771EB34A990014C46D /* SwiftUniqueObjectChild.swift */,
 				AD9400FC1E8BE7B100558F37 /* ObjCChildObject.h */,
 				AD9400FD1E8BE7B100558F37 /* ObjCChildObject.m */,
 				AD9400FE1E8BE7B100558F37 /* ObjCObject.h */,
@@ -466,6 +480,8 @@
 			isa = PBXGroup;
 			children = (
 				ADDBBD851EB0A42800BFFD77 /* ObjectMappingSpec.swift */,
+				ADA44C711EB34A5A0014C46D /* AssignmentPolicyObjectSpec.swift */,
+				ADA44C701EB34A5A0014C46D /* AssignmentPolicyCollectionSpec.swift */,
 				AD9401071E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m */,
 				AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */,
 				AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */,
@@ -912,17 +928,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA44C731EB34A5A0014C46D /* AssignmentPolicyCollectionSpec.swift in Sources */,
 				AD7DF8721E981696006888E1 /* UniqueChildRealmObject.m in Sources */,
 				ADDBBD921EB27D2400BFFD77 /* ObjectMappingSpec.swift in Sources */,
 				AD7DF8761E98169B006888E1 /* FEMDeserializerSpec.m in Sources */,
 				AD7DF8781E98169B006888E1 /* FEMAssignmentPolicyCollectionSpec.m in Sources */,
 				AD8DE1491E99094F00A969B1 /* FEMRealmStoreSpeс.m in Sources */,
 				AD7DF8791E9816A1006888E1 /* Fixture.m in Sources */,
+				ADA44C791EB34A990014C46D /* SwiftUniqueObject.swift in Sources */,
+				ADA44C7B1EB34A990014C46D /* SwiftUniqueObjectChild.swift in Sources */,
 				ADDBBD961EB2805000BFFD77 /* FEMAttribute+UTF8.swift in Sources */,
 				AD7DF8751E98169B006888E1 /* FEMAssignmentPolicyObjectSpec.m in Sources */,
 				AD7DF8731E981696006888E1 /* UniqueRealmObject.m in Sources */,
 				AD7DF8711E981696006888E1 /* ObjCObject.m in Sources */,
 				ADDBBD901EB0A45F00BFFD77 /* SwiftObjectChild.swift in Sources */,
+				ADA44C751EB34A5A0014C46D /* AssignmentPolicyObjectSpec.swift in Sources */,
 				AD7DF8741E981696006888E1 /* UniqueToManyChildRealmObject.m in Sources */,
 				ADDBBD8C1EB0A45F00BFFD77 /* SwiftObject.swift in Sources */,
 				AD7DF8701E981696006888E1 /* ObjCChildObject.m in Sources */,
@@ -966,17 +986,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA44C721EB34A5A0014C46D /* AssignmentPolicyCollectionSpec.swift in Sources */,
 				AD94011C1E8BE7B100558F37 /* FEMRealmStoreSpeс.m in Sources */,
 				ADDBBD911EB27D2400BFFD77 /* ObjectMappingSpec.swift in Sources */,
 				AD9401181E8BE7B100558F37 /* UniqueRealmObject.m in Sources */,
 				AD94011A1E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m in Sources */,
 				AD9401191E8BE7B100558F37 /* UniqueToManyChildRealmObject.m in Sources */,
 				AD9401151E8BE7B100558F37 /* ObjCChildObject.m in Sources */,
+				ADA44C781EB34A990014C46D /* SwiftUniqueObject.swift in Sources */,
+				ADA44C7A1EB34A990014C46D /* SwiftUniqueObjectChild.swift in Sources */,
 				ADDBBD951EB2805000BFFD77 /* FEMAttribute+UTF8.swift in Sources */,
 				AD9401171E8BE7B100558F37 /* UniqueChildRealmObject.m in Sources */,
 				AD94011B1E8BE7B100558F37 /* FEMDeserializerSpec.m in Sources */,
 				AD9401161E8BE7B100558F37 /* ObjCObject.m in Sources */,
 				ADDBBD8F1EB0A45F00BFFD77 /* SwiftObjectChild.swift in Sources */,
+				ADA44C741EB34A5A0014C46D /* AssignmentPolicyObjectSpec.swift in Sources */,
 				1D6A3B21882F44C2845BBE57 /* Fixture.m in Sources */,
 				ADDBBD8B1EB0A45F00BFFD77 /* SwiftObject.swift in Sources */,
 				1D6A33A75AAF19C278C15784 /* FEMAssignmentPolicyCollectionSpec.m in Sources */,
