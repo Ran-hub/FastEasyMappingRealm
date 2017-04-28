@@ -22,7 +22,7 @@ class ObjectMappingSpeс: QuickSpec {
         store = FEMRealmStore(realm: ObjectiveCSupport.convert(object: realm))
         deserializer = FEMDeserializer(store: store)
         
-        let fixture = Fixture.build(usingFixture: "SupportedTypes") as! [AnyHashable: Any]
+        let fixture = Fixture.build(usingFixture: "SupportedTypes")!
         object = deserializer.object(fromRepresentation: fixture, mapping: mapping) as! SwiftObject
       }
       
@@ -119,7 +119,7 @@ class ObjectMappingSpeс: QuickSpec {
       
       describe("null attributes") {
         beforeEach {
-          let fixture = Fixture.build(usingFixture: "SupportedTypesNull") as! [AnyHashable: Any]
+          let fixture = Fixture.build(usingFixture: "SupportedTypesNull")!
           object = deserializer.fill(object, fromRepresentation: fixture, mapping: mapping) as! SwiftObject
         }
         

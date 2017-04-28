@@ -3,7 +3,7 @@
 
 @implementation Fixture
 
-+ (id)buildUsingFixture:(NSString *)fileName {
++ (nullable NSDictionary *)buildUsingFixture:(NSString *)fileName {
     NSBundle *bundle = [NSBundle bundleForClass:self];
     NSString *path = [bundle pathForResource:fileName ofType:@"json"];
 

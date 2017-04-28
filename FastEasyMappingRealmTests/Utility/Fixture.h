@@ -5,7 +5,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Fixture : NSObject
 
-+ (nullable id)buildUsingFixture:(NSString *)fileName;
++ (nullable NSDictionary *)buildUsingFixture:(NSString *)fileName;
 
 @end
 

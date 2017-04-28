@@ -239,7 +239,7 @@ describe(@"FEMAssignmentPolicyObject", ^{
                     [[object.toOneRelationship should] beNil];
                 });
 
-                it(@"shouldn't remove old value", ^{
+                it(@"should remove old value", ^{
                     [[theValue(child.invalidated) should] beTrue];
 
                     [[[realm objectWithClassName:[UniqueChildRealmObject className] forPrimaryKey:@(10)] should] beNil];
