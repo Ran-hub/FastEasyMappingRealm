@@ -8,7 +8,6 @@
 
 #import "ObjCObject.h"
 #import "UniqueRealmObject.h"
-#import "UniqueToManyChildRealmObject.h"
 #import "FEMRealmAssignmentPolicy.h"
 #import "Fixture.h"
 #import "UniqueChildRealmObject.h"

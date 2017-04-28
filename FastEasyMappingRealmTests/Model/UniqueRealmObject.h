@@ -5,7 +5,7 @@
 #import <Realm/RLMArray.h>
 #import <FastEasyMapping/FastEasyMapping.h>
 
-#import "UniqueToManyChildRealmObject.h"
+#import "UniqueChildRealmObject.h"
 
 @class UniqueChildRealmObject;
 
@@ -14,7 +14,7 @@
 @property (nonatomic) int identifier;
 
 @property (nonatomic, strong) UniqueChildRealmObject *toOneRelationship;
-@property (nonatomic, strong) RLMArray<UniqueToManyChildRealmObject *><UniqueToManyChildRealmObject> *toManyRelationship;
+@property (nonatomic, strong) RLMArray<UniqueChildRealmObject *><UniqueChildRealmObject> *toManyRelationship;
 
 @end
 

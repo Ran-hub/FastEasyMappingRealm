@@ -1,14 +1,23 @@
-//
-// Created by zen on 13/09/15.
-// Copyright (c) 2015 Yalantis. All rights reserved.
-//
 
+#import <FastEasyMapping/FastEasyMapping.h>
 #import "UniqueChildRealmObject.h"
 
 @implementation UniqueChildRealmObject
 
 + (NSString *)primaryKey {
     return @"identifier";
+}
+
+@end
+
+@implementation UniqueChildRealmObject (Mapping)
+
++ (FEMMapping *)defaultMapping {
+    FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];
+    mapping.primaryKey = [self primaryKey];
+    [mapping addAttributesFromArray:@[@"identifier"]];
+
+    return mapping;
 }
 
 @end
