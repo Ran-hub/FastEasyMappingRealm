@@ -42,7 +42,7 @@
 		AD7DF8641E98168F006888E1 /* AssignmentPolicyToManyNull.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F21E8BE7B100558F37 /* AssignmentPolicyToManyNull.json */; };
 		AD7DF8651E98168F006888E1 /* AssignmentPolicyToManyUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F31E8BE7B100558F37 /* AssignmentPolicyToManyUpdate.json */; };
 		AD7DF8661E98168F006888E1 /* PrimaryKey.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F41E8BE7B100558F37 /* PrimaryKey.json */; };
-		AD7DF8671E98168F006888E1 /* SupportedNullTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F51E8BE7B100558F37 /* SupportedNullTypes.json */; };
+		AD7DF8671E98168F006888E1 /* SupportedTypesNull.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F51E8BE7B100558F37 /* SupportedTypesNull.json */; };
 		AD7DF8681E98168F006888E1 /* SupportedTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F61E8BE7B100558F37 /* SupportedTypes.json */; };
 		AD7DF8691E98168F006888E1 /* ToManyNullRelationship.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F71E8BE7B100558F37 /* ToManyNullRelationship.json */; };
 		AD7DF86A1E98168F006888E1 /* ToManyRelationship.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F81E8BE7B100558F37 /* ToManyRelationship.json */; };
@@ -88,7 +88,7 @@
 		AD94010C1E8BE7B100558F37 /* AssignmentPolicyToManyNull.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F21E8BE7B100558F37 /* AssignmentPolicyToManyNull.json */; };
 		AD94010D1E8BE7B100558F37 /* AssignmentPolicyToManyUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F31E8BE7B100558F37 /* AssignmentPolicyToManyUpdate.json */; };
 		AD94010E1E8BE7B100558F37 /* PrimaryKey.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F41E8BE7B100558F37 /* PrimaryKey.json */; };
-		AD94010F1E8BE7B100558F37 /* SupportedNullTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F51E8BE7B100558F37 /* SupportedNullTypes.json */; };
+		AD94010F1E8BE7B100558F37 /* SupportedTypesNull.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F51E8BE7B100558F37 /* SupportedTypesNull.json */; };
 		AD9401101E8BE7B100558F37 /* SupportedTypes.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F61E8BE7B100558F37 /* SupportedTypes.json */; };
 		AD9401111E8BE7B100558F37 /* ToManyNullRelationship.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F71E8BE7B100558F37 /* ToManyNullRelationship.json */; };
 		AD9401121E8BE7B100558F37 /* ToManyRelationship.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F81E8BE7B100558F37 /* ToManyRelationship.json */; };
@@ -116,10 +116,14 @@
 		ADDBBD7E1EB0A36500BFFD77 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD7C1EB0A36500BFFD77 /* Quick.framework */; };
 		ADDBBD801EB0A3AE00BFFD77 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD7F1EB0A3AE00BFFD77 /* RealmSwift.framework */; };
 		ADDBBD821EB0A3BC00BFFD77 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADDBBD811EB0A3BC00BFFD77 /* RealmSwift.framework */; };
-		ADDBBD8B1EB0A45F00BFFD77 /* SwiftRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD881EB0A45F00BFFD77 /* SwiftRealmObject.swift */; };
-		ADDBBD8C1EB0A45F00BFFD77 /* SwiftRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD881EB0A45F00BFFD77 /* SwiftRealmObject.swift */; };
-		ADDBBD8F1EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD8A1EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift */; };
-		ADDBBD901EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD8A1EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift */; };
+		ADDBBD8B1EB0A45F00BFFD77 /* SwiftObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD881EB0A45F00BFFD77 /* SwiftObject.swift */; };
+		ADDBBD8C1EB0A45F00BFFD77 /* SwiftObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD881EB0A45F00BFFD77 /* SwiftObject.swift */; };
+		ADDBBD8F1EB0A45F00BFFD77 /* SwiftObjectChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD8A1EB0A45F00BFFD77 /* SwiftObjectChild.swift */; };
+		ADDBBD901EB0A45F00BFFD77 /* SwiftObjectChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD8A1EB0A45F00BFFD77 /* SwiftObjectChild.swift */; };
+		ADDBBD911EB27D2400BFFD77 /* ObjectMappingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD851EB0A42800BFFD77 /* ObjectMappingSpec.swift */; };
+		ADDBBD921EB27D2400BFFD77 /* ObjectMappingSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD851EB0A42800BFFD77 /* ObjectMappingSpec.swift */; };
+		ADDBBD951EB2805000BFFD77 /* FEMAttribute+UTF8.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD941EB2805000BFFD77 /* FEMAttribute+UTF8.swift */; };
+		ADDBBD961EB2805000BFFD77 /* FEMAttribute+UTF8.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD941EB2805000BFFD77 /* FEMAttribute+UTF8.swift */; };
 		ADE1F3671E9A70A100F457E9 /* PerformanceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3641E9A70A100F457E9 /* PerformanceObject.m */; };
 		ADE1F3681E9A70A100F457E9 /* Benchmark.m in Sources */ = {isa = PBXBuildFile; fileRef = ADE1F3661E9A70A100F457E9 /* Benchmark.m */; };
 /* End PBXBuildFile section */
@@ -187,7 +191,7 @@
 		AD9400F21E8BE7B100558F37 /* AssignmentPolicyToManyNull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToManyNull.json; sourceTree = "<group>"; };
 		AD9400F31E8BE7B100558F37 /* AssignmentPolicyToManyUpdate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AssignmentPolicyToManyUpdate.json; sourceTree = "<group>"; };
 		AD9400F41E8BE7B100558F37 /* PrimaryKey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PrimaryKey.json; sourceTree = "<group>"; };
-		AD9400F51E8BE7B100558F37 /* SupportedNullTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SupportedNullTypes.json; sourceTree = "<group>"; };
+		AD9400F51E8BE7B100558F37 /* SupportedTypesNull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SupportedTypesNull.json; sourceTree = "<group>"; };
 		AD9400F61E8BE7B100558F37 /* SupportedTypes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SupportedTypes.json; sourceTree = "<group>"; };
 		AD9400F71E8BE7B100558F37 /* ToManyNullRelationship.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ToManyNullRelationship.json; sourceTree = "<group>"; };
 		AD9400F81E8BE7B100558F37 /* ToManyRelationship.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ToManyRelationship.json; sourceTree = "<group>"; };
@@ -215,8 +219,10 @@
 		ADDBBD7F1EB0A3AE00BFFD77 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		ADDBBD811EB0A3BC00BFFD77 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/Mac/RealmSwift.framework; sourceTree = "<group>"; };
 		ADDBBD851EB0A42800BFFD77 /* ObjectMappingSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectMappingSpec.swift; sourceTree = "<group>"; };
-		ADDBBD881EB0A45F00BFFD77 /* SwiftRealmObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRealmObject.swift; sourceTree = "<group>"; };
-		ADDBBD8A1EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRealmObjectChild.swift; sourceTree = "<group>"; };
+		ADDBBD881EB0A45F00BFFD77 /* SwiftObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftObject.swift; sourceTree = "<group>"; };
+		ADDBBD8A1EB0A45F00BFFD77 /* SwiftObjectChild.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftObjectChild.swift; sourceTree = "<group>"; };
+		ADDBBD931EB27D7F00BFFD77 /* FastEasyMappingRealmTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FastEasyMappingRealmTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		ADDBBD941EB2805000BFFD77 /* FEMAttribute+UTF8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FEMAttribute+UTF8.swift"; sourceTree = "<group>"; };
 		ADE1F3571E9A702D00F457E9 /* Benchmark.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Benchmark.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE1F35B1E9A702D00F457E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE1F3631E9A70A100F457E9 /* PerformanceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerformanceObject.h; sourceTree = "<group>"; };
@@ -305,6 +311,7 @@
 		1D6A3A00133EFE1EAF658E05 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				ADDBBD941EB2805000BFFD77 /* FEMAttribute+UTF8.swift */,
 				1D6A31A1AF6EB00C258F7B81 /* Fixture.m */,
 				1D6A3D0333F968F2A500D33B /* Fixture.h */,
 			);
@@ -380,6 +387,7 @@
 				AD9400FB1E8BE7B100558F37 /* Model */,
 				AD9401061E8BE7B100558F37 /* Specs */,
 				AD9400CE1E8BE11A00558F37 /* Info.plist */,
+				ADDBBD931EB27D7F00BFFD77 /* FastEasyMappingRealmTests-Bridging-Header.h */,
 				1D6A3A00133EFE1EAF658E05 /* Utility */,
 			);
 			path = FastEasyMappingRealmTests;
@@ -422,7 +430,7 @@
 				AD9400F21E8BE7B100558F37 /* AssignmentPolicyToManyNull.json */,
 				AD9400F31E8BE7B100558F37 /* AssignmentPolicyToManyUpdate.json */,
 				AD9400F41E8BE7B100558F37 /* PrimaryKey.json */,
-				AD9400F51E8BE7B100558F37 /* SupportedNullTypes.json */,
+				AD9400F51E8BE7B100558F37 /* SupportedTypesNull.json */,
 				AD9400F61E8BE7B100558F37 /* SupportedTypes.json */,
 				AD9400F71E8BE7B100558F37 /* ToManyNullRelationship.json */,
 				AD9400F81E8BE7B100558F37 /* ToManyRelationship.json */,
@@ -438,8 +446,8 @@
 		AD9400FB1E8BE7B100558F37 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ADDBBD881EB0A45F00BFFD77 /* SwiftRealmObject.swift */,
-				ADDBBD8A1EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift */,
+				ADDBBD881EB0A45F00BFFD77 /* SwiftObject.swift */,
+				ADDBBD8A1EB0A45F00BFFD77 /* SwiftObjectChild.swift */,
 				AD9400FC1E8BE7B100558F37 /* ObjCChildObject.h */,
 				AD9400FD1E8BE7B100558F37 /* ObjCChildObject.m */,
 				AD9400FE1E8BE7B100558F37 /* ObjCObject.h */,
@@ -774,7 +782,7 @@
 				AD7DF8621E98168F006888E1 /* AssignmentPolicyToManyEmptyArray.json in Resources */,
 				AD7DF8651E98168F006888E1 /* AssignmentPolicyToManyUpdate.json in Resources */,
 				AD7DF86B1E98168F006888E1 /* ToOneNullRelationship.json in Resources */,
-				AD7DF8671E98168F006888E1 /* SupportedNullTypes.json in Resources */,
+				AD7DF8671E98168F006888E1 /* SupportedTypesNull.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,7 +821,7 @@
 				AD94010A1E8BE7B100558F37 /* AssignmentPolicyToManyEmptyArray.json in Resources */,
 				AD94010D1E8BE7B100558F37 /* AssignmentPolicyToManyUpdate.json in Resources */,
 				AD9401131E8BE7B100558F37 /* ToOneNullRelationship.json in Resources */,
-				AD94010F1E8BE7B100558F37 /* SupportedNullTypes.json in Resources */,
+				AD94010F1E8BE7B100558F37 /* SupportedTypesNull.json in Resources */,
 				1D6A30DC583D66E065BF1E19 /* AssignmentPolicyToOneNull.json in Resources */,
 				1D6A304460D626A229EE33E1 /* AssignmentPolicyToOneInit.json in Resources */,
 				1D6A312ABA1C5814235ADF91 /* AssignmentPolicyToOneUpdate.json in Resources */,
@@ -905,16 +913,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7DF8721E981696006888E1 /* UniqueChildRealmObject.m in Sources */,
+				ADDBBD921EB27D2400BFFD77 /* ObjectMappingSpec.swift in Sources */,
 				AD7DF8761E98169B006888E1 /* FEMDeserializerSpec.m in Sources */,
 				AD7DF8781E98169B006888E1 /* FEMAssignmentPolicyCollectionSpec.m in Sources */,
 				AD8DE1491E99094F00A969B1 /* FEMRealmStoreSpeс.m in Sources */,
 				AD7DF8791E9816A1006888E1 /* Fixture.m in Sources */,
+				ADDBBD961EB2805000BFFD77 /* FEMAttribute+UTF8.swift in Sources */,
 				AD7DF8751E98169B006888E1 /* FEMAssignmentPolicyObjectSpec.m in Sources */,
 				AD7DF8731E981696006888E1 /* UniqueRealmObject.m in Sources */,
 				AD7DF8711E981696006888E1 /* ObjCObject.m in Sources */,
-				ADDBBD901EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift in Sources */,
+				ADDBBD901EB0A45F00BFFD77 /* SwiftObjectChild.swift in Sources */,
 				AD7DF8741E981696006888E1 /* UniqueToManyChildRealmObject.m in Sources */,
-				ADDBBD8C1EB0A45F00BFFD77 /* SwiftRealmObject.swift in Sources */,
+				ADDBBD8C1EB0A45F00BFFD77 /* SwiftObject.swift in Sources */,
 				AD7DF8701E981696006888E1 /* ObjCChildObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -957,16 +967,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD94011C1E8BE7B100558F37 /* FEMRealmStoreSpeс.m in Sources */,
+				ADDBBD911EB27D2400BFFD77 /* ObjectMappingSpec.swift in Sources */,
 				AD9401181E8BE7B100558F37 /* UniqueRealmObject.m in Sources */,
 				AD94011A1E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m in Sources */,
 				AD9401191E8BE7B100558F37 /* UniqueToManyChildRealmObject.m in Sources */,
 				AD9401151E8BE7B100558F37 /* ObjCChildObject.m in Sources */,
+				ADDBBD951EB2805000BFFD77 /* FEMAttribute+UTF8.swift in Sources */,
 				AD9401171E8BE7B100558F37 /* UniqueChildRealmObject.m in Sources */,
 				AD94011B1E8BE7B100558F37 /* FEMDeserializerSpec.m in Sources */,
 				AD9401161E8BE7B100558F37 /* ObjCObject.m in Sources */,
-				ADDBBD8F1EB0A45F00BFFD77 /* SwiftRealmObjectChild.swift in Sources */,
+				ADDBBD8F1EB0A45F00BFFD77 /* SwiftObjectChild.swift in Sources */,
 				1D6A3B21882F44C2845BBE57 /* Fixture.m in Sources */,
-				ADDBBD8B1EB0A45F00BFFD77 /* SwiftRealmObject.swift in Sources */,
+				ADDBBD8B1EB0A45F00BFFD77 /* SwiftObject.swift in Sources */,
 				1D6A33A75AAF19C278C15784 /* FEMAssignmentPolicyCollectionSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1064,6 +1076,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FastEasyMapping.FastEasyMappingRealm-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "FastEasyMappingRealmTests/FastEasyMappingRealmTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1086,6 +1099,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.FastEasyMapping.FastEasyMappingRealm-macOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "FastEasyMappingRealmTests/FastEasyMappingRealmTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -1346,6 +1360,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.FastEasyMappingRealmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FastEasyMappingRealmTests/FastEasyMappingRealmTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1365,6 +1380,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FastEasyMapping.FastEasyMappingRealmTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FastEasyMappingRealmTests/FastEasyMappingRealmTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

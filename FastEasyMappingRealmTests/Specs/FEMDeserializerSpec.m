@@ -149,7 +149,7 @@ describe(@"FEMDeserializer", ^{
 
                 it(@"should map date", ^{
                     FEMAttribute *attribute = [mapping attributeForProperty:@"date"];
-                    NSDate *expected = [attribute mapValue:@"2005-08-09T18:31:42+03"];
+                    NSDate *expected = [attribute mapValue:@"2017"];
                     [[realmObject.date should] equal:expected];
                 });
 
@@ -354,7 +354,6 @@ describe(@"FEMDeserializer", ^{
                 });
             });
         });
-
 
         context(@"to-one relationship", ^{
             context(@"nonnull value", ^{

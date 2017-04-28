@@ -32,7 +32,7 @@
         @"string"
     ]];
 
-    [mapping addAttribute:[FEMAttribute mappingOfProperty:@"date" toKeyPath:@"date" dateFormat:@"YYYY-mm-dd'T'HH:mm:ssZZZZ"]];
+    [mapping addAttribute:[FEMAttribute mappingOfProperty:@"date" toKeyPath:@"date" dateFormat:@"YYYY"]];
 	
 	[mapping addAttribute:[FEMAttribute mappingOfProperty:@"data" toKeyPath:@"data" map:^id(id value) {
 		if ([value isKindOfClass:[NSString class]]) {

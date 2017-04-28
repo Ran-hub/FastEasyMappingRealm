@@ -27,6 +27,9 @@
   "doubleObject": 12.2,
   
   "string": "string",
-  "date": "2005-08-09T18:31:42+03",
-  "data": "utf8"
+  "date": "2017",
+  "data": "utf8",
+  
+  "toOneRelationship": { "string": "1" },
+  "toManyRelationship": [{ "string": "10" }, { "string": "11" }]
 }

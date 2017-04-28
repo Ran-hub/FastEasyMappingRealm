@@ -1,0 +1,35 @@
+{
+  "boolValue": null,
+  "boolObject": null,
+  
+  "malformedBoolValue": null,
+  "malformedBoolObject": null,
+  
+  "charValue": null,
+  "charObject": null,
+  
+  "shortValue": null,
+  "shortObject": null,
+  
+  "intValue": null,
+  "intObject": null,
+  
+  "longValue": null,
+  "longObject": null,
+  
+  "longLongValue": null,
+  "longLongObject": null,
+  
+  "floatValue": null,
+  "floatObject": null,
+  
+  "doubleValue": null,
+  "doubleObject": null,
+  
+  "string": null,
+  "date": null,
+  "data": null,
+  
+  "toOneRelationship": null,
+  "toManyRelationship": null
+}

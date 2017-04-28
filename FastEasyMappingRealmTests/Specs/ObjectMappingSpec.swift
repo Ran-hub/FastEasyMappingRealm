@@ -9,61 +9,76 @@ class ObjectMappingSpeс: QuickSpec {
   
   override func spec() {
     describe("mapping") {
-      var object: Object!
-      let mapping = Object.defaultMapping()
+      var object: SwiftObject!
+      let mapping = SwiftObject.defaultMapping()
+      
+      var realm: Realm!
+      var deserializer: FEMDeserializer!
+      var store: FEMRealmStore!
       
       beforeEach {
-        let fixture = Fixture.build(usingFixture: "ObjectSupportedTypes") as! [AnyHashable: Any]
-        object = FEMDeserializer.object(fromRepresentation: fixture, mapping: mapping) as! Object
+        let configuration = Realm.Configuration(inMemoryIdentifier: "tests")
+        realm = try! Realm(configuration: configuration)
+        store = FEMRealmStore(realm: ObjectiveCSupport.convert(object: realm))
+        deserializer = FEMDeserializer(store: store)
+        
+        let fixture = Fixture.build(usingFixture: "SupportedTypes") as! [AnyHashable: Any]
+        object = deserializer.object(fromRepresentation: fixture, mapping: mapping) as! SwiftObject
+      }
+      
+      afterEach {
+        try! realm.write {
+          realm.deleteAll()
+        }
       }
       
       describe("non-null attributes") {
-        it("should map boolValue") {
+        it("should map bool value") {
           expect(object.boolValue) == true
         }
         
-        it("should map malformedBoolValue") {
+        it("should map bool object") {
+            expect(object.boolObject.value) == true
+        }
+        
+        it("should map malformed bool value") {
           expect(object.malformedBoolValue) == true
         }
         
-        it("should map charValue") {
+        it("should map malformed bool object") {
+            expect(object.malformedBoolObject.value) == true
+        }
+        
+        it("should map char value") {
           expect(object.charValue) == Int8.max
         }
         
-        it("should map ucharValue") {
-          expect(object.ucharValue) == UInt8.max
+        it("should map char object") {
+            expect(object.charObject.value) == Int8.max
         }
         
-        it("should map shortValue") {
+        it("should map short value") {
           expect(object.shortValue) == Int16.max
         }
         
-        it("should map ushortObject") {
-          expect(object.ushortValue) == UInt16.max
+        it("should map short object") {
+            expect(object.shortObject.value) == Int16.max
         }
         
-        it("should map intValue") {
+        it("should map int value") {
           expect(object.intValue) == Int32.max
         }
         
-        it("should map uintValue") {
-          expect(object.uintValue) == UInt32.max
+        it("should map int object") {
+            expect(object.intValue) == Int32.max
         }
-        
-        it("should map longValue") {
-          expect(object.longValue) == Int(Int32.max) // JSON contains 32-bits long
+
+        it("should map longLong value") {
+            expect(object.longLongValue) == Int64.max
         }
-        
-        it("should map ulongValue") {
-          expect(object.ulongValue) == UInt(UInt32.max) // JSON contains 32-bits long
-        }
-        
-        it("should map longLongValue") {
-          expect(object.longLongValue) == Int64.max
-        }
-        
-        it("should map ulongLongValue") {
-          expect(object.ulongLongValue) == UInt64.max
+
+        it("should map longLong object") {
+            expect(object.longLongObject.value) == Int64.max
         }
         
         it("should map floatValue") {
@@ -73,135 +88,115 @@ class ObjectMappingSpeс: QuickSpec {
         it("should map doubleValue") {
           expect(object.doubleValue) == 12.2
         }
-        
-        it("should map nsnumberBool") {
-          expect(object.nsnumberBool) == true
-        }
 
         it("should map string") {
           expect(object.string) == "string"
         }
         
         it("should map date") {
-          expect(object.date?.timeIntervalSinceReferenceDate) == 504316800.0
-        }
-
-        it("should map url") {
-          expect(object.url) == URL(string: "https://google.com")
+          let attribute = mapping.attribute(forProperty: "date")
+          let expected = attribute?.mapValue("2017") as? Date
+          expect(object.date) == expected
         }
         
         it("should map data") {
-          expect(object.data) == "utf8".data(using: .utf8)
+          let attribute = mapping.attribute(forProperty: "data")
+          let expected = attribute?.mapValue("utf8") as? Data
+          expect(object.data) == expected
         }
         
-        it("should map arrayOfStrings") {
-          expect(object.arrayOfStrings) == ["1", "2"]
+        it("should map to-one relationship") {
+          expect(object.toOneRelationship).toNot(beNil())
+          expect(object.toOneRelationship?.string) ==  "1"
         }
         
-        it("should map arrayOfStrings") {
-          expect(object.setOfStrings) == ["1", "2"]
-        }
-
-        it("should map children") {
-          expect(object.children) != nil
-          expect(object.children!).to(haveCount(2))
-          
-          expect(object.children!.flatMap({ $0.string })).to(contain(["1", "2"]))
+        it("should map to-many relationship") {
+          expect(object.toManyRelationship.count) == 2
+          expect(object.toManyRelationship[0].string) ==  "10"
+          expect(object.toManyRelationship[1].string) ==  "11"
         }
       }
       
       describe("null attributes") {
         beforeEach {
-          let fixture = Fixture.build(usingFixture: "ObjectSupportedTypesNull") as! [AnyHashable: Any]
-          object = FEMDeserializer.fill(object, fromRepresentation: fixture, mapping: mapping) as! Object
+          let fixture = Fixture.build(usingFixture: "SupportedTypesNull") as! [AnyHashable: Any]
+          object = deserializer.fill(object, fromRepresentation: fixture, mapping: mapping) as! SwiftObject
         }
         
-        it("should skip boolValue") {
-          expect(object.boolValue) == true
+        it("should skip bool value") {
+            expect(object.boolValue) == true
         }
         
-        it("should skip malformedBoolValue") {
-          expect(object.malformedBoolValue) == true
+        it("should nil bool object") {
+            expect(object.boolObject.value).to(beNil())
         }
         
-        it("should skip charValue") {
-          expect(object.charValue) == Int8.max
+        it("should skip malformed bool value") {
+            expect(object.malformedBoolValue) == true
         }
         
-        it("should skip ucharValue") {
-          expect(object.ucharValue) == UInt8.max
+        it("should nil malformed bool object") {
+            expect(object.malformedBoolObject.value).to(beNil())
         }
         
-        it("should skip shortValue") {
-          expect(object.shortValue) == Int16.max
+        it("should skip int8 (char) value") {
+            expect(object.charValue) == Int8.max
         }
         
-        it("should skip ushortObject") {
-          expect(object.ushortValue) == UInt16.max
+        it("should nil char object") {
+            expect(object.charObject.value).to(beNil())
         }
         
-        it("should skip intValue") {
-          expect(object.intValue) == Int32.max
+        it("should skip short value") {
+            expect(object.shortValue) == Int16.max
         }
         
-        it("should skip uintValue") {
-          expect(object.uintValue) == UInt32.max
+        it("should nil short object") {
+            expect(object.shortObject.value).to(beNil())
         }
         
-        it("should skip longValue") {
-          expect(object.longValue) == Int(Int32.max) // JSON contains 32-bits long
+        it("should skip int value") {
+            expect(object.intValue) == Int32.max
         }
         
-        it("should skip ulongValue") {
-          expect(object.ulongValue) == UInt(UInt32.max) // JSON contains 32-bits long
+        it("should nil int object") {
+            expect(object.intObject.value).to(beNil())
         }
         
-        it("should skip longLongValue") {
-          expect(object.longLongValue) == Int64.max
+        it("should skip longLong value") {
+            expect(object.longLongValue) == Int64.max
         }
         
-        it("should skip ulongLongValue") {
-          expect(object.ulongLongValue) == UInt64.max
+        it("should nil longLong object") {
+            expect(object.longLongObject.value).to(beNil())
         }
         
         it("should skip floatValue") {
-          expect(object.floatValue) == 11.1
+            expect(object.floatValue) == 11.1
         }
         
         it("should skip doubleValue") {
-          expect(object.doubleValue) == 12.2
+            expect(object.doubleValue) == 12.2
         }
         
-        it("should nullify nsnumberBool") {
-          expect(object.nsnumberBool).to(beNil())
+        it("should nil string") {
+            expect(object.string).to(beNil())
         }
         
-        it("should nullify string") {
-          expect(object.string).to(beNil())
+        it("should nil date") {
+            expect(object.date).to(beNil())
         }
         
-        it("should nullify date") {
-          expect(object.date).to(beNil())
+        it("should nil data") {
+            expect(object.data).to(beNil())
         }
         
-        it("should nullify url") {
-          expect(object.url).to(beNil())
+        it("should nil to-one relationship") {
+          expect(object.toOneRelationship).to(beNil())
         }
         
-        it("should nullify data") {
-          expect(object.data).to(beNil())
-        }
-        
-        it("should nullify arrayOfStrings") {
-          expect(object.arrayOfStrings).to(beNil())
-        }
-        
-        it("should nullify arrayOfStrings") {
-          expect(object.setOfStrings).to(beNil())
-        }
-        
-        it("should nullify children") {
-          expect(object.children).to(beNil())
+        it("should nil to-many relationship") {
+          expect(object.toManyRelationship.count) == 0
         }
       }
     }
