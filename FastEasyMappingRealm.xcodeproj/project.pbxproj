@@ -477,9 +477,9 @@
 				ADA44C711EB34A5A0014C46D /* AssignmentPolicyObjectSpec.swift */,
 				ADA44C701EB34A5A0014C46D /* AssignmentPolicyCollectionSpec.swift */,
 				AD9401071E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m */,
+				1D6A3FD9EC906F05ADB303A7 /* FEMAssignmentPolicyCollectionSpec.m */,
 				AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */,
 				AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */,
-				1D6A3FD9EC906F05ADB303A7 /* FEMAssignmentPolicyCollectionSpec.m */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
