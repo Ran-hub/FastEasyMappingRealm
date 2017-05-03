@@ -4,6 +4,7 @@
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
+  - [Assignment Policies](#assignment-policies)
   - [Swift](#swift)
 
 ## Overview
@@ -11,7 +12,7 @@ FastEasyMappingRealm is an extension to the [FastEasyMapping](https://github.com
 
 ## Features
 - Common mapping features such as keys or/and values transformation
-- Merge policies that gives you ability to assign (default), merge or even replace values of the relationship with zero effort
+- Assignment policies that gives you ability to assign (default), merge or even replace values of the relationship with zero effort
 - Recursive relationships support
 - Mapping is a separate entity and doesn't lock your DTO to a single JSON representation
 - Finegrained control over mapping process via delegation
@@ -173,7 +174,25 @@ commentsRelationship.toMany = true
 userMapping.addRelationship(commentsRelationship)
 ```
 
-
 For the comprehensive usage guide please visit [FastEasyMapping](https://github.com/Yalantis/FastEasyMapping) page.
+
+### Assignment Policies
+Quite often during relationship mapping we're doing an update and not a simple assignment. After update it is useful to remove "old" values of the relationship that are no longer in use. FastEasyMapping offers an elegan and simple solution by exposing a customization point. Built-in assignment policies are: 
+
+##### To-one relationship
+Desired action | Policy | Description
+:---: | :---: | :---:
+Assign | FEMAssignmentPolicyAssign | Assign new value. Previous value stays in the database untouched
+Merge | FEMAssignmentPolicyObjectMerge | Pick either a new or old value depending on which one presented. Previous value stays in the database untouched
+Replace | FEMAssignmentPolicyObjectReplace | Replace old values by new. Previous values removed
+
+##### To-many relationship
+Desired action | Policy | Description
+:---: | :---: | :---:
+Assign | FEMAssignmentPolicyAssign | Assign new value. Previous value stays in the database untouched
+Merge | FEMRealmAssignmentPolicyCollectionMerge | Merge two collections. Previos value included in the new one
+Replace | FEMRealmAssignmentPolicyCollectionReplace | Replace old values by new. Values not presented in the new collection removed from the database
+
+For the comprehensive usage guide please visit [FastEasyMapping: Assignment Policy](https://github.com/Yalantis/FastEasyMapping#assignment-policy) page.
 
 ### Swift
