@@ -7,6 +7,8 @@
 @import Realm.RLMObject;
 @import Realm.Dynamic;
 
+#import "FEMRealmUtility.h"
+
 @implementation FEMRealmStore
 
 - (instancetype)initWithRealm:(RLMRealm *)realm {
@@ -37,24 +39,22 @@
 }
 
 - (id)newObjectForMapping:(FEMMapping *)mapping {
+    FEMRealmValidateMapping(mapping);
+
     Class realmClass = mapping.objectClass;
-
-    NSAssert(realmClass != nil, @"-[FEMMapping objectClass] can't be nil");
-    NSAssert(
-        [realmClass isSubclassOfClass:[RLMObjectBase class]],
-        @"-[FEMMapping objectClass] (<%@>) has to be a subclass of RLMObjectBase class",
-        NSStringFromClass(realmClass)
-    );
-
     RLMObjectBase *object = [(RLMObjectBase *)[realmClass alloc] init];
     return object;
 }
 
 - (nullable id)objectForPrimaryKey:(id)primaryKey mapping:(FEMMapping *)mapping {
+    FEMRealmValidateMapping(mapping);
+    
     return [_realm objectWithClassName:[mapping.objectClass className] forPrimaryKey:primaryKey];
 }
 
 - (void)addObject:(id)object forPrimaryKey:(nullable id)primaryKey mapping:(FEMMapping *)mapping {
+    FEMRealmValidateMapping(mapping);
+    
     if ([(RLMObject *)object realm] != _realm) {
         [_realm addObject:object];  
     }
