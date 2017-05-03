@@ -2,4 +2,4 @@ git "/Users/zen/Developer/ios/FEM/FastEasyMapping" "30b6d60618f77f6512797674225d
 github "Quick/Nimble" "v6.1.0"
 github "Quick/Quick" "v1.1.0"
 github "kiwi-bdd/Kiwi" "v2.4.0"
-github "realm/realm-cocoa" "v2.6.2"
+github "realm/realm-cocoa" "7b71035122db18fc2301a0913a7a6166b7988541"

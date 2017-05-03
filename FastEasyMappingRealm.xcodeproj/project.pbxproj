@@ -100,14 +100,6 @@
 		AD94011A1E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401071E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m */; };
 		AD94011B1E8BE7B100558F37 /* FEMDeserializerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */; };
 		AD94011C1E8BE7B100558F37 /* FEMRealmStoreSpeс.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */; };
-		AD9F7B441E9E208F00A58327 /* FEMMapping+Realm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9F7B421E9E208F00A58327 /* FEMMapping+Realm.h */; };
-		AD9F7B451E9E208F00A58327 /* FEMMapping+Realm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9F7B421E9E208F00A58327 /* FEMMapping+Realm.h */; };
-		AD9F7B461E9E208F00A58327 /* FEMMapping+Realm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9F7B421E9E208F00A58327 /* FEMMapping+Realm.h */; };
-		AD9F7B471E9E208F00A58327 /* FEMMapping+Realm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9F7B421E9E208F00A58327 /* FEMMapping+Realm.h */; };
-		AD9F7B481E9E208F00A58327 /* FEMMapping+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F7B431E9E208F00A58327 /* FEMMapping+Realm.m */; };
-		AD9F7B491E9E208F00A58327 /* FEMMapping+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F7B431E9E208F00A58327 /* FEMMapping+Realm.m */; };
-		AD9F7B4A1E9E208F00A58327 /* FEMMapping+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F7B431E9E208F00A58327 /* FEMMapping+Realm.m */; };
-		AD9F7B4B1E9E208F00A58327 /* FEMMapping+Realm.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9F7B431E9E208F00A58327 /* FEMMapping+Realm.m */; };
 		ADA44C721EB34A5A0014C46D /* AssignmentPolicyCollectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA44C701EB34A5A0014C46D /* AssignmentPolicyCollectionSpec.swift */; };
 		ADA44C731EB34A5A0014C46D /* AssignmentPolicyCollectionSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA44C701EB34A5A0014C46D /* AssignmentPolicyCollectionSpec.swift */; };
 		ADA44C741EB34A5A0014C46D /* AssignmentPolicyObjectSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA44C711EB34A5A0014C46D /* AssignmentPolicyObjectSpec.swift */; };
@@ -214,8 +206,6 @@
 		AD9401071E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMAssignmentPolicyObjectSpec.m; sourceTree = "<group>"; };
 		AD9401081E8BE7B100558F37 /* FEMDeserializerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FEMDeserializerSpec.m; sourceTree = "<group>"; };
 		AD9401091E8BE7B100558F37 /* FEMRealmStoreSpeс.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMRealmStoreSpeс.m"; sourceTree = "<group>"; };
-		AD9F7B421E9E208F00A58327 /* FEMMapping+Realm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FEMMapping+Realm.h"; sourceTree = "<group>"; };
-		AD9F7B431E9E208F00A58327 /* FEMMapping+Realm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FEMMapping+Realm.m"; sourceTree = "<group>"; };
 		ADA44C701EB34A5A0014C46D /* AssignmentPolicyCollectionSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentPolicyCollectionSpec.swift; sourceTree = "<group>"; };
 		ADA44C711EB34A5A0014C46D /* AssignmentPolicyObjectSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentPolicyObjectSpec.swift; sourceTree = "<group>"; };
 		ADA44C761EB34A990014C46D /* SwiftUniqueObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUniqueObject.swift; sourceTree = "<group>"; };
@@ -415,8 +405,6 @@
 			children = (
 				AD9400DE1E8BE75000558F37 /* FEMDeserializer+Realm.h */,
 				AD9400DF1E8BE75000558F37 /* FEMDeserializer+Realm.m */,
-				AD9F7B421E9E208F00A58327 /* FEMMapping+Realm.h */,
-				AD9F7B431E9E208F00A58327 /* FEMMapping+Realm.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -519,7 +507,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7DF84B1E98152F006888E1 /* FastEasyMappingRealm.h in Headers */,
-				AD9F7B451E9E208F00A58327 /* FEMMapping+Realm.h in Headers */,
 				AD7DF8481E98152F006888E1 /* FEMDeserializer+Realm.h in Headers */,
 				AD7DF8471E98152F006888E1 /* FEMRealmAssignmentPolicy.h in Headers */,
 				AD7DF84A1E98152F006888E1 /* FEMRealmStore.h in Headers */,
@@ -531,7 +518,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7DF8501E981530006888E1 /* FastEasyMappingRealm.h in Headers */,
-				AD9F7B461E9E208F00A58327 /* FEMMapping+Realm.h in Headers */,
 				AD7DF84D1E981530006888E1 /* FEMDeserializer+Realm.h in Headers */,
 				AD7DF84C1E981530006888E1 /* FEMRealmAssignmentPolicy.h in Headers */,
 				AD7DF84F1E981530006888E1 /* FEMRealmStore.h in Headers */,
@@ -543,7 +529,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7DF8551E981530006888E1 /* FastEasyMappingRealm.h in Headers */,
-				AD9F7B471E9E208F00A58327 /* FEMMapping+Realm.h in Headers */,
 				AD7DF8521E981530006888E1 /* FEMDeserializer+Realm.h in Headers */,
 				AD7DF8511E981530006888E1 /* FEMRealmAssignmentPolicy.h in Headers */,
 				AD7DF8541E981530006888E1 /* FEMRealmStore.h in Headers */,
@@ -555,7 +540,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD9400ED1E8BE75000558F37 /* FEMRealmStore.h in Headers */,
-				AD9F7B441E9E208F00A58327 /* FEMMapping+Realm.h in Headers */,
 				AD9400E91E8BE75000558F37 /* FEMDeserializer+Realm.h in Headers */,
 				AD9400E51E8BE75000558F37 /* FEMRealmAssignmentPolicy.h in Headers */,
 				AD9400CF1E8BE11A00558F37 /* FastEasyMappingRealm.h in Headers */,
@@ -912,7 +896,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7DF8921E98229E006888E1 /* FEMRealmStore.m in Sources */,
-				AD9F7B491E9E208F00A58327 /* FEMMapping+Realm.m in Sources */,
 				AD7DF8561E98153C006888E1 /* FEMRealmAssignmentPolicy.m in Sources */,
 				AD7DF8571E98153C006888E1 /* FEMDeserializer+Realm.m in Sources */,
 			);
@@ -947,7 +930,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7DF8931E98229F006888E1 /* FEMRealmStore.m in Sources */,
-				AD9F7B4A1E9E208F00A58327 /* FEMMapping+Realm.m in Sources */,
 				AD7DF85A1E98153D006888E1 /* FEMRealmAssignmentPolicy.m in Sources */,
 				AD7DF85B1E98153D006888E1 /* FEMDeserializer+Realm.m in Sources */,
 			);
@@ -958,7 +940,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7DF8941E98229F006888E1 /* FEMRealmStore.m in Sources */,
-				AD9F7B4B1E9E208F00A58327 /* FEMMapping+Realm.m in Sources */,
 				AD7DF85E1E98153D006888E1 /* FEMRealmAssignmentPolicy.m in Sources */,
 				AD7DF85F1E98153D006888E1 /* FEMDeserializer+Realm.m in Sources */,
 			);
@@ -969,7 +950,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD9400EE1E8BE75000558F37 /* FEMRealmStore.m in Sources */,
-				AD9F7B481E9E208F00A58327 /* FEMMapping+Realm.m in Sources */,
 				AD9400E61E8BE75000558F37 /* FEMRealmAssignmentPolicy.m in Sources */,
 				AD9400EA1E8BE75000558F37 /* FEMDeserializer+Realm.m in Sources */,
 			);

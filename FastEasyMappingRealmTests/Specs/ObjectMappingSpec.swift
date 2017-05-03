@@ -4,6 +4,7 @@ import Quick
 import Nimble
 import FastEasyMappingRealm
 import RealmSwift
+import Realm
 
 class ObjectMappingSpeс: QuickSpec {
   
@@ -16,7 +17,7 @@ class ObjectMappingSpeс: QuickSpec {
       var deserializer: FEMDeserializer!
       var store: FEMRealmStore!
       
-      beforeEach {
+      beforeEach {        
         let configuration = Realm.Configuration(inMemoryIdentifier: "tests")
         realm = try! Realm(configuration: configuration)
         store = FEMRealmStore(realm: ObjectiveCSupport.convert(object: realm))
