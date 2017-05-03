@@ -54,8 +54,8 @@ class SwiftObject: Object {
   dynamic var date: Date?
   dynamic var data: Data?
   
-  dynamic var toOneRelationship: SwiftObjectChild?
-  let toManyRelationship = List<SwiftObjectChild>()
+  dynamic var toOneRelationship: SwiftChildObject?
+  let toManyRelationship = List<SwiftChildObject>()
 }
 
 extension SwiftObject {
@@ -85,7 +85,7 @@ extension SwiftObject {
     mapping.addAttribute(FEMAttribute.mapping(ofProperty: "date", toKeyPath: "date", dateFormat: "YYYY"))
     mapping.addAttribute(FEMAttribute.stringToDataMapping(of: "data", keyPath: "data"))
 
-    let child = SwiftObjectChild.defaultMapping()
+    let child = SwiftChildObject.defaultMapping()
     mapping.addRelationshipMapping(child, forProperty: "toOneRelationship", keyPath: "toOneRelationship")
     mapping.add(toManyRelationshipMapping: child, forProperty: "toManyRelationship", keyPath: "toManyRelationship")
     

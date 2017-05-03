@@ -7,15 +7,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class FEMMapping;
 
-@interface ChildObject : RLMObject
+@interface ObjCChildObject : RLMObject
 
 @property (nonatomic) int identifier;
 
 @end
 
-RLM_ARRAY_TYPE(ChildObject)
+RLM_ARRAY_TYPE(ObjCChildObject)
 
-@interface ChildObject (Mapping)
+@interface ObjCChildObject (Mapping)
 
 + (FEMMapping *)defaultMapping;
 

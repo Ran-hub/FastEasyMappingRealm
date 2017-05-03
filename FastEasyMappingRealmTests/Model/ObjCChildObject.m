@@ -1,12 +1,12 @@
 
-#import "ChildObject.h"
+#import "ObjCChildObject.h"
 
 #import <FastEasyMapping/FEMMapping.h>
 
-@implementation ChildObject
+@implementation ObjCChildObject
 @end
 
-@implementation ChildObject (Mapping)
+@implementation ObjCChildObject (Mapping)
 
 + (FEMMapping *)defaultMapping {
     FEMMapping *mapping = [[FEMMapping alloc] initWithObjectClass:self];

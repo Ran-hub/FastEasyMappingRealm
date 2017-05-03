@@ -12,8 +12,8 @@ class SwiftUniqueObject: Object {
     return "identifier"
   }
   
-  dynamic var toOneRelationship: SwiftUniqueObjectChild?
-  let toManyRelationship = List<SwiftUniqueObjectChild>()
+  dynamic var toOneRelationship: SwiftUniqueChildObject?
+  let toManyRelationship = List<SwiftUniqueChildObject>()
 }
 
 extension SwiftUniqueObject {
@@ -28,7 +28,7 @@ extension SwiftUniqueObject {
   class func toOneRelationshipMapping(with policy: @escaping FEMAssignmentPolicy) -> FEMMapping {
     let mapping = self.defaultMapping()
     
-    let child = FEMRelationship(property: "toOneRelationship", keyPath: "toOne", mapping: SwiftUniqueObjectChild.defaultMapping())
+    let child = FEMRelationship(property: "toOneRelationship", keyPath: "toOne", mapping: SwiftUniqueChildObject.defaultMapping())
     child.assignmentPolicy = policy
     mapping.addRelationship(child)
     
@@ -38,7 +38,7 @@ extension SwiftUniqueObject {
   class func toManyRelationshipMapping(with policy: @escaping FEMAssignmentPolicy) -> FEMMapping {
     let mapping = self.defaultMapping()
     
-    let child = FEMRelationship(property: "toManyRelationship", keyPath: "toMany", mapping: SwiftUniqueObjectChild.defaultMapping())
+    let child = FEMRelationship(property: "toManyRelationship", keyPath: "toMany", mapping: SwiftUniqueChildObject.defaultMapping())
     child.assignmentPolicy = policy
     child.isToMany = true
     mapping.addRelationship(child)

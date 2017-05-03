@@ -1,4 +1,4 @@
-// For License please refer to LICENSE file in the root of FastEasyMapping project
+// For License please refer to LICENSE file in the root of FastEasyMappingRealm project
 
 #import <Kiwi/Kiwi.h>
 #import <FastEasyMapping/FastEasyMapping.h>
@@ -6,7 +6,7 @@
 #import <Realm/Realm.h>
 #import <Realm/RLMRealm_Dynamic.h>
 
-#import "Object.h"
+#import "ObjCObject.h"
 #import "UniqueObject.h"
 #import "FEMRealmAssignmentPolicy.h"
 #import "Fixture.h"

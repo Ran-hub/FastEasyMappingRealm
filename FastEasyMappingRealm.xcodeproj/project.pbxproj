@@ -51,8 +51,8 @@
 		AD7DF86D1E98168F006888E1 /* AssignmentPolicyToOneNull.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3F3CBAED31FB56A1BACA /* AssignmentPolicyToOneNull.json */; };
 		AD7DF86E1E98168F006888E1 /* AssignmentPolicyToOneInit.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3B226D8E5C958A3A810B /* AssignmentPolicyToOneInit.json */; };
 		AD7DF86F1E98168F006888E1 /* AssignmentPolicyToOneUpdate.json in Resources */ = {isa = PBXBuildFile; fileRef = 1D6A3FBBE6A00A55297E22F9 /* AssignmentPolicyToOneUpdate.json */; };
-		AD7DF8701E981696006888E1 /* ChildObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FD1E8BE7B100558F37 /* ChildObject.m */; };
-		AD7DF8711E981696006888E1 /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FF1E8BE7B100558F37 /* Object.m */; };
+		AD7DF8701E981696006888E1 /* ObjCChildObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FD1E8BE7B100558F37 /* ObjCChildObject.m */; };
+		AD7DF8711E981696006888E1 /* ObjCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FF1E8BE7B100558F37 /* ObjCObject.m */; };
 		AD7DF8721E981696006888E1 /* UniqueChildObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401011E8BE7B100558F37 /* UniqueChildObject.m */; };
 		AD7DF8731E981696006888E1 /* UniqueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401031E8BE7B100558F37 /* UniqueObject.m */; };
 		AD7DF8751E98169B006888E1 /* FEMAssignmentPolicyObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401071E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m */; };
@@ -97,8 +97,8 @@
 		AD9401121E8BE7B100558F37 /* ToManyRelationship.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F81E8BE7B100558F37 /* ToManyRelationship.json */; };
 		AD9401131E8BE7B100558F37 /* ToOneNullRelationship.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400F91E8BE7B100558F37 /* ToOneNullRelationship.json */; };
 		AD9401141E8BE7B100558F37 /* ToOneRelationship.json in Resources */ = {isa = PBXBuildFile; fileRef = AD9400FA1E8BE7B100558F37 /* ToOneRelationship.json */; };
-		AD9401151E8BE7B100558F37 /* ChildObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FD1E8BE7B100558F37 /* ChildObject.m */; };
-		AD9401161E8BE7B100558F37 /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FF1E8BE7B100558F37 /* Object.m */; };
+		AD9401151E8BE7B100558F37 /* ObjCChildObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FD1E8BE7B100558F37 /* ObjCChildObject.m */; };
+		AD9401161E8BE7B100558F37 /* ObjCObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9400FF1E8BE7B100558F37 /* ObjCObject.m */; };
 		AD9401171E8BE7B100558F37 /* UniqueChildObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401011E8BE7B100558F37 /* UniqueChildObject.m */; };
 		AD9401181E8BE7B100558F37 /* UniqueObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401031E8BE7B100558F37 /* UniqueObject.m */; };
 		AD94011A1E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9401071E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m */; };
@@ -200,10 +200,10 @@
 		AD9400F81E8BE7B100558F37 /* ToManyRelationship.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ToManyRelationship.json; sourceTree = "<group>"; };
 		AD9400F91E8BE7B100558F37 /* ToOneNullRelationship.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ToOneNullRelationship.json; sourceTree = "<group>"; };
 		AD9400FA1E8BE7B100558F37 /* ToOneRelationship.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ToOneRelationship.json; sourceTree = "<group>"; };
-		AD9400FC1E8BE7B100558F37 /* ChildObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildObject.h; sourceTree = "<group>"; };
-		AD9400FD1E8BE7B100558F37 /* ChildObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildObject.m; sourceTree = "<group>"; };
-		AD9400FE1E8BE7B100558F37 /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
-		AD9400FF1E8BE7B100558F37 /* Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Object.m; sourceTree = "<group>"; };
+		AD9400FC1E8BE7B100558F37 /* ObjCChildObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCChildObject.h; sourceTree = "<group>"; };
+		AD9400FD1E8BE7B100558F37 /* ObjCChildObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCChildObject.m; sourceTree = "<group>"; };
+		AD9400FE1E8BE7B100558F37 /* ObjCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCObject.h; sourceTree = "<group>"; };
+		AD9400FF1E8BE7B100558F37 /* ObjCObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCObject.m; sourceTree = "<group>"; };
 		AD9401001E8BE7B100558F37 /* UniqueChildObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniqueChildObject.h; sourceTree = "<group>"; };
 		AD9401011E8BE7B100558F37 /* UniqueChildObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UniqueChildObject.m; sourceTree = "<group>"; };
 		AD9401021E8BE7B100558F37 /* UniqueObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UniqueObject.h; sourceTree = "<group>"; };
@@ -460,10 +460,10 @@
 				ADDBBD8A1EB0A45F00BFFD77 /* SwiftObjectChild.swift */,
 				ADA44C761EB34A990014C46D /* SwiftUniqueObject.swift */,
 				ADA44C771EB34A990014C46D /* SwiftUniqueObjectChild.swift */,
-				AD9400FC1E8BE7B100558F37 /* ChildObject.h */,
-				AD9400FD1E8BE7B100558F37 /* ChildObject.m */,
-				AD9400FE1E8BE7B100558F37 /* Object.h */,
-				AD9400FF1E8BE7B100558F37 /* Object.m */,
+				AD9400FC1E8BE7B100558F37 /* ObjCChildObject.h */,
+				AD9400FD1E8BE7B100558F37 /* ObjCChildObject.m */,
+				AD9400FE1E8BE7B100558F37 /* ObjCObject.h */,
+				AD9400FF1E8BE7B100558F37 /* ObjCObject.m */,
 				AD9401001E8BE7B100558F37 /* UniqueChildObject.h */,
 				AD9401011E8BE7B100558F37 /* UniqueChildObject.m */,
 				AD9401021E8BE7B100558F37 /* UniqueObject.h */,
@@ -935,11 +935,11 @@
 				ADDBBD961EB2805000BFFD77 /* FEMAttribute+UTF8.swift in Sources */,
 				AD7DF8751E98169B006888E1 /* FEMAssignmentPolicyObjectSpec.m in Sources */,
 				AD7DF8731E981696006888E1 /* UniqueObject.m in Sources */,
-				AD7DF8711E981696006888E1 /* Object.m in Sources */,
+				AD7DF8711E981696006888E1 /* ObjCObject.m in Sources */,
 				ADDBBD901EB0A45F00BFFD77 /* SwiftObjectChild.swift in Sources */,
 				ADA44C751EB34A5A0014C46D /* AssignmentPolicyObjectSpec.swift in Sources */,
 				ADDBBD8C1EB0A45F00BFFD77 /* SwiftObject.swift in Sources */,
-				AD7DF8701E981696006888E1 /* ChildObject.m in Sources */,
+				AD7DF8701E981696006888E1 /* ObjCChildObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -982,13 +982,13 @@
 				ADDBBD911EB27D2400BFFD77 /* ObjectMappingSpec.swift in Sources */,
 				AD9401181E8BE7B100558F37 /* UniqueObject.m in Sources */,
 				AD94011A1E8BE7B100558F37 /* FEMAssignmentPolicyObjectSpec.m in Sources */,
-				AD9401151E8BE7B100558F37 /* ChildObject.m in Sources */,
+				AD9401151E8BE7B100558F37 /* ObjCChildObject.m in Sources */,
 				ADA44C781EB34A990014C46D /* SwiftUniqueObject.swift in Sources */,
 				ADA44C7A1EB34A990014C46D /* SwiftUniqueObjectChild.swift in Sources */,
 				ADDBBD951EB2805000BFFD77 /* FEMAttribute+UTF8.swift in Sources */,
 				AD9401171E8BE7B100558F37 /* UniqueChildObject.m in Sources */,
 				AD94011B1E8BE7B100558F37 /* FEMDeserializerSpec.m in Sources */,
-				AD9401161E8BE7B100558F37 /* Object.m in Sources */,
+				AD9401161E8BE7B100558F37 /* ObjCObject.m in Sources */,
 				ADDBBD8F1EB0A45F00BFFD77 /* SwiftObjectChild.swift in Sources */,
 				ADA44C741EB34A5A0014C46D /* AssignmentPolicyObjectSpec.swift in Sources */,
 				1D6A3B21882F44C2845BBE57 /* Fixture.m in Sources */,

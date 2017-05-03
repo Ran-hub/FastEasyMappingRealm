@@ -1,4 +1,4 @@
-// For License please refer to LICENSE file in the root of FastEasyMapping project
+// For License please refer to LICENSE file in the root of FastEasyMappingRealm project
 
 @import Kiwi;
 @import FastEasyMapping;

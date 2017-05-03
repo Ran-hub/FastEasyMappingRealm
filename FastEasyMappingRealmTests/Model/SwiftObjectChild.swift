@@ -4,12 +4,12 @@ import Foundation
 import RealmSwift
 import FastEasyMapping
 
-class SwiftObjectChild: Object {
+class SwiftChildObject: Object {
 
   dynamic var string: String = ""
 }
 
-extension SwiftObjectChild {
+extension SwiftChildObject {
   
   class func defaultMapping() -> FEMMapping {
     let mapping = FEMMapping(objectClass: self)

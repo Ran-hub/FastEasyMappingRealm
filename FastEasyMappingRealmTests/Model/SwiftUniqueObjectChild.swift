@@ -4,7 +4,7 @@ import Foundation
 import RealmSwift
 import FastEasyMapping
 
-class SwiftUniqueObjectChild: Object {
+class SwiftUniqueChildObject: Object {
 
   dynamic var identifier: Int32 = 0
   
@@ -13,7 +13,7 @@ class SwiftUniqueObjectChild: Object {
   }
 }
 
-extension SwiftUniqueObjectChild {
+extension SwiftUniqueChildObject {
   
   class func defaultMapping() -> FEMMapping {
     let mapping = FEMMapping(objectClass: self)

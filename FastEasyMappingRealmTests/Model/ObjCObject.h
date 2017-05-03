@@ -7,14 +7,14 @@
 @import CoreGraphics;
 
 #import <Realm/RLMObject.h>
-#import "ChildObject.h"
+#import "ObjCChildObject.h"
 
 @class FEMMapping;
 @class RLMArray;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Object : RLMObject
+@interface ObjCObject : RLMObject
 
 @property (nonatomic) BOOL boolValue;
 @property (nonatomic, nullable) NSNumber<RLMBool> *boolObject;
@@ -48,13 +48,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSDate *date;
 @property (nonatomic, strong, nullable) NSData *data;
 
-@property (nonatomic, strong, nullable) ChildObject *toOneRelationship;
-@property RLMArray<ChildObject *><ChildObject> *toManyRelationship;
+@property (nonatomic, strong, nullable) ObjCChildObject *toOneRelationship;
+@property RLMArray<ObjCChildObject *><ObjCChildObject> *toManyRelationship;
 
 @end
 
 
-@interface Object (Mapping)
+@interface ObjCObject (Mapping)
 
 + (FEMMapping *)attributesMapping;
 

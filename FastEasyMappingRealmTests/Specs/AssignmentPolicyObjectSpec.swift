@@ -1,4 +1,4 @@
-// For License please refer to LICENSE file in the root of FastEasyMapping project
+// For License please refer to LICENSE file in the root of FastEasyMappingRealm project
 
 import Quick
 import Nimble
@@ -14,7 +14,7 @@ class AssignmentPolicyObjectSpec: QuickSpec {
       var store: FEMRealmStore!
 
       var object: SwiftUniqueObject!
-      var child: SwiftUniqueObjectChild!
+      var child: SwiftUniqueChildObject!
     
       beforeEach {
         let configuration = Realm.Configuration(inMemoryIdentifier: "tests")
@@ -47,7 +47,7 @@ class AssignmentPolicyObjectSpec: QuickSpec {
             it("should assign new value") {
               expect(object.toOneRelationship).toNot(beNil())
               expect(object.toOneRelationship?.identifier) == 10
-              expect(realm.objects(SwiftUniqueObjectChild.self).count) == 1
+              expect(realm.objects(SwiftUniqueChildObject.self).count) == 1
             }
           }
         }
@@ -74,8 +74,8 @@ class AssignmentPolicyObjectSpec: QuickSpec {
               expect(child.isInvalidated) == false
               expect(child.realm) == realm
               
-              expect(realm.object(ofType: SwiftUniqueObjectChild.self, forPrimaryKey: 10)) == child
-              expect(realm.objects(SwiftUniqueObjectChild.self).count) == 2
+              expect(realm.object(ofType: SwiftUniqueChildObject.self, forPrimaryKey: 10)) == child
+              expect(realm.objects(SwiftUniqueChildObject.self).count) == 2
             }
           }
           
@@ -93,8 +93,8 @@ class AssignmentPolicyObjectSpec: QuickSpec {
               expect(child.isInvalidated) == false
               expect(child.realm) == realm
               
-              expect(realm.object(ofType: SwiftUniqueObjectChild.self, forPrimaryKey: 10)) == child
-              expect(realm.objects(SwiftUniqueObjectChild.self).count) == 1
+              expect(realm.object(ofType: SwiftUniqueChildObject.self, forPrimaryKey: 10)) == child
+              expect(realm.objects(SwiftUniqueChildObject.self).count) == 1
             }
           }
         }
@@ -118,7 +118,7 @@ class AssignmentPolicyObjectSpec: QuickSpec {
             it("should assign new value") {
               expect(object.toOneRelationship).toNot(beNil())
               expect(object.toOneRelationship?.identifier) == 10
-              expect(realm.objects(SwiftUniqueObjectChild.self).count) == 1
+              expect(realm.objects(SwiftUniqueChildObject.self).count) == 1
             }
           }
         }
@@ -145,8 +145,8 @@ class AssignmentPolicyObjectSpec: QuickSpec {
               expect(child.isInvalidated) == false
               expect(child.realm) == realm
               
-              expect(realm.object(ofType: SwiftUniqueObjectChild.self, forPrimaryKey: 10)) == child
-              expect(realm.objects(SwiftUniqueObjectChild.self).count) == 2
+              expect(realm.object(ofType: SwiftUniqueChildObject.self, forPrimaryKey: 10)) == child
+              expect(realm.objects(SwiftUniqueChildObject.self).count) == 2
             }
           }
           
@@ -159,7 +159,7 @@ class AssignmentPolicyObjectSpec: QuickSpec {
             it("should preserve old value") {
               expect(object.toOneRelationship).toNot(beNil())
               expect(object.toOneRelationship?.identifier) == 10
-              expect(realm.objects(SwiftUniqueObjectChild.self).count) == 1
+              expect(realm.objects(SwiftUniqueChildObject.self).count) == 1
             }
           }
         }
@@ -183,7 +183,7 @@ class AssignmentPolicyObjectSpec: QuickSpec {
             it("should assign new value") {
               expect(object.toOneRelationship).toNot(beNil())
               expect(object.toOneRelationship?.identifier) == 10
-              expect(realm.objects(SwiftUniqueObjectChild.self).count) == 1
+              expect(realm.objects(SwiftUniqueChildObject.self).count) == 1
             }
           }
         }
@@ -209,8 +209,8 @@ class AssignmentPolicyObjectSpec: QuickSpec {
             it("should remove old value") {
               expect(child.isInvalidated) == true
 
-              expect(realm.object(ofType: SwiftUniqueObjectChild.self, forPrimaryKey: 10)).to(beNil())
-              expect(realm.objects(SwiftUniqueObjectChild.self).count) == 1
+              expect(realm.object(ofType: SwiftUniqueChildObject.self, forPrimaryKey: 10)).to(beNil())
+              expect(realm.objects(SwiftUniqueChildObject.self).count) == 1
             }
           }
           
@@ -227,8 +227,8 @@ class AssignmentPolicyObjectSpec: QuickSpec {
             it("should remove old value") {
               expect(child.isInvalidated) == true
               
-              expect(realm.object(ofType: SwiftUniqueObjectChild.self, forPrimaryKey: 10)).to(beNil())
-              expect(realm.objects(SwiftUniqueObjectChild.self).count) == 0
+              expect(realm.object(ofType: SwiftUniqueChildObject.self, forPrimaryKey: 10)).to(beNil())
+              expect(realm.objects(SwiftUniqueChildObject.self).count) == 0
             }
           }
         }
