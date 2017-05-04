@@ -218,8 +218,8 @@ mapping.addAttributes(from: ["optionalDouble"])
 mapping.addToManyRelationshipMapping(childMapping, forProperty: "toManyRelationship", keyPath: "children")
 ```
 
-### When to use
+## When to use
 FastEasyMappingRealm is a great choise when it comes to speed, handling of duplicates, special relationships handling (merge, replace), etc. Or maybe you're transitioning from the CoreData to the Realm and already using FEM.
 
-Due to the ObjC nature and limited Swift's runtime possibilities you won't get any of the Swift compile-time checks (just like in ObjC). Hence other Swift-based JSON solutions might be the case for you. 
+However due to the ObjC nature and limited Swift's runtime possibilities you won't get any of the Swift compile-time checks (just like in ObjC). Hence other Swift-based JSON solutions might be the case for you. 
 
