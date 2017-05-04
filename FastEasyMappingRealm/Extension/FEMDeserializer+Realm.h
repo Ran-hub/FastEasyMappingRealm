@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return Deserialized instance of the type, specified by `mapping`.
  */
-+ (id)objectFromRepresentation:(NSDictionary *)representation mapping:(FEMMapping *)mapping realm:(RLMRealm *)realm;
++ (id)objectFromRepresentation:(NSDictionary *)representation mapping:(FEMMapping *)mapping realm:(RLMRealm *)realm NS_SWIFT_NAME(object(from:mapping:realm:));
 
 /**
  @brief Update given `object` by applying deserialized `representation` to it using `mapping`.
@@ -53,8 +53,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return Same instance as passed to the `object`.
  */
-+ (id)fillObject:(id)object fromRepresentation:(NSDictionary *)representation mapping:(FEMMapping *)mapping realm:(RLMRealm *)realm;
-
++ (id)fillObject:(id)object fromRepresentation:(NSDictionary *)representation mapping:(FEMMapping *)mapping realm:(RLMRealm *)realm NS_SWIFT_NAME(fill(object:from:mapping:realm:));
 
 /**
  @brief Deserialize array of Realm's subclass from the given `representation` by using `mapping`.
@@ -67,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return Array of deserialized instances of the type, specified by `mapping`.
  */
-+ (NSArray *)collectionFromRepresentation:(NSArray *)representation mapping:(FEMMapping *)mapping realm:(RLMRealm *)realm;
++ (NSArray *)collectionFromRepresentation:(NSArray *)representation mapping:(FEMMapping *)mapping realm:(RLMRealm *)realm NS_SWIFT_NAME(collection(from:mapping:realm:));
 
 @end
 
