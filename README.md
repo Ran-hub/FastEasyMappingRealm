@@ -1,4 +1,4 @@
-# [WIP] FastEasyMappingRealm
+# FastEasyMappingRealm
 - [Overview](#overview)
 - [Features](#features)
 - [Requirements](#requirements)
@@ -6,6 +6,7 @@
 - [Usage](#usage)
   - [Assignment Policies](#assignment-policies)
   - [Swift](#swift)
+- [When to use?](#when-to-use)
 
 ## Overview
 FastEasyMappingRealm is an extension to the [FastEasyMapping](https://github.com/Yalantis/FastEasyMapping) that allows you to map [Realm](https://github.com/realm/realm-cocoa) objects from (and to) the JSON. Supports both **Realm** and **RealmSwift**. 
@@ -13,6 +14,7 @@ FastEasyMappingRealm is an extension to the [FastEasyMapping](https://github.com
 ## Features
 - Common mapping features such as keys or/and values transformation
 - Assignment policies that gives you ability to assign (default), merge or even replace values of the relationship with zero effort
+- Duplicates resolution
 - Recursive relationships support
 - Mapping is a separate entity and doesn't lock your DTO to a single JSON representation
 - Finegrained control over mapping process via delegation
@@ -77,6 +79,14 @@ github "realm/realm-cocoa" ~> 2.7
 ```
 
 Run `carthage update` to build the framework and drag the built `FastEasyMappingRealm.framework`, `FastEasyMapping.framework`, `Realm.framework` and (optionally) `RealmSwift.framework` into your Xcode project. 
+
+### Manually 
+In order to build and run project manually you have to install [Carthage](https://github.com/Carthage/Carthage) and execute in the root of the project:
+```bash
+carthage update
+```
+
+Run `carthage build --no-current-skip` to build the framework and drag the built `FastEasyMappingRealm.framework`, `FastEasyMapping.framework`, `Realm.framework` and (optionally) `RealmSwift.framework` into your Xcode project. Those frameworks located under `./Carthage/Build/${PLATFORM}/`.
 
 ## Usage
 ### Getting started
@@ -196,3 +206,20 @@ Replace | FEMRealmAssignmentPolicyCollectionReplace | Replace old values by new.
 For the comprehensive usage guide please visit [FastEasyMapping: Assignment Policy](https://github.com/Yalantis/FastEasyMapping#assignment-policy) page.
 
 ### Swift
+Despite ObjC nature of the FastEasyMapping it still support all of the Swift-only features of the RealSwift.Object such as: 
+- Optional variables ```let optionalDouble = RealmOptional<Double>()```
+- Relationships ```let toManyRelationship = List<Child>()```
+
+You can use them simply by a property name: 
+```swift
+let mapping = FEMMapping(objectClass: RealmUser.self)
+mapping.addAttributes(from: ["optionalDouble"]) 
+
+mapping.addToManyRelationshipMapping(childMapping, forProperty: "toManyRelationship", keyPath: "children")
+```
+
+### When to use
+FastEasyMappingRealm is a great choise when it comes to speed, handling of duplicates, special relationships handling (merge, replace), etc. Or maybe you're transitioning from the CoreData to the Realm and already using FEM.
+
+Due to the ObjC nature and limited Swift's runtime possibilities you won't get any of the Swift compile-time checks (just like in ObjC). Hence other Swift-based JSON solutions might be the case for you. 
+
