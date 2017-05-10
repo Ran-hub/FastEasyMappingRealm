@@ -1,2 +1,2 @@
-github "yalantis/FastEasyMapping" "master"
-github "realm/realm-cocoa" "master"
+github "yalantis/FastEasyMapping" ~> 1.2
+github "realm/realm-cocoa" ~> 2.7

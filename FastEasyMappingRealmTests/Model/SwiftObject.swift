@@ -87,7 +87,7 @@ extension SwiftObject {
 
     let child = SwiftChildObject.defaultMapping()
     mapping.addRelationshipMapping(child, forProperty: "toOneRelationship", keyPath: "toOneRelationship")
-    mapping.add(toManyRelationshipMapping: child, forProperty: "toManyRelationship", keyPath: "toManyRelationship")
+    mapping.addToManyRelationshipMapping(child, forProperty: "toManyRelationship", keyPath: "toManyRelationship")
     
     return mapping
   }

@@ -1,3 +1,7 @@
+[![GitHub release](https://img.shields.io/github/release/Yalantis/FastEasyMappingRealm.svg)](https://github.com/Yalantis/FastEasyMappingRealm/releases)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/FastEasyMappingRealm.svg)](https://img.shields.io/cocoapods/v/FastEasyMappingRealm.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 # FastEasyMappingRealm
 - [Overview](#overview)
 - [Features](#features)
