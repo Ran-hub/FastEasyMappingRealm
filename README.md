@@ -37,7 +37,7 @@ Build using Xcode 8.3.2+
 ```bash
 $ gem install cocoapods
 ```
-To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate FastEasyMappingRealm into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
