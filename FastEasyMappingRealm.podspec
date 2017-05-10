@@ -13,8 +13,10 @@ Pod::Spec.new do |spec|
   spec.watchos.deployment_target = '2.0'
 
   spec.requires_arc = true
+
+  spec.dependency 'FastEasyMapping', '~> 1.2'
   spec.dependency 'Realm', '~> 2.7'
 
   spec.source_files = 'FastEasyMappingRealm/**/*.{h,m}'
-  spec.private_header_files = 'FastEasyMappingRealm/Source/Private/**/*{.h}'
+  spec.private_header_files = 'FastEasyMappingRealm/Private/**/*.{h}'
 end
